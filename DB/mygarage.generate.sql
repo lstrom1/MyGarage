@@ -1,13 +1,13 @@
 /* Check if database already exists and delete it if it does exist*/
-IF EXISTS(SELECT 1 FROM master.dbo.sysdatabases WHERE name = 'mygarage') 
+IF EXISTS(SELECT 1 FROM master.dbo.sysdatabases WHERE name = 'CS6920-team5') 
 
-DROP DATABASE[mygarage] 
+DROP DATABASE[CS6920-team5] 
 GO
 
-CREATE DATABASE [mygarage]
+CREATE DATABASE [CS6920-team5]
 GO
 
-USE [mygarage]
+USE [CS6920-team5]
 GO
 
 /**** Object: Create Table [dbo].[owner] ****/

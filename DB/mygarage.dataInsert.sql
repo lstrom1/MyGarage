@@ -1,4 +1,4 @@
-USE [mygarage]
+USE [CS6920-team5]
 GO
 /*** Owner Data ***/
 INSERT [dbo].[owner] ([lastName], [firstName], [streetAddress], [city], [state], [zip], [phoneNumber], [emailAddress]) VALUES (N'Smith', N'Jeff', N'87 Cow Drive', N'Atlanta', N'GA', N'30332', N'555-555-5554', N'jeff.smith@gmail.com')
