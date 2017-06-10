@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyGarage.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,14 @@ namespace MyGarage
         private void Home_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+            AddCustomer addCust = new AddCustomer();
+            addCust.TopLevel = false;
+            frmPanel.Controls.Add(addCust);
+            addCust.Show();
         }
     }
 }
