@@ -60,6 +60,10 @@ namespace MyGarageData.DAL
                 }
                 MessageBox.Show(errorDetails.ToString(), "SQL Exception");
             }
+            finally
+            {
+                connection.Close();
+            }
 
             return exitStatus;
         }
@@ -143,6 +147,61 @@ namespace MyGarageData.DAL
             return exitStatus;
         }
 
+        public static Owner GetOwner(int ownerID)
+        {
+            Owner owner = new Owner();
+            string selectStatement = "SELECT * FROM owner " +
+                "WHERE ownerID = @ownerID";
 
+            try
+            {
+                using (SqlConnection connection = DBConnection.GetConnection())
+                {
+                    connection.Open();
+                    using (SqlCommand selectCommand = new SqlCommand(selectStatement, connection))
+                    {
+                        selectCommand.Parameters.AddWithValue("@ownerID", ownerID);
+                        using (SqlDataReader reader = selectCommand.ExecuteReader())
+                        {
+                            int ownLastName = reader.GetOrdinal("lastName");
+                            int ownFirstName = reader.GetOrdinal("firstName");
+                            int ownStreetAddress = reader.GetOrdinal("streetAddress");
+                            int ownCity = reader.GetOrdinal("city");
+                            int ownState = reader.GetOrdinal("state");
+                            int ownZip = reader.GetOrdinal("zip");
+                            int ownPhoneNumber = reader.GetOrdinal("phoneNumber");
+                            int ownEmailAddress = reader.GetOrdinal("emailAddress");
+
+                            if(reader.Read())
+                            {
+                                owner.ownerID = (int)reader["ownerID"];
+                                owner.lastName = reader.GetString(ownLastName);
+                                owner.firstName = reader.GetString(ownFirstName);
+                                owner.streetAddress = reader.GetString(ownStreetAddress);
+                                owner.city = reader.GetString(ownCity);
+                                owner.state = reader.GetString(ownState);
+                                owner.zip = reader.GetString(ownZip);
+                                owner.phoneNumber = reader.GetString(ownPhoneNumber);
+                                owner.emailAddress = reader.GetString(ownEmailAddress);
+                            }
+                            else
+                            {
+                                owner = null;
+                            }
+                            connection.Close();
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return owner;
+        }
     }
 }
