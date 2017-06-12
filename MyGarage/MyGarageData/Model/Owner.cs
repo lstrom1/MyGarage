@@ -1,7 +1,7 @@
 ﻿namespace MyGarageData.Model
 {
 
-    class Owner
+    public class Owner
     {
         // OwnerID type int in the DB primary key
         public int ownerID { get; set; }

@@ -11,7 +11,7 @@ using System.Data;
 
 namespace MyGarageData.DAL
 {
-    class OwnerDAL
+    public class OwnerDAL
     {   
         /// <summary>
         /// Creates a new Owner 

@@ -49,9 +49,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.cmbYear = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtModel = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txtMake = new System.Windows.Forms.TextBox();
@@ -59,6 +58,8 @@
             this.txtVIN = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.cmbState = new System.Windows.Forms.ComboBox();
+            this.txtYear = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -150,7 +151,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(317, 176);
+            this.label6.Location = new System.Drawing.Point(374, 179);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 17);
             this.label6.TabIndex = 10;
@@ -244,13 +245,6 @@
             this.label11.TabIndex = 4;
             this.label11.Text = "Vehicle Information";
             // 
-            // cmbYear
-            // 
-            this.cmbYear.Location = new System.Drawing.Point(415, 344);
-            this.cmbYear.Name = "cmbYear";
-            this.cmbYear.Size = new System.Drawing.Size(69, 25);
-            this.cmbYear.TabIndex = 26;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -260,12 +254,12 @@
             this.label12.TabIndex = 25;
             this.label12.Text = "Year";
             // 
-            // textBox2
+            // txtModel
             // 
-            this.textBox2.Location = new System.Drawing.Point(90, 347);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 25);
-            this.textBox2.TabIndex = 24;
+            this.txtModel.Location = new System.Drawing.Point(90, 347);
+            this.txtModel.Name = "txtModel";
+            this.txtModel.Size = new System.Drawing.Size(203, 25);
+            this.txtModel.TabIndex = 24;
             // 
             // label13
             // 
@@ -316,6 +310,7 @@
             this.btnSave.TabIndex = 27;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -327,17 +322,84 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // cmbState
+            // 
+            this.cmbState.FormattingEnabled = true;
+            this.cmbState.Items.AddRange(new object[] {
+            "AL",
+            "AK",
+            "AZ",
+            "AR",
+            "CA",
+            "CO",
+            "CT",
+            "DE",
+            "FL",
+            "GA",
+            "HI",
+            "ID",
+            "IL",
+            "IN",
+            "IA",
+            "KS",
+            "KY",
+            "LA",
+            "ME",
+            "MD",
+            "MA",
+            "MI",
+            "MN",
+            "MS",
+            "MO",
+            "MT",
+            "NE",
+            "NV",
+            "NH",
+            "NJ",
+            "NM",
+            "NY",
+            "NC",
+            "ND",
+            "OH",
+            "OK",
+            "OR",
+            "PA",
+            "RI",
+            "SC",
+            "SD",
+            "TN",
+            "TX",
+            "UT",
+            "VT",
+            "VA",
+            "WA",
+            "WV",
+            "WI",
+            "WY"});
+            this.cmbState.Location = new System.Drawing.Point(415, 176);
+            this.cmbState.Name = "cmbState";
+            this.cmbState.Size = new System.Drawing.Size(59, 25);
+            this.cmbState.TabIndex = 29;
+            // 
+            // txtYear
+            // 
+            this.txtYear.Location = new System.Drawing.Point(415, 344);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(69, 25);
+            this.txtYear.TabIndex = 26;
+            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(641, 529);
+            this.Controls.Add(this.cmbState);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.cmbYear);
+            this.Controls.Add(this.txtYear);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtModel);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtMake);
@@ -400,9 +462,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox cmbYear;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtMake;
@@ -410,5 +471,7 @@
         private System.Windows.Forms.TextBox txtVIN;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.ComboBox cmbState;
+        private System.Windows.Forms.TextBox txtYear;
     }
 }
