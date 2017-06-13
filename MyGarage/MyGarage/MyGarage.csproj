@@ -47,6 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\OwnerController.cs" />
+    <Compile Include="DAL\OwnerDAL.cs" />
+    <Compile Include="DB\DBConnection.cs" />
+    <Compile Include="Model\Owner.cs" />
+    <Compile Include="Model\Vehicle.cs" />
     <Compile Include="View\AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,12 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MyGarageData\MyGarageData.csproj">
-      <Project>{62C968B2-4C8E-4D02-B569-92C0B6A4BF6F}</Project>
-      <Name>MyGarageData</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

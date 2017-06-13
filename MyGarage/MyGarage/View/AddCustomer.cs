@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MyGarageData.Model;
+using MyGarage.Model;
 using MyGarage.Controller;
 using System.Text.RegularExpressions;
 

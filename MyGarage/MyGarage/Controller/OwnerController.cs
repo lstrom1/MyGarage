@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MyGarageData.Model;
-using MyGarageData.DAL; 
+using MyGarage.Model;
+using MyGarage.DAL; 
 
 namespace MyGarage.Controller
 {
