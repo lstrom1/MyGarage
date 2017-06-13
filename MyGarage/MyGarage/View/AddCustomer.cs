@@ -28,9 +28,14 @@ namespace MyGarage.View
             this.Close();
         }
 
+        private void AddCustomer_Load(object sender, EventArgs e)
+        {
+            cmbState.SelectedIndex = 0; 
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (IsValidEmail(txtEmail.Text) && IsValidPhone(txtPhoneNum.Text) && IsValidYear(txtYear.Text) && AllValidInputs())
+            if (AllValidInputs() && IsValidEmail(txtEmail.Text) && IsValidPhone(txtPhoneNum.Text) && IsValidYear(txtYear.Text))
             {
                 Owner newOwner = new Owner(); 
                 newOwner.firstName = txtFirstName.Text;
@@ -58,10 +63,18 @@ namespace MyGarage.View
             try
             {
                 var addr = new System.Net.Mail.MailAddress(email);
-                return addr.Address == email;
+                if (addr.Address == email)
+                {
+                    return true;
+                } else
+                {
+                    MessageBox.Show("Please provide a valid e-mail address.");
+                    return false;
+                }
             }
             catch
             {
+                MessageBox.Show("Please provide a valid e-mail address.");
                 return false;
             }
         } 
@@ -70,8 +83,14 @@ namespace MyGarage.View
         {
             try
             {
-                var r = new Regex(@"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}");
-                return r.IsMatch(phone);
+                if (Regex.IsMatch(phone, @"^((1-)?\d{3}-)?\d{3}-\d{4}$"))
+                {
+                    return true;  
+                } else
+                {
+                    MessageBox.Show("Please provide a valid phone number.");
+                    return false;
+                }
             }
             catch (Exception)
             {
@@ -82,12 +101,20 @@ namespace MyGarage.View
         private bool IsValidYear(string year) { 
             try
             {
-                var r = new Regex(@"^(19|20)[0-9][0-9]");
-                return r.IsMatch(year);
+                if (Regex.IsMatch(year, "^(19|20)[0-9][0-9]"))
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Please provide a valid year.");
+                    return false;
+                }
             }
             catch (Exception)
             {
-                throw;
+                MessageBox.Show("Please provide a valid year.");
+                return false; 
             }
         }
 
