@@ -6,7 +6,7 @@ INSERT [dbo].[owner] ([lastName], [firstName], [streetAddress], [city], [state],
 INSERT [dbo].[owner] ([lastName], [firstName], [streetAddress], [city], [state], [zip], [phoneNumber], [emailAddress]) VALUES (N'Flanders', N'Ned', N'740 Evergreen Terrace', N'Springfield', N'GA', N'30332', N'555-555-3054', N'ned.flanders@gmail.com')
 INSERT [dbo].[owner] ([lastName], [firstName], [streetAddress], [city], [state], [zip], [phoneNumber], [emailAddress]) VALUES (N'Burns', N'Mr.', N'87 Terrace', N'Springfield', N'GA', N'30332', N'555-555-6666', N'mr.burns@gmail.com')
 INSERT [dbo].[owner] ([lastName], [firstName], [streetAddress], [city], [state], [zip], [phoneNumber], [emailAddress]) VALUES (N'Smithers', N'Waylon', N'87 Cow Drive', N'Springfield', N'GA', N'30332', N'555-555-6554', N'waylon.smithers@gmail.com')
-INSERT [dbo].[owner] ([lastName], [firstName], [streetAddress], [city], [state], [zip], [phoneNumber], [emailAddress]) VALUES (N'Szslak', N'Moe', N'Moes Tavern', N'Springfield', N'GA', N'30332', N'555-555-5784', N'moe.szslak@gmail.com')
+INSERT [dbo].[owner] ([lastName], [firstName], [streetAddress], [city], [state], [zip], [phoneNumber], [emailAddress]) VALUES (N'Szslak', N'Moe', N'Moes Tavern', N'Springfield', N'GA', N'30332', N'555-555-5784', N'jeff.smith@gmail.com')
 /*** Vehicle Data ***/
 INSERT [dbo].[vehicle] ([vin], [make], [model], [vehicleYear]) VALUES (N'HONDAACCORDTEST01', N'Honda', N'Accord', N'2006')
 INSERT [dbo].[vehicle] ([vin], [make], [model], [vehicleYear]) VALUES (N'HONDAODYSSEYTEST2', N'Honda', N'Odyssey', N'2007')
