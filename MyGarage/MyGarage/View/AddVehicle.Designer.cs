@@ -74,7 +74,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 51);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(736, 31);
+            this.panel3.Size = new System.Drawing.Size(641, 31);
             this.panel3.TabIndex = 19;
             // 
             // label11
@@ -107,7 +107,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(345, 102);
+            this.label14.Location = new System.Drawing.Point(291, 102);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(38, 17);
             this.label14.TabIndex = 24;
@@ -115,14 +115,14 @@
             // 
             // txtMake
             // 
-            this.txtMake.Location = new System.Drawing.Point(389, 102);
+            this.txtMake.Location = new System.Drawing.Point(335, 99);
             this.txtMake.Name = "txtMake";
             this.txtMake.Size = new System.Drawing.Size(203, 25);
             this.txtMake.TabIndex = 23;
             // 
             // txtYear
             // 
-            this.txtYear.Location = new System.Drawing.Point(389, 137);
+            this.txtYear.Location = new System.Drawing.Point(335, 137);
             this.txtYear.Name = "txtYear";
             this.txtYear.Size = new System.Drawing.Size(69, 25);
             this.txtYear.TabIndex = 30;
@@ -130,7 +130,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(351, 140);
+            this.label12.Location = new System.Drawing.Point(297, 140);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(32, 17);
             this.label12.TabIndex = 29;
