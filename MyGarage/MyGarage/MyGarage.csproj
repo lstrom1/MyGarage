@@ -59,6 +59,12 @@
     <Compile Include="View\AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\AddVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddVehicle.Designer.cs">
+      <DependentUpon>AddVehicle.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\EditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="View\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddVehicle.resx">
+      <DependentUpon>AddVehicle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditCustomer.resx">
       <DependentUpon>EditCustomer.cs</DependentUpon>
