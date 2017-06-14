@@ -114,7 +114,7 @@ namespace MyGarage.View
         private bool IsValidYear(string year) { 
             try
             {
-                if (Regex.IsMatch(year, "^(19|20)[0-9][0-9]"))
+                if (Regex.IsMatch(year, "^(19|20)[0-9][0-9]") && Convert.ToInt32(year) <= DateTime.Now.Year)
                 {
                     return true;
                 }
