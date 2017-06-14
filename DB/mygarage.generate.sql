@@ -29,7 +29,8 @@ CREATE TABLE [dbo].[owner]
    [zip] varchar(5)  NOT NULL,
    [phoneNumber] varchar(12)  NOT NULL,
    [emailAddress] varchar(150) NOT NULL,
-CONSTRAINT [PK_owner_ownerID] PRIMARY KEY CLUSTERED ([ownerID])
+CONSTRAINT [PK_owner_ownerID] PRIMARY KEY CLUSTERED ([ownerID]),
+CONSTRAINT [uniqueEmailAddress] UNIQUE (emailAddress)
 )
 
 GO
