@@ -16,7 +16,8 @@ namespace MyGarage.View
     public partial class AddCustomer : Form
     {
 
-        OwnerController ownControl = new OwnerController(); 
+        OwnerController ownControl = new OwnerController();
+        VehicleController vehControl = new VehicleController(); 
 
         public AddCustomer()
         {
@@ -37,6 +38,7 @@ namespace MyGarage.View
         {
             if (AllValidInputs() && IsValidEmail(txtEmail.Text) && IsValidPhone(txtPhoneNum.Text) && IsValidYear(txtYear.Text))
             {
+                //add new owner
                 Owner newOwner = new Owner(); 
                 newOwner.firstName = txtFirstName.Text;
                 newOwner.lastName = txtLastName.Text;
@@ -45,11 +47,22 @@ namespace MyGarage.View
                 newOwner.state = cmbState.ValueMember;
                 newOwner.zip = txtZip.Text;
                 newOwner.phoneNumber = txtPhoneNum.Text;
-                newOwner.emailAddress = txtEmail.Text; 
-                int addStatus = ownControl.AddOwner(newOwner);
-                    if (addStatus == 0)
+                newOwner.emailAddress = txtEmail.Text;
+
+                //add new vehicle
+                Vehicle newVehicle = new Vehicle();
+                newVehicle.make = txtMake.Text;
+                newVehicle.model = txtModel.Text;
+                newVehicle.VIN = txtVIN.Text;
+                newVehicle.year = txtYear.Text;
+
+                int addStatus = vehControl.AddVehicle(newVehicle); 
+                int addStatus1 = ownControl.AddOwner(newOwner);
+
+                    if (addStatus == 0 && addStatus1 == 0)
                     {
-                        this.DialogResult = DialogResult.OK;
+                        MessageBox.Show("You have successfully created a new customer!");
+                        this.Close(); 
                     } else
                     {
                         MessageBox.Show("There was an error while saving, please try again."); 
@@ -83,7 +96,7 @@ namespace MyGarage.View
         {
             try
             {
-                if (Regex.IsMatch(phone, @"^((1-)?\d{3}-)?\d{3}-\d{4}$"))
+                if (Regex.IsMatch(phone, @"^\(\d{3}\) ?\d{3}( |-)?\d{4}|^\d{3}( |-)?\d{3}( |-)?\d{4}"))
                 {
                     return true;  
                 } else
@@ -101,7 +114,7 @@ namespace MyGarage.View
         private bool IsValidYear(string year) { 
             try
             {
-                if (Regex.IsMatch(year, "^(19|20)[0-9][0-9]"))
+                if (Regex.IsMatch(year, "^(19|20)[0-9][0-9]") && Convert.ToInt32(year) <= DateTime.Now.Year)
                 {
                     return true;
                 }
@@ -120,15 +133,17 @@ namespace MyGarage.View
 
         private bool AllValidInputs()
         {
-            if (txtZip.Text.Length != 5)
-            {
-                MessageBox.Show("Zip code must be five digits long!");
-                return false; 
-            } else if (txtFirstName.Text == "" || txtLastName.Text == "" || txtStreet.Text == "" || txtCity.Text == "" || txtZip.Text == "" || txtPhoneNum.Text == "" || txtEmail.Text == "" || txtMake.Text == "" || txtVIN.Text == "" || txtYear.Text == "" || txtModel.Text == "")
+            if (txtFirstName.Text == "" || txtLastName.Text == "" || txtStreet.Text == "" || txtCity.Text == "" || txtZip.Text == "" || txtPhoneNum.Text == "" || txtEmail.Text == "" || txtMake.Text == "" || txtVIN.Text == "" || txtYear.Text == "" || txtModel.Text == "")
             {
                 MessageBox.Show("Please fill out all fields.");
                 return false;
-            } else
+            }
+            else if (txtZip.Text.Length != 5)
+            {
+                MessageBox.Show("Zip code must be five digits long!");
+                return false;
+            }
+            else
             {
                 return true;
             }

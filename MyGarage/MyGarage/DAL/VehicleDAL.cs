@@ -22,7 +22,7 @@ namespace MyGarage.DAL
 
             string insertStatement =
                 "INSERT vehicle " +
-                    "(make, model, year, VIN)" +
+                    "(make, model, vehicleYear, VIN)" +
                 "VALUES" +
                     "(@make, @model, @year, @VIN)";
 

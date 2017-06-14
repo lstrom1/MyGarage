@@ -25,10 +25,29 @@ namespace MyGarage
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
+            frmPanel.Controls.Clear(); 
             AddCustomer addCust = new AddCustomer();
             addCust.TopLevel = false;
             frmPanel.Controls.Add(addCust);
             addCust.Show();
+        }
+
+        private void btnAddVehicle_Click(object sender, EventArgs e)
+        {
+            frmPanel.Controls.Clear();
+            AddVehicle addVeh = new View.AddVehicle();
+            addVeh.TopLevel = false;
+            frmPanel.Controls.Add(addVeh);
+            addVeh.Show(); 
+        }
+
+        private void btnEditCustomer_Click(object sender, EventArgs e)
+        {
+            frmPanel.Controls.Clear();
+            EditCustomer editCustomer = new View.EditCustomer();
+            editCustomer.TopLevel = false;
+            frmPanel.Controls.Add(editCustomer);
+            editCustomer.Show();
         }
     }
 }
