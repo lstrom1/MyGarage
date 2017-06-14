@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Controller\OwnerController.cs" />
     <Compile Include="DAL\OwnerDAL.cs" />
+    <Compile Include="DAL\VehicleDAL.cs" />
     <Compile Include="DB\DBConnection.cs" />
     <Compile Include="Model\Owner.cs" />
     <Compile Include="Model\Vehicle.cs" />
