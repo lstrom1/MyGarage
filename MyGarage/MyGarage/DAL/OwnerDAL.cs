@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using MyGarage.DB;
 using System.Windows.Forms;
 using System.Data;
+using System.Collections.Generic;
 
 namespace MyGarage.DAL
 {
@@ -199,6 +200,69 @@ namespace MyGarage.DAL
                 throw ex;
             }
             return owner;
+        }
+
+        public static List<Owner> GetListByName(string firstName, string lastName)
+        {
+            System.Collections.Generic.List<Owner> ownerList = new List<Owner>();
+            string selectStatement = "SELECT * FROM owner " +
+                "WHERE (firstName LIKE @firstName OR lastName LIKE @lastname) " +
+                "ORDER BY lastName";
+            SqlDataReader reader = null;
+            SqlConnection connection = null;
+            try
+            {
+                using (SqlConnection connection = DBConnection.GetConnection())
+                {
+                    connection.Open();
+                    using (SqlCommand selectCommand = new SqlCommand(selectStatement, connection))
+                    {
+                        if (String.IsNullOrEmpty(firstName))
+                            selectCommand.Parameters.AddWithValue("@firstName", firstName);
+                        else
+                            selectCommand.Parameters.AddWithValue("@firstName", firstName + "%");
+
+                        if (String.IsNullOrEmpty(lastName))
+                            selectCommand.Parameters.AddWithValue("@lastName", lastName);
+                        else
+                            selectCommand.Parameters.AddWithValue("@lastName", lastName + "%");
+
+                        using (reader = selectCommand.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Owner owner = new Owner();
+                                owner.ownerID = (int)reader["ownerID"];
+                                owner.firstName = reader["firstName"].ToString();
+                                owner.lastName = reader["lastName"].ToString();
+                                owner.streetAddress = reader["streetAddress"].ToString();
+                                owner.city = reader["city"].ToString();
+                                owner.state = reader["state"].ToString();
+                                owner.zip = reader["zip"].ToString();
+                                owner.phoneNumber = reader["phoneNumber"].ToString();
+                                owner.emailAddress = reader["emailAddress"].ToString();
+                                ownerList.Add(owner);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+                if (reader != null)
+                    reader.Close();
+            }
+            return ownerList;
         }
     }
 }
