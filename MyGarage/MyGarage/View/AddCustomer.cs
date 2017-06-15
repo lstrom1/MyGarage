@@ -44,7 +44,7 @@ namespace MyGarage.View
                 newOwner.lastName = txtLastName.Text;
                 newOwner.streetAddress = txtStreet.Text;
                 newOwner.city = txtCity.Text;
-                newOwner.state = cmbState.ValueMember;
+                newOwner.state = cmbState.Text;
                 newOwner.zip = txtZip.Text;
                 newOwner.phoneNumber = txtPhoneNum.Text;
                 newOwner.emailAddress = txtEmail.Text;

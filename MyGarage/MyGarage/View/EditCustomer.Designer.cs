@@ -51,9 +51,9 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearchLast = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSearchFirst = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.cmbSelect = new System.Windows.Forms.ComboBox();
             this.btnSelect = new System.Windows.Forms.Button();
@@ -291,6 +291,7 @@
             this.btnClose.TabIndex = 41;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSave
             // 
@@ -300,6 +301,7 @@
             this.btnSave.TabIndex = 40;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label11
             // 
@@ -310,12 +312,12 @@
             this.label11.TabIndex = 45;
             this.label11.Text = "Last Name";
             // 
-            // textBox1
+            // txtSearchLast
             // 
-            this.textBox1.Location = new System.Drawing.Point(99, 141);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(203, 25);
-            this.textBox1.TabIndex = 44;
+            this.txtSearchLast.Location = new System.Drawing.Point(99, 141);
+            this.txtSearchLast.Name = "txtSearchLast";
+            this.txtSearchLast.Size = new System.Drawing.Size(203, 25);
+            this.txtSearchLast.TabIndex = 44;
             // 
             // label12
             // 
@@ -326,12 +328,12 @@
             this.label12.TabIndex = 43;
             this.label12.Text = "First Name";
             // 
-            // textBox2
+            // txtSearchFirst
             // 
-            this.textBox2.Location = new System.Drawing.Point(99, 109);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 25);
-            this.textBox2.TabIndex = 42;
+            this.txtSearchFirst.Location = new System.Drawing.Point(99, 109);
+            this.txtSearchFirst.Name = "txtSearchFirst";
+            this.txtSearchFirst.Size = new System.Drawing.Size(203, 25);
+            this.txtSearchFirst.TabIndex = 42;
             // 
             // btnSearch
             // 
@@ -341,6 +343,7 @@
             this.btnSearch.TabIndex = 46;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cmbSelect
             // 
@@ -358,6 +361,7 @@
             this.btnSelect.TabIndex = 48;
             this.btnSelect.Text = "Select";
             this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // panel3
             // 
@@ -389,9 +393,9 @@
             this.Controls.Add(this.cmbSelect);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSearchLast);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtSearchFirst);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtPhoneNum);
@@ -452,9 +456,9 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearchLast;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSearchFirst;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ComboBox cmbSelect;
         private System.Windows.Forms.Button btnSelect;

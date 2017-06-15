@@ -29,5 +29,13 @@
 
         // emailAddress type varchar(150) in the DB
         public string emailAddress { get; set; }
+
+        public string ownerUnique
+        {
+            get
+            {
+                return firstName + ' ' + lastName + ' ' + emailAddress; 
+            }
+        }
     }
 }

@@ -81,15 +81,15 @@ namespace MyGarage.DAL
             updateCommand.Connection = connection;
 
             updateCommand.CommandText = "UPDATE owner " +
-                "SET lastname = @updateLastName, " +
+                "SET lastname = @updatedLastName, " +
                     "firstname = @updatedFirstName, " +
                     "streetAddress = @updatedStreetAddress, " +
                     "city = @updatedCity, " +
                     "state = @updatedState, " +
                     "zip = @updatedZip, " +
                     "phoneNumber = @updatedPhoneNumber, " +
-                    "emailAddress = @updatedEmailAddress, " +
-                "WHERE ownerID = @ownerID";
+                    "emailAddress = @updatedEmailAddress " +
+                "WHERE ownerID = @ownerID ";
 
             updateCommand.Parameters.AddWithValue("@updatedLastName", updatedOwner.lastName);
             updateCommand.Parameters.AddWithValue("@updatedFirstName", updatedOwner.firstName);
@@ -99,7 +99,7 @@ namespace MyGarage.DAL
             updateCommand.Parameters.AddWithValue("@updatedZip", updatedOwner.zip);
             updateCommand.Parameters.AddWithValue("@updatedPhoneNumber", updatedOwner.phoneNumber);
             updateCommand.Parameters.AddWithValue("@updatedEmailAddress", updatedOwner.emailAddress);
-
+            updateCommand.Parameters.AddWithValue("@ownerID", existingOwner.ownerID);
             try
             {
                 connection.Open();
@@ -212,7 +212,7 @@ namespace MyGarage.DAL
             SqlConnection connection = null;
             try
             {
-                using (SqlConnection connection = DBConnection.GetConnection())
+                using (connection = DBConnection.GetConnection())
                 {
                     connection.Open();
                     using (SqlCommand selectCommand = new SqlCommand(selectStatement, connection))
