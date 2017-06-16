@@ -154,5 +154,15 @@ namespace MyGarage.View
         {
             this.allowOnlyNumbersKeyPress(e);
         }
+
+        private void txtPhoneNum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.allowOnlyNumbersKeyPress(e);
+        }
+
+        private void txtYear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.allowOnlyNumbersKeyPress(e);
+        }
     }
 }

@@ -205,6 +205,7 @@
             this.txtPhoneNum.Name = "txtPhoneNum";
             this.txtPhoneNum.Size = new System.Drawing.Size(203, 29);
             this.txtPhoneNum.TabIndex = 16;
+            this.txtPhoneNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNum_KeyPress);
             // 
             // panel2
             // 
@@ -388,6 +389,7 @@
             this.txtYear.Name = "txtYear";
             this.txtYear.Size = new System.Drawing.Size(69, 29);
             this.txtYear.TabIndex = 26;
+            this.txtYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYear_KeyPress);
             // 
             // AddCustomer
             // 
