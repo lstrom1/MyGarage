@@ -133,7 +133,12 @@ namespace MyGarage.View
             }
             else if (txtZip.Text.Length != 5)
             {
-                MessageBox.Show("Zip code must be five digits long!");
+                MessageBox.Show("Zip code must be exactly five digits long!");
+                return false;
+            }
+            else if (txtVIN.Text.Length < 11 || txtVIN.Text.Length > 17)
+            {
+                MessageBox.Show("VIN must be between 11 and 17 digits long!");
                 return false;
             }
             else
