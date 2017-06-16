@@ -1,14 +1,7 @@
 ﻿using MyGarage.Controller;
 using MyGarage.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MyGarage.View
@@ -78,6 +71,11 @@ namespace MyGarage.View
                 MessageBox.Show("Please fill out all fields.");
                 return false;
             }
+            else if (txtVIN.Text.Length < 11 || txtVIN.Text.Length > 17)
+            {
+                MessageBox.Show("VIN must be between 11 and 17 digits long!");
+                return false;
+            }
             else
             {
                 return true;
@@ -87,6 +85,19 @@ namespace MyGarage.View
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void allowOnlyNumbersKeyPress(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtYear_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.allowOnlyNumbersKeyPress(e);
         }
     }
 }
