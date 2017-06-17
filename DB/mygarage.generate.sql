@@ -50,7 +50,8 @@ CREATE TABLE [dbo].[vehicle]
    [make] varchar(45)  NOT NULL,
    [model] varchar(45)  NOT NULL,
    [vehicleYear] varchar(4)  NOT NULL,
-CONSTRAINT [PK_vehicle_vehicleID] PRIMARY KEY CLUSTERED ([vehicleID])
+CONSTRAINT [PK_vehicle_vehicleID] PRIMARY KEY CLUSTERED ([vehicleID]),
+CONSTANT [uniqueVIN] UNIQUE (vin)
 )
 
 GO
