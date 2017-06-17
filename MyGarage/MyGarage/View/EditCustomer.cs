@@ -2,13 +2,7 @@
 using MyGarage.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MyGarage.View
@@ -135,7 +129,12 @@ namespace MyGarage.View
         {
             try
             {
-                if (Regex.IsMatch(phone, @"^\(\d{3}\) ?\d{3}( |-)?\d{4}|^\d{3}( |-)?\d{3}( |-)?\d{4}"))
+                if (phone.Length > 12 || phone.Length < 10)
+                {
+                    MessageBox.Show("Invalid phone number length.");
+                    return false;
+                }
+                else if (Regex.IsMatch(phone, @"^\(\d{3}\) ?\d{3}( |-)?\d{4}|^\d{3}( |-)?\d{3}( |-)?\d{4}"))
                 {
                     return true;
                 }
@@ -167,6 +166,19 @@ namespace MyGarage.View
             {
                 return true;
             }
+        }
+
+        private void allowOnlyNumbersKeyPress(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtZip_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.allowOnlyNumbersKeyPress(e);
         }
     }
 
