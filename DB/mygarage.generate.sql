@@ -51,7 +51,7 @@ CREATE TABLE [dbo].[vehicle]
    [model] varchar(45)  NOT NULL,
    [vehicleYear] varchar(4)  NOT NULL,
 CONSTRAINT [PK_vehicle_vehicleID] PRIMARY KEY CLUSTERED ([vehicleID]),
-CONSTANT [uniqueVIN] UNIQUE (vin)
+CONSTRAINT [uniqueVIN] UNIQUE (vin)
 )
 
 GO
@@ -71,7 +71,8 @@ CREATE TABLE [dbo].[ownerVehicle]
    [vehicleID] int NOT NULL,
 CONSTRAINT [PK_ownerVehicle_ownerVehicleID] PRIMARY KEY CLUSTERED ([ownerVehicleID]),
 CONSTRAINT [fk_ownerVehicle_ownerID] FOREIGN KEY ([ownerID]) REFERENCES owner ([ownerID]),
-CONSTRAINT [fk_ownerVehicle_vehicleID] FOREIGN KEY ([vehicleID]) REFERENCES vehicle ([vehicleID])  
+CONSTRAINT [fk_ownerVehicle_vehicleID] FOREIGN KEY ([vehicleID]) REFERENCES vehicle ([vehicleID])
+CONSTRAINT [uniqueOwnerVehicle] UNIQUE ([ownerID], [vehicleID])  
 )
 
 GO
