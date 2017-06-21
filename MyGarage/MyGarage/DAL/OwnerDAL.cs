@@ -89,7 +89,7 @@ namespace MyGarage.DAL
                     "zip = @updatedZip, " +
                     "phoneNumber = @updatedPhoneNumber, " +
                     "emailAddress = @updatedEmailAddress " +
-                "WHERE ownerID = @ownerID ";
+                "WHERE ownerID = @ownerID";
 
             updateCommand.Parameters.AddWithValue("@updatedLastName", updatedOwner.lastName);
             updateCommand.Parameters.AddWithValue("@updatedFirstName", updatedOwner.firstName);

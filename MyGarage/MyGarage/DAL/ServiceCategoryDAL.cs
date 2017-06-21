@@ -177,7 +177,10 @@ namespace MyGarage.DAL
             }
             return serviceCategory;
         }
-
+        /// <summary>
+        /// List of serviceCategory records
+        /// </summary>
+        /// <returns></returns>
         public static List<ServiceCategory> GetServiceCategoryList()
         {
             List<ServiceCategory> serviceCategoryList = new List<ServiceCategory>();
