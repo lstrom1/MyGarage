@@ -44,7 +44,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtPhoneNum = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -60,6 +59,11 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.cmbState = new System.Windows.Forms.ComboBox();
             this.txtYear = new System.Windows.Forms.TextBox();
+            this.txtPhoneAreaCode = new System.Windows.Forms.TextBox();
+            this.firstDash = new System.Windows.Forms.Label();
+            this.txtPhoneFirstThreeDigits = new System.Windows.Forms.TextBox();
+            this.txtPhoneLastFourDigits = new System.Windows.Forms.TextBox();
+            this.secondDash = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -84,7 +88,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(343, 96);
+            this.label2.Location = new System.Drawing.Point(314, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 23);
             this.label2.TabIndex = 3;
@@ -92,10 +96,10 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(415, 96);
+            this.txtLastName.Location = new System.Drawing.Point(392, 96);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(203, 29);
-            this.txtLastName.TabIndex = 2;
+            this.txtLastName.Size = new System.Drawing.Size(226, 29);
+            this.txtLastName.TabIndex = 1;
             // 
             // label3
             // 
@@ -130,7 +134,7 @@
             this.txtStreet.Location = new System.Drawing.Point(90, 135);
             this.txtStreet.Name = "txtStreet";
             this.txtStreet.Size = new System.Drawing.Size(528, 29);
-            this.txtStreet.TabIndex = 7;
+            this.txtStreet.TabIndex = 2;
             // 
             // label5
             // 
@@ -146,12 +150,12 @@
             this.txtCity.Location = new System.Drawing.Point(90, 176);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(203, 29);
-            this.txtCity.TabIndex = 9;
+            this.txtCity.TabIndex = 3;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(374, 179);
+            this.label6.Location = new System.Drawing.Point(355, 179);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 23);
             this.label6.TabIndex = 10;
@@ -171,13 +175,13 @@
             this.txtZip.Location = new System.Drawing.Point(544, 176);
             this.txtZip.Name = "txtZip";
             this.txtZip.Size = new System.Drawing.Size(74, 29);
-            this.txtZip.TabIndex = 12;
+            this.txtZip.TabIndex = 5;
             this.txtZip.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtZip_KeyPress);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(317, 216);
+            this.label8.Location = new System.Drawing.Point(298, 216);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(121, 23);
             this.label8.TabIndex = 13;
@@ -197,15 +201,7 @@
             this.txtEmail.Location = new System.Drawing.Point(90, 216);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(203, 29);
-            this.txtEmail.TabIndex = 15;
-            // 
-            // txtPhoneNum
-            // 
-            this.txtPhoneNum.Location = new System.Drawing.Point(415, 216);
-            this.txtPhoneNum.Name = "txtPhoneNum";
-            this.txtPhoneNum.Size = new System.Drawing.Size(203, 29);
-            this.txtPhoneNum.TabIndex = 16;
-            this.txtPhoneNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNum_KeyPress);
+            this.txtEmail.TabIndex = 6;
             // 
             // panel2
             // 
@@ -250,7 +246,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(377, 347);
+            this.label12.Location = new System.Drawing.Point(357, 347);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(40, 23);
             this.label12.TabIndex = 25;
@@ -261,7 +257,7 @@
             this.txtModel.Location = new System.Drawing.Point(90, 347);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(203, 29);
-            this.txtModel.TabIndex = 24;
+            this.txtModel.TabIndex = 12;
             // 
             // label13
             // 
@@ -275,7 +271,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(371, 306);
+            this.label14.Location = new System.Drawing.Point(351, 306);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(49, 23);
             this.label14.TabIndex = 22;
@@ -283,10 +279,10 @@
             // 
             // txtMake
             // 
-            this.txtMake.Location = new System.Drawing.Point(415, 306);
+            this.txtMake.Location = new System.Drawing.Point(392, 306);
             this.txtMake.Name = "txtMake";
-            this.txtMake.Size = new System.Drawing.Size(203, 29);
-            this.txtMake.TabIndex = 21;
+            this.txtMake.Size = new System.Drawing.Size(226, 29);
+            this.txtMake.TabIndex = 11;
             // 
             // label15
             // 
@@ -302,14 +298,14 @@
             this.txtVIN.Location = new System.Drawing.Point(90, 306);
             this.txtVIN.Name = "txtVIN";
             this.txtVIN.Size = new System.Drawing.Size(203, 29);
-            this.txtVIN.TabIndex = 19;
+            this.txtVIN.TabIndex = 10;
             // 
             // btnSave
             // 
             this.btnSave.Location = new System.Drawing.Point(90, 392);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 31);
-            this.btnSave.TabIndex = 27;
+            this.btnSave.TabIndex = 14;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -319,7 +315,7 @@
             this.btnClose.Location = new System.Drawing.Point(171, 392);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 31);
-            this.btnClose.TabIndex = 28;
+            this.btnClose.TabIndex = 15;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -378,18 +374,60 @@
             "WV",
             "WI",
             "WY"});
-            this.cmbState.Location = new System.Drawing.Point(415, 176);
+            this.cmbState.Location = new System.Drawing.Point(392, 176);
             this.cmbState.Name = "cmbState";
             this.cmbState.Size = new System.Drawing.Size(59, 29);
-            this.cmbState.TabIndex = 29;
+            this.cmbState.TabIndex = 4;
             // 
             // txtYear
             // 
-            this.txtYear.Location = new System.Drawing.Point(415, 344);
+            this.txtYear.Location = new System.Drawing.Point(392, 344);
             this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(69, 29);
-            this.txtYear.TabIndex = 26;
+            this.txtYear.Size = new System.Drawing.Size(92, 29);
+            this.txtYear.TabIndex = 13;
             this.txtYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYear_KeyPress);
+            // 
+            // txtPhoneAreaCode
+            // 
+            this.txtPhoneAreaCode.Location = new System.Drawing.Point(392, 216);
+            this.txtPhoneAreaCode.Name = "txtPhoneAreaCode";
+            this.txtPhoneAreaCode.Size = new System.Drawing.Size(59, 29);
+            this.txtPhoneAreaCode.TabIndex = 7;
+            this.txtPhoneAreaCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneAreaCode_KeyPress);
+            // 
+            // firstDash
+            // 
+            this.firstDash.AutoSize = true;
+            this.firstDash.Location = new System.Drawing.Point(454, 219);
+            this.firstDash.Name = "firstDash";
+            this.firstDash.Size = new System.Drawing.Size(17, 23);
+            this.firstDash.TabIndex = 31;
+            this.firstDash.Text = "-";
+            // 
+            // txtPhoneFirstThreeDigits
+            // 
+            this.txtPhoneFirstThreeDigits.Location = new System.Drawing.Point(468, 216);
+            this.txtPhoneFirstThreeDigits.Name = "txtPhoneFirstThreeDigits";
+            this.txtPhoneFirstThreeDigits.Size = new System.Drawing.Size(55, 29);
+            this.txtPhoneFirstThreeDigits.TabIndex = 8;
+            this.txtPhoneFirstThreeDigits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneFirstThreeDigits_KeyPress);
+            // 
+            // txtPhoneLastFourDigits
+            // 
+            this.txtPhoneLastFourDigits.Location = new System.Drawing.Point(544, 216);
+            this.txtPhoneLastFourDigits.Name = "txtPhoneLastFourDigits";
+            this.txtPhoneLastFourDigits.Size = new System.Drawing.Size(74, 29);
+            this.txtPhoneLastFourDigits.TabIndex = 9;
+            this.txtPhoneLastFourDigits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneLastFourDigits_KeyPress);
+            // 
+            // secondDash
+            // 
+            this.secondDash.AutoSize = true;
+            this.secondDash.Location = new System.Drawing.Point(529, 219);
+            this.secondDash.Name = "secondDash";
+            this.secondDash.Size = new System.Drawing.Size(17, 23);
+            this.secondDash.TabIndex = 34;
+            this.secondDash.Text = "-";
             // 
             // AddCustomer
             // 
@@ -397,6 +435,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(641, 529);
+            this.Controls.Add(this.secondDash);
+            this.Controls.Add(this.txtPhoneLastFourDigits);
+            this.Controls.Add(this.txtPhoneFirstThreeDigits);
+            this.Controls.Add(this.firstDash);
+            this.Controls.Add(this.txtPhoneAreaCode);
             this.Controls.Add(this.cmbState);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
@@ -410,7 +453,6 @@
             this.Controls.Add(this.txtVIN);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.txtPhoneNum);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -461,7 +503,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtPhoneNum;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel3;
@@ -477,5 +518,10 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ComboBox cmbState;
         private System.Windows.Forms.TextBox txtYear;
+        private System.Windows.Forms.TextBox txtPhoneAreaCode;
+        private System.Windows.Forms.Label firstDash;
+        private System.Windows.Forms.TextBox txtPhoneFirstThreeDigits;
+        private System.Windows.Forms.TextBox txtPhoneLastFourDigits;
+        private System.Windows.Forms.Label secondDash;
     }
 }

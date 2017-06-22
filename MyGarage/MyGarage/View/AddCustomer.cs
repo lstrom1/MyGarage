@@ -29,17 +29,23 @@ namespace MyGarage.View
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (AllValidInputs() && IsValidEmail(txtEmail.Text) && IsValidPhone(txtPhoneNum.Text) && IsValidYear(txtYear.Text))
+            if (AllValidInputs() && IsValidEmail(txtEmail.Text) && IsValidYear(txtYear.Text))
             {
                 //add new owner
-                Owner newOwner = new Owner(); 
+                Owner newOwner = new Owner();
+
+                string formattedPhoneNumber =
+                    txtPhoneAreaCode.Text + "-" +
+                    txtPhoneFirstThreeDigits.Text + "-" +
+                    txtPhoneLastFourDigits.Text;
+
                 newOwner.firstName = txtFirstName.Text;
                 newOwner.lastName = txtLastName.Text;
                 newOwner.streetAddress = txtStreet.Text;
                 newOwner.city = txtCity.Text;
                 newOwner.state = cmbState.Text;
                 newOwner.zip = txtZip.Text;
-                newOwner.phoneNumber = txtPhoneNum.Text;
+                newOwner.phoneNumber = formattedPhoneNumber;
                 newOwner.emailAddress = txtEmail.Text;
 
                 //add new vehicle
@@ -126,7 +132,19 @@ namespace MyGarage.View
 
         private bool AllValidInputs()
         {
-            if (txtFirstName.Text == "" || txtLastName.Text == "" || txtStreet.Text == "" || txtCity.Text == "" || txtZip.Text == "" || txtPhoneNum.Text == "" || txtEmail.Text == "" || txtMake.Text == "" || txtVIN.Text == "" || txtYear.Text == "" || txtModel.Text == "")
+            if (txtFirstName.Text == "" || 
+                txtLastName.Text == "" || 
+                txtStreet.Text == "" || 
+                txtCity.Text == "" || 
+                txtZip.Text == "" || 
+                txtPhoneAreaCode.Text == "" || 
+                txtPhoneFirstThreeDigits.Text == "" || 
+                txtPhoneLastFourDigits.Text == "" || 
+                txtEmail.Text == "" || 
+                txtMake.Text == "" || 
+                txtVIN.Text == "" || 
+                txtYear.Text == "" || 
+                txtModel.Text == "")
             {
                 MessageBox.Show("Please fill out all fields.");
                 return false;
@@ -134,6 +152,21 @@ namespace MyGarage.View
             else if (txtZip.Text.Length != 5)
             {
                 MessageBox.Show("Zip code must be exactly five digits long!");
+                return false;
+            }
+            else if (txtPhoneAreaCode.Text.Length != 3)
+            {
+                MessageBox.Show("A phone number's area code must be exactly 3 digits long!");
+                return false;
+            }
+            else if (txtPhoneFirstThreeDigits.Text.Length != 3)
+            {
+                MessageBox.Show("A phone number's first three digits must be exactly 3 digits long!");
+                return false;
+            }
+            else if (txtPhoneLastFourDigits.Text.Length != 4)
+            {
+                MessageBox.Show("A phone number's last four digits must be exactly 4 digits long!");
                 return false;
             }
             else if (txtVIN.Text.Length < 11 || txtVIN.Text.Length > 17)
@@ -160,12 +193,22 @@ namespace MyGarage.View
             this.allowOnlyNumbersKeyPress(e);
         }
 
-        private void txtPhoneNum_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtYear_KeyPress(object sender, KeyPressEventArgs e)
         {
             this.allowOnlyNumbersKeyPress(e);
         }
 
-        private void txtYear_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtPhoneAreaCode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.allowOnlyNumbersKeyPress(e);
+        }
+
+        private void txtPhoneFirstThreeDigits_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.allowOnlyNumbersKeyPress(e);
+        }
+
+        private void txtPhoneLastFourDigits_KeyPress(object sender, KeyPressEventArgs e)
         {
             this.allowOnlyNumbersKeyPress(e);
         }
