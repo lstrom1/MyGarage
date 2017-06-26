@@ -91,6 +91,7 @@ namespace MyGarage.View
             }
         } 
 
+        //Old phone validation
         private bool IsValidPhone(string phone)
         {
             try
