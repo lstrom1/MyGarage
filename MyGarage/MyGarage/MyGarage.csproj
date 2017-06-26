@@ -49,9 +49,13 @@
     <Compile Include="Controller\OwnerController.cs" />
     <Compile Include="Controller\VehicleController.cs" />
     <Compile Include="DAL\OwnerDAL.cs" />
+    <Compile Include="DAL\OwnerVehicleDAL.cs" />
+    <Compile Include="DAL\ServiceCategoryDAL.cs" />
     <Compile Include="DAL\VehicleDAL.cs" />
     <Compile Include="DB\DBConnection.cs" />
     <Compile Include="Model\Owner.cs" />
+    <Compile Include="Model\OwnerVehicle.cs" />
+    <Compile Include="Model\ServiceCategory.cs" />
     <Compile Include="Model\Vehicle.cs" />
     <Compile Include="View\AddCustomer.cs">
       <SubType>Form</SubType>
