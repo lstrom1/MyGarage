@@ -190,12 +190,12 @@ namespace MyGarage.DAL
             SqlConnection connection = null;
             try
             {
-                using (SqlConnection connection = DBConnection.GetConnection());
+                using (connection = DBConnection.GetConnection());
                 {
                     connection.Open();
                     using (SqlCommand selectCommand = new SqlCommand(selectStatement, connection))
                     {
-                        using (SqlDataReader reader = selectCommand.ExecuteReader())
+                        using (reader = selectCommand.ExecuteReader())
                         {
                             while (reader.Read())
                             {
