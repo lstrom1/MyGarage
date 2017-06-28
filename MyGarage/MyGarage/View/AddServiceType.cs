@@ -23,7 +23,7 @@ namespace MyGarage.View
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (AllValidInputs() {
+            if (AllValidInputs()) {
                 ServiceCategory serviceCat = new ServiceCategory();
                 serviceCat.categoryName = txtServiceName.Text;
                 serviceCat.mileageIntervals = Convert.ToInt32(txtMileFreq.Text);

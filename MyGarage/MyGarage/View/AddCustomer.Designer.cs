@@ -60,10 +60,10 @@
             this.cmbState = new System.Windows.Forms.ComboBox();
             this.txtYear = new System.Windows.Forms.TextBox();
             this.txtPhoneAreaCode = new System.Windows.Forms.TextBox();
-            this.firstDash = new System.Windows.Forms.Label();
+            this.phoneDashLeft = new System.Windows.Forms.Label();
             this.txtPhoneFirstThreeDigits = new System.Windows.Forms.TextBox();
             this.txtPhoneLastFourDigits = new System.Windows.Forms.TextBox();
-            this.secondDash = new System.Windows.Forms.Label();
+            this.phoneDashRight = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -395,14 +395,14 @@
             this.txtPhoneAreaCode.TabIndex = 7;
             this.txtPhoneAreaCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneAreaCode_KeyPress);
             // 
-            // firstDash
+            // phoneDashLeft
             // 
-            this.firstDash.AutoSize = true;
-            this.firstDash.Location = new System.Drawing.Point(454, 219);
-            this.firstDash.Name = "firstDash";
-            this.firstDash.Size = new System.Drawing.Size(17, 23);
-            this.firstDash.TabIndex = 31;
-            this.firstDash.Text = "-";
+            this.phoneDashLeft.AutoSize = true;
+            this.phoneDashLeft.Location = new System.Drawing.Point(454, 219);
+            this.phoneDashLeft.Name = "phoneDashLeft";
+            this.phoneDashLeft.Size = new System.Drawing.Size(17, 23);
+            this.phoneDashLeft.TabIndex = 31;
+            this.phoneDashLeft.Text = "-";
             // 
             // txtPhoneFirstThreeDigits
             // 
@@ -420,14 +420,14 @@
             this.txtPhoneLastFourDigits.TabIndex = 9;
             this.txtPhoneLastFourDigits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneLastFourDigits_KeyPress);
             // 
-            // secondDash
+            // phoneDashRight
             // 
-            this.secondDash.AutoSize = true;
-            this.secondDash.Location = new System.Drawing.Point(529, 219);
-            this.secondDash.Name = "secondDash";
-            this.secondDash.Size = new System.Drawing.Size(17, 23);
-            this.secondDash.TabIndex = 34;
-            this.secondDash.Text = "-";
+            this.phoneDashRight.AutoSize = true;
+            this.phoneDashRight.Location = new System.Drawing.Point(529, 219);
+            this.phoneDashRight.Name = "phoneDashRight";
+            this.phoneDashRight.Size = new System.Drawing.Size(17, 23);
+            this.phoneDashRight.TabIndex = 34;
+            this.phoneDashRight.Text = "-";
             // 
             // AddCustomer
             // 
@@ -435,10 +435,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(641, 529);
-            this.Controls.Add(this.secondDash);
+            this.Controls.Add(this.phoneDashRight);
             this.Controls.Add(this.txtPhoneLastFourDigits);
             this.Controls.Add(this.txtPhoneFirstThreeDigits);
-            this.Controls.Add(this.firstDash);
+            this.Controls.Add(this.phoneDashLeft);
             this.Controls.Add(this.txtPhoneAreaCode);
             this.Controls.Add(this.cmbState);
             this.Controls.Add(this.btnClose);
@@ -519,9 +519,9 @@
         private System.Windows.Forms.ComboBox cmbState;
         private System.Windows.Forms.TextBox txtYear;
         private System.Windows.Forms.TextBox txtPhoneAreaCode;
-        private System.Windows.Forms.Label firstDash;
+        private System.Windows.Forms.Label phoneDashLeft;
         private System.Windows.Forms.TextBox txtPhoneFirstThreeDigits;
         private System.Windows.Forms.TextBox txtPhoneLastFourDigits;
-        private System.Windows.Forms.Label secondDash;
+        private System.Windows.Forms.Label phoneDashRight;
     }
 }
