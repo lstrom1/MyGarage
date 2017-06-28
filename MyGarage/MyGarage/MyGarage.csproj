@@ -65,6 +65,12 @@
     <Compile Include="View\AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\AddServiceRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddServiceRecord.Designer.cs">
+      <DependentUpon>AddServiceRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\AddServiceType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="View\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddServiceRecord.resx">
+      <DependentUpon>AddServiceRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AddServiceType.resx">
       <DependentUpon>AddServiceType.cs</DependentUpon>

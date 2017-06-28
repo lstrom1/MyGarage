@@ -68,7 +68,7 @@ namespace MyGarage.View
                     vehicleID = vehControl.AddVehicle(newVehicle);
                 } else
                 {
-                    vehicleID = Convert.ToInt32(cmbSelect.SelectedValue); 
+                    vehicleID = int.Parse(cmbSelect.SelectedValue.ToString()); 
                 }             
 
                 ownerID = ownControl.AddOwner(newOwner);

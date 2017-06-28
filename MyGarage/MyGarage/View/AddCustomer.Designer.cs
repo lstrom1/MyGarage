@@ -446,7 +446,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(392, 15);
+            this.btnSearch.Location = new System.Drawing.Point(311, 14);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 28);
             this.btnSearch.TabIndex = 49;
@@ -468,7 +468,7 @@
             // 
             // btnAll
             // 
-            this.btnAll.Location = new System.Drawing.Point(311, 15);
+            this.btnAll.Location = new System.Drawing.Point(392, 13);
             this.btnAll.Name = "btnAll";
             this.btnAll.Size = new System.Drawing.Size(75, 28);
             this.btnAll.TabIndex = 51;
