@@ -60,13 +60,14 @@ namespace MyGarage.View
                 newVehicle.VIN = txtVIN.Text;
                 newVehicle.year = txtYear.Text;
 
+                vehicleID = vehControl.AddVehicle(newVehicle);
+                ownerID = ownControl.AddOwner(newOwner);
+
                 //link vehicle to owner (add entry to OwnerVehicle table)
                 OwnerVehicle newOwnerVehicle = new OwnerVehicle();
                 newOwnerVehicle.ownerID = ownerID;
                 newOwnerVehicle.vehicleID = vehicleID;
 
-                vehicleID = vehControl.AddVehicle(newVehicle);
-                ownerID = ownControl.AddOwner(newOwner);
                 status = ownVehControl.AddOwnerVehicle(newOwnerVehicle);
 
                     if (ownerID != 0 && vehicleID != 0 && status == 0)
