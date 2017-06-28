@@ -53,6 +53,11 @@ namespace MyGarage.View
                 {
                     int id = Convert.ToInt32(cmbSelect.SelectedValue.ToString());
                     editOwner = ownControl.GetOwner(id);
+
+                    string areaCode = editOwner.phoneNumber.Substring(0, 3);
+                    string firstThree = editOwner.phoneNumber.Substring(4, 3);
+                    string lastFour = editOwner.phoneNumber.Substring(8, 4);
+
                     txtFirstName.Text = editOwner.firstName;
                     txtLastName.Text = editOwner.lastName;
                     txtStreet.Text = editOwner.streetAddress;
@@ -60,7 +65,9 @@ namespace MyGarage.View
                     txtZip.Text = editOwner.zip;
                     cmbState.Text = editOwner.state;
                     txtEmail.Text = editOwner.emailAddress;
-                    txtPhoneNum.Text = editOwner.phoneNumber;
+                    txtPhoneAreaCode.Text = areaCode;
+                    txtPhoneFirstThreeDigits.Text = firstThree;
+                    txtPhoneLastFourDigits.Text = lastFour;
                 }
                 catch
                 {
@@ -76,9 +83,15 @@ namespace MyGarage.View
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (AllValidInputs() && IsValidEmail(txtEmail.Text) && IsValidPhone(txtPhoneNum.Text))
+            if (AllValidInputs() && IsValidEmail(txtEmail.Text))
             {
                 Owner updatedOwner = new Owner();
+
+                string updatedPhoneNumber =
+                    txtPhoneAreaCode.Text + "-" +
+                    txtPhoneFirstThreeDigits.Text + "-" +
+                    txtPhoneLastFourDigits.Text;
+
                 updatedOwner.firstName = txtFirstName.Text;
                 updatedOwner.lastName = txtLastName.Text;
                 updatedOwner.streetAddress = txtStreet.Text;
@@ -86,7 +99,7 @@ namespace MyGarage.View
                 updatedOwner.state = cmbState.Text;
                 updatedOwner.zip = txtZip.Text;
                 updatedOwner.emailAddress = txtEmail.Text;
-                updatedOwner.phoneNumber = txtPhoneNum.Text;
+                updatedOwner.phoneNumber = updatedPhoneNumber;
 
                 int updateStatus = ownControl.UpdateOwner(editOwner, updatedOwner);
 
@@ -152,7 +165,15 @@ namespace MyGarage.View
 
         private bool AllValidInputs()
         {
-            if (txtFirstName.Text == "" || txtLastName.Text == "" || txtStreet.Text == "" || txtCity.Text == "" || txtZip.Text == "" || txtPhoneNum.Text == "" || txtEmail.Text == "")
+            if (txtFirstName.Text == "" || 
+                txtLastName.Text == "" || 
+                txtStreet.Text == "" || 
+                txtCity.Text == "" || 
+                txtZip.Text == "" ||
+                txtPhoneAreaCode.Text == "" ||
+                txtPhoneFirstThreeDigits.Text == "" ||
+                txtPhoneLastFourDigits.Text == "" || 
+                txtEmail.Text == "")
             {
                 MessageBox.Show("Please fill out all fields.");
                 return false;
@@ -160,6 +181,21 @@ namespace MyGarage.View
             else if (txtZip.Text.Length != 5)
             {
                 MessageBox.Show("Zip code must be five digits long!");
+                return false;
+            }
+            else if (txtPhoneAreaCode.Text.Length != 3)
+            {
+                MessageBox.Show("A phone number's area code must be exactly 3 digits long!");
+                return false;
+            }
+            else if (txtPhoneFirstThreeDigits.Text.Length != 3)
+            {
+                MessageBox.Show("A phone number's first three digits must be exactly 3 digits long!");
+                return false;
+            }
+            else if (txtPhoneLastFourDigits.Text.Length != 4)
+            {
+                MessageBox.Show("A phone number's last four digits must be exactly 4 digits long!");
                 return false;
             }
             else
@@ -177,6 +213,21 @@ namespace MyGarage.View
         }
 
         private void txtZip_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.allowOnlyNumbersKeyPress(e);
+        }
+
+        private void txtPhoneAreaCode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.allowOnlyNumbersKeyPress(e);
+        }
+
+        private void txtPhoneFirstThreeDigits_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.allowOnlyNumbersKeyPress(e);
+        }
+
+        private void txtPhoneLastFourDigits_KeyPress(object sender, KeyPressEventArgs e)
         {
             this.allowOnlyNumbersKeyPress(e);
         }

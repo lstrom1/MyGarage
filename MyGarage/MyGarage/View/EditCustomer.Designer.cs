@@ -44,7 +44,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtPhoneNum = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -59,6 +58,11 @@
             this.btnSelect = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
+            this.txtPhoneAreaCode = new System.Windows.Forms.TextBox();
+            this.txtPhoneFirstThreeDigits = new System.Windows.Forms.TextBox();
+            this.txtPhoneLastFourDigits = new System.Windows.Forms.TextBox();
+            this.phoneDashLeft = new System.Windows.Forms.Label();
+            this.phoneDashRight = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -205,7 +209,7 @@
             "WV",
             "WI",
             "WY"});
-            this.cmbState.Location = new System.Drawing.Point(424, 321);
+            this.cmbState.Location = new System.Drawing.Point(403, 321);
             this.cmbState.Name = "cmbState";
             this.cmbState.Size = new System.Drawing.Size(59, 29);
             this.cmbState.TabIndex = 35;
@@ -230,7 +234,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(383, 324);
+            this.label6.Location = new System.Drawing.Point(362, 324);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 23);
             this.label6.TabIndex = 32;
@@ -252,13 +256,6 @@
             this.label5.TabIndex = 30;
             this.label5.Text = "City";
             // 
-            // txtPhoneNum
-            // 
-            this.txtPhoneNum.Location = new System.Drawing.Point(424, 352);
-            this.txtPhoneNum.Name = "txtPhoneNum";
-            this.txtPhoneNum.Size = new System.Drawing.Size(203, 29);
-            this.txtPhoneNum.TabIndex = 39;
-            // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(99, 352);
@@ -278,7 +275,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(326, 352);
+            this.label8.Location = new System.Drawing.Point(308, 355);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(121, 23);
             this.label8.TabIndex = 36;
@@ -384,11 +381,58 @@
             this.label13.TabIndex = 4;
             this.label13.Text = "Select Customer";
             // 
+            // txtPhoneAreaCode
+            // 
+            this.txtPhoneAreaCode.Location = new System.Drawing.Point(403, 352);
+            this.txtPhoneAreaCode.Name = "txtPhoneAreaCode";
+            this.txtPhoneAreaCode.Size = new System.Drawing.Size(59, 29);
+            this.txtPhoneAreaCode.TabIndex = 50;
+            this.txtPhoneAreaCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneAreaCode_KeyPress);
+            // 
+            // txtPhoneFirstThreeDigits
+            // 
+            this.txtPhoneFirstThreeDigits.Location = new System.Drawing.Point(482, 352);
+            this.txtPhoneFirstThreeDigits.Name = "txtPhoneFirstThreeDigits";
+            this.txtPhoneFirstThreeDigits.Size = new System.Drawing.Size(54, 29);
+            this.txtPhoneFirstThreeDigits.TabIndex = 51;
+            this.txtPhoneFirstThreeDigits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneFirstThreeDigits_KeyPress);
+            // 
+            // txtPhoneLastFourDigits
+            // 
+            this.txtPhoneLastFourDigits.Location = new System.Drawing.Point(553, 352);
+            this.txtPhoneLastFourDigits.Name = "txtPhoneLastFourDigits";
+            this.txtPhoneLastFourDigits.Size = new System.Drawing.Size(74, 29);
+            this.txtPhoneLastFourDigits.TabIndex = 52;
+            this.txtPhoneLastFourDigits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneLastFourDigits_KeyPress);
+            // 
+            // phoneDashLeft
+            // 
+            this.phoneDashLeft.AutoSize = true;
+            this.phoneDashLeft.Location = new System.Drawing.Point(468, 355);
+            this.phoneDashLeft.Name = "phoneDashLeft";
+            this.phoneDashLeft.Size = new System.Drawing.Size(17, 23);
+            this.phoneDashLeft.TabIndex = 53;
+            this.phoneDashLeft.Text = "-";
+            // 
+            // phoneDashRight
+            // 
+            this.phoneDashRight.AutoSize = true;
+            this.phoneDashRight.Location = new System.Drawing.Point(537, 355);
+            this.phoneDashRight.Name = "phoneDashRight";
+            this.phoneDashRight.Size = new System.Drawing.Size(17, 23);
+            this.phoneDashRight.TabIndex = 54;
+            this.phoneDashRight.Text = "-";
+            // 
             // EditCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 529);
+            this.Controls.Add(this.phoneDashRight);
+            this.Controls.Add(this.phoneDashLeft);
+            this.Controls.Add(this.txtPhoneLastFourDigits);
+            this.Controls.Add(this.txtPhoneFirstThreeDigits);
+            this.Controls.Add(this.txtPhoneAreaCode);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.cmbSelect);
@@ -399,7 +443,6 @@
             this.Controls.Add(this.txtSearchFirst);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtPhoneNum);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -450,7 +493,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtPhoneNum;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -465,5 +507,10 @@
         private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtPhoneAreaCode;
+        private System.Windows.Forms.TextBox txtPhoneFirstThreeDigits;
+        private System.Windows.Forms.TextBox txtPhoneLastFourDigits;
+        private System.Windows.Forms.Label phoneDashLeft;
+        private System.Windows.Forms.Label phoneDashRight;
     }
 }
