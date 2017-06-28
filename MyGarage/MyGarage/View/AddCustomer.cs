@@ -68,7 +68,7 @@ namespace MyGarage.View
                     vehicleID = vehControl.AddVehicle(newVehicle);
                 } else
                 {
-                    vehicleID = Convert.ToInt32(cmbSelect.ValueMember); 
+                    vehicleID = Convert.ToInt32(cmbSelect.SelectedValue); 
                 }             
 
                 ownerID = ownControl.AddOwner(newOwner);
@@ -251,7 +251,13 @@ namespace MyGarage.View
         private void btnExistCar_Click(object sender, EventArgs e)
         {
             panelExist.Visible = true;
-            panelNew.Visible = false; 
+            panelNew.Visible = false;
+
+            //populate the combobox with all cars without an owner
+            List<Vehicle> vehList = vehControl.GetVehicleList("%");
+            cmbSelect.DataSource = vehList;
+            cmbSelect.DisplayMember = "vehicleUnique";
+            cmbSelect.ValueMember = "vehicleID";
         }
 
         private void btnNewCar_Click(object sender, EventArgs e)
@@ -266,8 +272,8 @@ namespace MyGarage.View
             {
                 try
                 {
-                    List<Vehicle> vehList = vehControl.GetVehicleList(txtVinSearch.Text);
-                    cmbSelect.DataSource = vehList;
+                    List<Vehicle> vehicleList = vehControl.GetVehicleList(txtVinSearch.Text);
+                    cmbSelect.DataSource = vehicleList;
                     cmbSelect.DisplayMember = "vehicleUnique";
                     cmbSelect.ValueMember = "vehicleID";
 
@@ -283,5 +289,13 @@ namespace MyGarage.View
             }
         }
 
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            //populate the combobox with all cars without an owner
+            List<Vehicle> vehList = vehControl.GetVehicleList("%");
+            cmbSelect.DataSource = vehList;
+            cmbSelect.DisplayMember = "vehicleUnique";
+            cmbSelect.ValueMember = "vehicleID";
+        }
     }
 }

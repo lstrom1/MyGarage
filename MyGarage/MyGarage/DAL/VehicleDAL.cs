@@ -72,7 +72,7 @@ namespace MyGarage.DAL
         {
             System.Collections.Generic.List<Vehicle> vehList = new List<Vehicle>();
             string selectStatement = "SELECT * FROM vehicle " +
-                "WHERE (VIN LIKE @VIN) ";
+                "WHERE (VIN LIKE @VIN) AND (vehicleID not in (select distinct vehicleID from ownerVehicle)) order by VIN ";
             SqlDataReader reader = null;
             SqlConnection connection = null;
             try

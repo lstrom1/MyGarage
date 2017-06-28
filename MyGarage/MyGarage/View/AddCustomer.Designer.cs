@@ -67,6 +67,7 @@
             this.cmbSelect = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.panelExist = new System.Windows.Forms.Panel();
+            this.btnAll = new System.Windows.Forms.Button();
             this.panelNew = new System.Windows.Forms.Panel();
             this.btnNewCar = new System.Windows.Forms.Button();
             this.btnExistCar = new System.Windows.Forms.Button();
@@ -455,6 +456,7 @@
             // 
             // panelExist
             // 
+            this.panelExist.Controls.Add(this.btnAll);
             this.panelExist.Controls.Add(this.label16);
             this.panelExist.Controls.Add(this.cmbSelect);
             this.panelExist.Controls.Add(this.txtVinSearch);
@@ -463,6 +465,16 @@
             this.panelExist.Name = "panelExist";
             this.panelExist.Size = new System.Drawing.Size(641, 86);
             this.panelExist.TabIndex = 51;
+            // 
+            // btnAll
+            // 
+            this.btnAll.Location = new System.Drawing.Point(311, 15);
+            this.btnAll.Name = "btnAll";
+            this.btnAll.Size = new System.Drawing.Size(75, 28);
+            this.btnAll.TabIndex = 51;
+            this.btnAll.Text = "All";
+            this.btnAll.UseVisualStyleBackColor = true;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // panelNew
             // 
@@ -621,5 +633,6 @@
         private System.Windows.Forms.Button btnExistCar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnAll;
     }
 }
