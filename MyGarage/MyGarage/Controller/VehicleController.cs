@@ -1,5 +1,6 @@
 ﻿using MyGarage.Model;
 using MyGarage.DAL;
+using System.Collections.Generic;
 
 namespace MyGarage.Controller
 {
@@ -8,6 +9,11 @@ namespace MyGarage.Controller
         public int AddVehicle(Vehicle newVehicle)
         {
             return VehicleDAL.CreateVehicle(newVehicle);
+        }
+
+        public List<Vehicle> GetVehicleList(string VIN)
+        {
+            return VehicleDAL.GetListByName(VIN); 
         }
     }
 }

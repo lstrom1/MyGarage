@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using MyGarage.Model;
 using MyGarage.Controller;
 using System.Text.RegularExpressions;
+using System.Collections.Generic;
 
 namespace MyGarage.View
 {
@@ -25,12 +26,14 @@ namespace MyGarage.View
 
         private void AddCustomer_Load(object sender, EventArgs e)
         {
-            cmbState.SelectedIndex = 0; 
+            cmbState.SelectedIndex = 0;
+            panelExist.Visible = false;
+            panelNew.Visible = false;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (AllValidInputs() && IsValidEmail(txtEmail.Text) && IsValidYear(txtYear.Text))
+            if (AllValidInputs() && IsValidEmail(txtEmail.Text) && ((panelNew.Visible == true && IsValidYear(txtYear.Text) && AllNewCarValidInputs()) || (panelExist.Visible == true && cmbSelect.SelectedItem != null)))
             {
                 int vehicleID = 0;
                 int ownerID = 0;
@@ -53,14 +56,21 @@ namespace MyGarage.View
                 newOwner.phoneNumber = formattedPhoneNumber;
                 newOwner.emailAddress = txtEmail.Text;
 
-                //add new vehicle
-                Vehicle newVehicle = new Vehicle();
-                newVehicle.make = txtMake.Text;
-                newVehicle.model = txtModel.Text;
-                newVehicle.VIN = txtVIN.Text;
-                newVehicle.year = txtYear.Text;
 
-                vehicleID = vehControl.AddVehicle(newVehicle);
+                if (panelNew.Visible == true)
+                {
+                    //add new vehicle
+                    Vehicle newVehicle = new Vehicle();
+                    newVehicle.make = txtMake.Text;
+                    newVehicle.model = txtModel.Text;
+                    newVehicle.VIN = txtVIN.Text;
+                    newVehicle.year = txtYear.Text;
+                    vehicleID = vehControl.AddVehicle(newVehicle);
+                } else
+                {
+                    vehicleID = Convert.ToInt32(cmbSelect.ValueMember); 
+                }             
+
                 ownerID = ownControl.AddOwner(newOwner);
 
                 //link vehicle to owner (add entry to OwnerVehicle table)
@@ -153,11 +163,7 @@ namespace MyGarage.View
                 txtPhoneAreaCode.Text == "" || 
                 txtPhoneFirstThreeDigits.Text == "" || 
                 txtPhoneLastFourDigits.Text == "" || 
-                txtEmail.Text == "" || 
-                txtMake.Text == "" || 
-                txtVIN.Text == "" || 
-                txtYear.Text == "" || 
-                txtModel.Text == "")
+                txtEmail.Text == "")
             {
                 MessageBox.Show("Please fill out all fields.");
                 return false;
@@ -180,6 +186,22 @@ namespace MyGarage.View
             else if (txtPhoneLastFourDigits.Text.Length != 4)
             {
                 MessageBox.Show("A phone number's last four digits must be exactly 4 digits long!");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool AllNewCarValidInputs()
+        {
+            if (txtMake.Text == "" ||
+                txtVIN.Text == "" ||
+                txtYear.Text == "" ||
+                txtModel.Text == "")
+            {
+                MessageBox.Show("Please fill out all fields.");
                 return false;
             }
             else if (txtVIN.Text.Length < 11 || txtVIN.Text.Length > 17)
@@ -225,5 +247,41 @@ namespace MyGarage.View
         {
             this.allowOnlyNumbersKeyPress(e);
         }
+
+        private void btnExistCar_Click(object sender, EventArgs e)
+        {
+            panelExist.Visible = true;
+            panelNew.Visible = false; 
+        }
+
+        private void btnNewCar_Click(object sender, EventArgs e)
+        {
+            panelExist.Visible = false;
+            panelNew.Visible = true;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtVinSearch.Text != null)
+            {
+                try
+                {
+                    List<Vehicle> vehList = vehControl.GetVehicleList(txtVinSearch.Text);
+                    cmbSelect.DataSource = vehList;
+                    cmbSelect.DisplayMember = "vehicleUnique";
+                    cmbSelect.ValueMember = "vehicleID";
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("An error occured, please try again.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please provide a VIN to search by.");
+            }
+        }
+
     }
 }

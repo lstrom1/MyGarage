@@ -16,5 +16,13 @@
 
         // Year type varchar(4) in the DB
         public string year { get; set; }
+
+        public string vehicleUnique
+        {
+            get
+            {
+                return VIN + ' ' + make + ' ' + model + ' ' + year;
+            }
+        }
     }
 }
