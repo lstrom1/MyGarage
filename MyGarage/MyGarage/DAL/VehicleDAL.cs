@@ -1,5 +1,6 @@
 ﻿using MyGarage.DB;
 using MyGarage.Model;
+using System;
 using System.Data.SqlClient;
 using System.Text;
 using System.Windows.Forms;
@@ -37,11 +38,16 @@ namespace MyGarage.DAL
             {
                 connection.Open();
                 insertCommand.ExecuteNonQuery();
-                exitStatus = 0;
+                string selectStatement = "SELECT IDENT_CURRENT('vehicle') FROM vehicle";
+                SqlCommand selectCommand = new SqlCommand(selectStatement, connection);
+                int vehicleID = Convert.ToInt32(selectCommand.ExecuteScalar());
+                return vehicleID;
+                //exitStatus = 0;
             }
             catch (SqlException ex)
             {
-                exitStatus = 1;
+                exitStatus = 0;
+                
                 StringBuilder errorDetails = new StringBuilder();
                 for (int i = 0; i < ex.Errors.Count; i++)
                 {
@@ -51,13 +57,14 @@ namespace MyGarage.DAL
                         "Procedure: " + ex.Errors[i].Procedure + "\n");
                 }
                 MessageBox.Show(errorDetails.ToString(), "SQL Exception");
+                return exitStatus;
             }
             finally
             {
                 connection.Close();
             }
 
-            return exitStatus;
+            //return exitStatus;
         }
     }
 }

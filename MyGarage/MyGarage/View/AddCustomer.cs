@@ -10,7 +10,8 @@ namespace MyGarage.View
     {
 
         OwnerController ownControl = new OwnerController();
-        VehicleController vehControl = new VehicleController(); 
+        VehicleController vehControl = new VehicleController();
+        OwnerVehicleController ownVehControl = new OwnerVehicleController();
 
         public AddCustomer()
         {
@@ -31,6 +32,10 @@ namespace MyGarage.View
         {
             if (AllValidInputs() && IsValidEmail(txtEmail.Text) && IsValidYear(txtYear.Text))
             {
+                int vehicleID = 0;
+                int ownerID = 0;
+                int status = 1;
+
                 //add new owner
                 Owner newOwner = new Owner();
 
@@ -55,10 +60,16 @@ namespace MyGarage.View
                 newVehicle.VIN = txtVIN.Text;
                 newVehicle.year = txtYear.Text;
 
-                int addStatus = vehControl.AddVehicle(newVehicle); 
-                int addStatus1 = ownControl.AddOwner(newOwner);
+                //link vehicle to owner (add entry to OwnerVehicle table)
+                OwnerVehicle newOwnerVehicle = new OwnerVehicle();
+                newOwnerVehicle.ownerID = ownerID;
+                newOwnerVehicle.vehicleID = vehicleID;
 
-                    if (addStatus == 0 && addStatus1 == 0)
+                vehicleID = vehControl.AddVehicle(newVehicle);
+                ownerID = ownControl.AddOwner(newOwner);
+                status = ownVehControl.AddOwnerVehicle(newOwnerVehicle);
+
+                    if (ownerID != 0 && vehicleID != 0 && status == 0)
                     {
                         MessageBox.Show("You have successfully created a new customer!");
                         this.Close(); 

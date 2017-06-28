@@ -23,7 +23,11 @@ namespace MyGarage.DAL
 
             SqlConnection connection = DBConnection.GetConnection();
 
-            string insertStatement = "INSERT ownerVehicle (ownerID, vehicleID) VALUES (@ownerID, @vehicleID)";
+            string insertStatement = 
+                "INSERT ownerVehicle " +
+                    "(ownerID, vehicleID)" +
+                "VALUES" + 
+                    "(@ownerID, @vehicleID)";
 
             SqlCommand insertCommand = new SqlCommand(insertStatement, connection);
 
@@ -97,6 +101,6 @@ namespace MyGarage.DAL
             }
             return exitStatus;
         }
-
+       
     }
 }
