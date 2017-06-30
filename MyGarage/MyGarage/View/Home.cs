@@ -60,5 +60,14 @@ namespace MyGarage
             frmPanel.Controls.Add(addVehicleOwner);
             addVehicleOwner.Show();
         }
+
+        private void btnDeleteVehOwn_Click(object sender, EventArgs e)
+        {
+            frmPanel.Controls.Clear();
+            DeleteVehicleOwner deleteVehicleOwner = new View.DeleteVehicleOwner();
+            deleteVehicleOwner.TopLevel = false;
+            frmPanel.Controls.Add(deleteVehicleOwner);
+            deleteVehicleOwner.Show();
+        }
     }
 }

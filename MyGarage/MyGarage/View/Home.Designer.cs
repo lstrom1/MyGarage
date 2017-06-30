@@ -35,7 +35,7 @@
             this.btnAddService = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDeleteVehOwn = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAddVehicle = new System.Windows.Forms.Button();
@@ -59,7 +59,7 @@
             this.panel1.Controls.Add(this.btnAddService);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnDeleteVehOwn);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btnAddVehicle);
@@ -78,7 +78,7 @@
             this.btnAddVehicleOwner.FlatAppearance.BorderSize = 2;
             this.btnAddVehicleOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddVehicleOwner.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddVehicleOwner.Location = new System.Drawing.Point(3, 247);
+            this.btnAddVehicleOwner.Location = new System.Drawing.Point(3, 228);
             this.btnAddVehicleOwner.Name = "btnAddVehicleOwner";
             this.btnAddVehicleOwner.Size = new System.Drawing.Size(159, 34);
             this.btnAddVehicleOwner.TabIndex = 12;
@@ -89,7 +89,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(124, 284);
+            this.pictureBox4.Location = new System.Drawing.Point(124, 265);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(38, 33);
             this.pictureBox4.TabIndex = 11;
@@ -101,7 +101,7 @@
             this.btnAddService.FlatAppearance.BorderSize = 2;
             this.btnAddService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddService.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddService.Location = new System.Drawing.Point(3, 359);
+            this.btnAddService.Location = new System.Drawing.Point(3, 340);
             this.btnAddService.Name = "btnAddService";
             this.btnAddService.Size = new System.Drawing.Size(159, 33);
             this.btnAddService.TabIndex = 10;
@@ -115,7 +115,7 @@
             this.button2.FlatAppearance.BorderSize = 2;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(3, 320);
+            this.button2.Location = new System.Drawing.Point(3, 301);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(159, 33);
             this.button2.TabIndex = 9;
@@ -127,25 +127,26 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(35)))), ((int)(((byte)(6)))));
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
-            this.label3.Location = new System.Drawing.Point(3, 284);
+            this.label3.Location = new System.Drawing.Point(3, 265);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(159, 33);
             this.label3.TabIndex = 8;
             this.label3.Text = "Service";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button1
+            // btnDeleteVehOwn
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(35)))), ((int)(((byte)(6)))));
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Light", 10.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 189);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 52);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Remove Vehicle Owner";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDeleteVehOwn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(35)))), ((int)(((byte)(6)))));
+            this.btnDeleteVehOwn.FlatAppearance.BorderSize = 2;
+            this.btnDeleteVehOwn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteVehOwn.Font = new System.Drawing.Font("Segoe UI Light", 10.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteVehOwn.Location = new System.Drawing.Point(3, 189);
+            this.btnDeleteVehOwn.Name = "btnDeleteVehOwn";
+            this.btnDeleteVehOwn.Size = new System.Drawing.Size(159, 33);
+            this.btnDeleteVehOwn.TabIndex = 7;
+            this.btnDeleteVehOwn.Text = "Delete Vehicle Owner";
+            this.btnDeleteVehOwn.UseVisualStyleBackColor = true;
+            this.btnDeleteVehOwn.Click += new System.EventHandler(this.btnDeleteVehOwn_Click);
             // 
             // pictureBox3
             // 
@@ -286,7 +287,7 @@
         private System.Windows.Forms.Button btnAddService;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDeleteVehOwn;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnAddVehicleOwner;
     }

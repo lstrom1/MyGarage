@@ -89,6 +89,12 @@
     <Compile Include="View\AddVehicleOwner.Designer.cs">
       <DependentUpon>AddVehicleOwner.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DeleteVehicleOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DeleteVehicleOwner.Designer.cs">
+      <DependentUpon>DeleteVehicleOwner.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\EditCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AddVehicleOwner.resx">
       <DependentUpon>AddVehicleOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DeleteVehicleOwner.resx">
+      <DependentUpon>DeleteVehicleOwner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditCustomer.resx">
       <DependentUpon>EditCustomer.cs</DependentUpon>
