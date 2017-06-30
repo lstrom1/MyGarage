@@ -252,12 +252,7 @@ namespace MyGarage.View
         {
             panelExist.Visible = true;
             panelNew.Visible = false;
-
-            //populate the combobox with all cars without an owner
-            List<Vehicle> vehList = vehControl.GetVehicleList("%");
-            cmbSelect.DataSource = vehList;
-            cmbSelect.DisplayMember = "vehicleUnique";
-            cmbSelect.ValueMember = "vehicleID";
+            this.populateVehicleList("%"); 
         }
 
         private void btnNewCar_Click(object sender, EventArgs e)
@@ -270,18 +265,7 @@ namespace MyGarage.View
         {
             if (txtVinSearch.Text != null)
             {
-                try
-                {
-                    List<Vehicle> vehicleList = vehControl.GetVehicleList(txtVinSearch.Text);
-                    cmbSelect.DataSource = vehicleList;
-                    cmbSelect.DisplayMember = "vehicleUnique";
-                    cmbSelect.ValueMember = "vehicleID";
-
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("An error occured, please try again.");
-                }
+                this.populateVehicleList(txtVinSearch.Text); 
             }
             else
             {
@@ -291,11 +275,30 @@ namespace MyGarage.View
 
         private void btnAll_Click(object sender, EventArgs e)
         {
-            //populate the combobox with all cars without an owner
-            List<Vehicle> vehList = vehControl.GetVehicleList("%");
-            cmbSelect.DataSource = vehList;
-            cmbSelect.DisplayMember = "vehicleUnique";
-            cmbSelect.ValueMember = "vehicleID";
+            this.populateVehicleList("%"); 
+        }
+
+        private void populateVehicleList(string VIN)
+        {
+            try
+            {
+                List<Vehicle> vehicleList = vehControl.GetVehicleList(VIN);
+                if (vehicleList == null || vehicleList.Count == 0)
+                {
+                    MessageBox.Show("There were no results for that search!");
+                    cmbSelect.Text = null;
+                }
+                else
+                {
+                    cmbSelect.DataSource = vehicleList;
+                    cmbSelect.DisplayMember = "vehicleUnique";
+                    cmbSelect.ValueMember = "vehicleID";
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An error occured, please try again.");
+            }
         }
     }
 }

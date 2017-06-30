@@ -43,13 +43,22 @@ namespace MyGarage
             editCustomer.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnAddService_Click(object sender, EventArgs e)
         {
             frmPanel.Controls.Clear();
             AddServiceType addServiceType = new View.AddServiceType();
             addServiceType.TopLevel = false;
             frmPanel.Controls.Add(addServiceType);
             addServiceType.Show();
+        }
+
+        private void btnAddVehicleOwner_Click(object sender, EventArgs e)
+        {
+            frmPanel.Controls.Clear();
+            AddVehicleOwner addVehicleOwner = new View.AddVehicleOwner();
+            addVehicleOwner.TopLevel = false;
+            frmPanel.Controls.Add(addVehicleOwner);
+            addVehicleOwner.Show();
         }
     }
 }

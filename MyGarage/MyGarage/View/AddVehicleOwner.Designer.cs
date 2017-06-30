@@ -39,8 +39,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cmbCustomers = new System.Windows.Forms.ComboBox();
+            this.btnCustSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearchLast = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -79,6 +79,7 @@
             this.btnAll.TabIndex = 56;
             this.btnAll.Text = "All";
             this.btnAll.UseVisualStyleBackColor = true;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // label16
             // 
@@ -112,6 +113,7 @@
             this.btnSearch.TabIndex = 54;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // panel3
             // 
@@ -153,22 +155,23 @@
             this.label10.TabIndex = 4;
             this.label10.Text = "Customer Information";
             // 
-            // comboBox1
+            // cmbCustomers
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(22, 299);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(272, 25);
-            this.comboBox1.TabIndex = 64;
+            this.cmbCustomers.FormattingEnabled = true;
+            this.cmbCustomers.Location = new System.Drawing.Point(22, 299);
+            this.cmbCustomers.Name = "cmbCustomers";
+            this.cmbCustomers.Size = new System.Drawing.Size(272, 25);
+            this.cmbCustomers.TabIndex = 64;
             // 
-            // button1
+            // btnCustSearch
             // 
-            this.button1.Location = new System.Drawing.Point(312, 266);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 27);
-            this.button1.TabIndex = 63;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCustSearch.Location = new System.Drawing.Point(312, 266);
+            this.btnCustSearch.Name = "btnCustSearch";
+            this.btnCustSearch.Size = new System.Drawing.Size(75, 27);
+            this.btnCustSearch.TabIndex = 63;
+            this.btnCustSearch.Text = "Search";
+            this.btnCustSearch.UseVisualStyleBackColor = true;
+            this.btnCustSearch.Click += new System.EventHandler(this.btnCustSearch_Click);
             // 
             // label1
             // 
@@ -220,6 +223,7 @@
             this.btnSave.TabIndex = 65;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // AddVehicleOwner
             // 
@@ -228,8 +232,8 @@
             this.ClientSize = new System.Drawing.Size(641, 529);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cmbCustomers);
+            this.Controls.Add(this.btnCustSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSearchLast);
             this.Controls.Add(this.label12);
@@ -271,8 +275,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmbCustomers;
+        private System.Windows.Forms.Button btnCustSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearchLast;
         private System.Windows.Forms.Label label12;
