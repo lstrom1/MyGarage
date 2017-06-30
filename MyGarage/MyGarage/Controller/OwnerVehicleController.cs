@@ -14,5 +14,10 @@ namespace MyGarage.Controller
         {
             return OwnerVehicleDAL.CreateOwnerVehicle(newOwnerVehicle);
         }
+
+        public int RemoveOwnerVehicle(OwnerVehicle oldOwnerVehicle)
+        {
+            return OwnerVehicleDAL.RemoveOwnerVehicle(oldOwnerVehicle); 
+        }
     }
 }

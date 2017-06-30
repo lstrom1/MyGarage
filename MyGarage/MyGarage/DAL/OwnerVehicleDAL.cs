@@ -76,6 +76,9 @@ namespace MyGarage.DAL
 
             SqlCommand removeCommand = new SqlCommand(removeStatement, connection);
 
+            removeCommand.Parameters.AddWithValue("@ownerID", ownerVehicle.ownerID);
+            removeCommand.Parameters.AddWithValue("@vehicleID", ownerVehicle.vehicleID);
+
             try
             {
                 connection.Open();

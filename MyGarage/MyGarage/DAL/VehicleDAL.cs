@@ -120,5 +120,56 @@ namespace MyGarage.DAL
             }
             return vehList;
         }
+
+        public static List<Vehicle> GetListByCustomer(int ownerID)
+        {
+            System.Collections.Generic.List<Vehicle> vehList = new List<Vehicle>();
+            string selectStatement = "Select ownervehicle.vehicleID, vin, make, model, vehicleyear " +
+                "FROM ownervehicle left outer join vehicle on ownervehicle.vehicleID = vehicle.vehicleID " +
+                "WHERE ownerID = @ownerID";
+            SqlDataReader reader = null;
+            SqlConnection connection = null;
+            try
+            {
+                using (connection = DBConnection.GetConnection())
+                {
+                    connection.Open();
+                    using (SqlCommand selectCommand = new SqlCommand(selectStatement, connection))
+                    {
+                        selectCommand.Parameters.AddWithValue("@ownerID", ownerID);
+
+                        using (reader = selectCommand.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Vehicle vehicle = new Vehicle();
+                                vehicle.vehicleID = (int)reader["vehicleID"];
+                                vehicle.VIN = reader["VIN"].ToString();
+                                vehicle.make = reader["make"].ToString();
+                                vehicle.model = reader["model"].ToString();
+                                vehicle.year = reader["vehicleYear"].ToString();
+                                vehList.Add(vehicle);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+                if (reader != null)
+                    reader.Close();
+            }
+            return vehList;
+        }
     }
 }

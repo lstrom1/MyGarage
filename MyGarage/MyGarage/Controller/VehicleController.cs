@@ -15,5 +15,10 @@ namespace MyGarage.Controller
         {
             return VehicleDAL.GetListByName(VIN); 
         }
+
+        public List<Vehicle> GetCustVehicleList(int ownerID)
+        {
+            return VehicleDAL.GetListByCustomer(ownerID); 
+        }
     }
 }

@@ -99,7 +99,7 @@ namespace MyGarage.View
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (cmbSelect.SelectedValue == null || cmbSelect.SelectedValue == null)
+            if (cmbSelect.SelectedValue == null || cmbCustomers.SelectedValue == null)
             {
                 MessageBox.Show("Please make sure to select both a vehicle and owner."); 
             } else
