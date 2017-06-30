@@ -441,12 +441,12 @@
             this.cmbSelect.FormattingEnabled = true;
             this.cmbSelect.Location = new System.Drawing.Point(90, 50);
             this.cmbSelect.Name = "cmbSelect";
-            this.cmbSelect.Size = new System.Drawing.Size(377, 25);
+            this.cmbSelect.Size = new System.Drawing.Size(300, 25);
             this.cmbSelect.TabIndex = 50;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(311, 14);
+            this.btnSearch.Location = new System.Drawing.Point(299, 14);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 28);
             this.btnSearch.TabIndex = 49;
@@ -468,9 +468,9 @@
             // 
             // btnAll
             // 
-            this.btnAll.Location = new System.Drawing.Point(392, 13);
+            this.btnAll.Location = new System.Drawing.Point(380, 14);
             this.btnAll.Name = "btnAll";
-            this.btnAll.Size = new System.Drawing.Size(75, 28);
+            this.btnAll.Size = new System.Drawing.Size(41, 28);
             this.btnAll.TabIndex = 51;
             this.btnAll.Text = "All";
             this.btnAll.UseVisualStyleBackColor = true;
