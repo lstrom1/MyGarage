@@ -20,5 +20,12 @@ namespace MyGarage.Controller
         {
             return VehicleDAL.GetListByCustomer(ownerID); 
         }
+
+        public List<Vehicle> GetAllVehicleList(string VIN)
+        {
+            return VehicleDAL.GetAllList(VIN);
+        }
+
+
     }
 }

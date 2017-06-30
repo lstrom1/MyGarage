@@ -69,5 +69,14 @@ namespace MyGarage
             frmPanel.Controls.Add(deleteVehicleOwner);
             deleteVehicleOwner.Show();
         }
+
+        private void btnAddServiceRecord_Click(object sender, EventArgs e)
+        {
+            frmPanel.Controls.Clear();
+            AddServiceRecord addService = new View.AddServiceRecord();
+            addService.TopLevel = false;
+            frmPanel.Controls.Add(addService);
+            addService.Show();
+        }
     }
 }

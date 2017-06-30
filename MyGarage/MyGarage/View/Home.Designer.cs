@@ -33,7 +33,7 @@
             this.btnAddVehicleOwner = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnAddService = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAddServiceRecord = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnDeleteVehOwn = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -57,7 +57,7 @@
             this.panel1.Controls.Add(this.btnAddVehicleOwner);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.btnAddService);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnAddServiceRecord);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnDeleteVehOwn);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -78,7 +78,7 @@
             this.btnAddVehicleOwner.FlatAppearance.BorderSize = 2;
             this.btnAddVehicleOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddVehicleOwner.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddVehicleOwner.Location = new System.Drawing.Point(3, 228);
+            this.btnAddVehicleOwner.Location = new System.Drawing.Point(3, 189);
             this.btnAddVehicleOwner.Name = "btnAddVehicleOwner";
             this.btnAddVehicleOwner.Size = new System.Drawing.Size(159, 34);
             this.btnAddVehicleOwner.TabIndex = 12;
@@ -109,18 +109,19 @@
             this.btnAddService.UseVisualStyleBackColor = true;
             this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
             // 
-            // button2
+            // btnAddServiceRecord
             // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(35)))), ((int)(((byte)(6)))));
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(3, 301);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 33);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Add Service Record";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAddServiceRecord.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(35)))), ((int)(((byte)(6)))));
+            this.btnAddServiceRecord.FlatAppearance.BorderSize = 2;
+            this.btnAddServiceRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddServiceRecord.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddServiceRecord.Location = new System.Drawing.Point(3, 301);
+            this.btnAddServiceRecord.Name = "btnAddServiceRecord";
+            this.btnAddServiceRecord.Size = new System.Drawing.Size(159, 33);
+            this.btnAddServiceRecord.TabIndex = 9;
+            this.btnAddServiceRecord.Text = "Add Service Record";
+            this.btnAddServiceRecord.UseVisualStyleBackColor = true;
+            this.btnAddServiceRecord.Click += new System.EventHandler(this.btnAddServiceRecord_Click);
             // 
             // label3
             // 
@@ -140,7 +141,7 @@
             this.btnDeleteVehOwn.FlatAppearance.BorderSize = 2;
             this.btnDeleteVehOwn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteVehOwn.Font = new System.Drawing.Font("Segoe UI Light", 10.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteVehOwn.Location = new System.Drawing.Point(3, 189);
+            this.btnDeleteVehOwn.Location = new System.Drawing.Point(3, 229);
             this.btnDeleteVehOwn.Name = "btnDeleteVehOwn";
             this.btnDeleteVehOwn.Size = new System.Drawing.Size(159, 33);
             this.btnDeleteVehOwn.TabIndex = 7;
@@ -285,7 +286,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel frmPanel;
         private System.Windows.Forms.Button btnAddService;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAddServiceRecord;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnDeleteVehOwn;
         private System.Windows.Forms.PictureBox pictureBox4;
