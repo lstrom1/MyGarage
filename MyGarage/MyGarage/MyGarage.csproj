@@ -58,6 +58,7 @@
     <Compile Include="Model\Owner.cs" />
     <Compile Include="Model\OwnerVehicle.cs" />
     <Compile Include="Model\ServiceCategory.cs" />
+    <Compile Include="Model\ServiceRecord.cs" />
     <Compile Include="Model\Vehicle.cs" />
     <Compile Include="View\AddCustomer.cs">
       <SubType>Form</SubType>
