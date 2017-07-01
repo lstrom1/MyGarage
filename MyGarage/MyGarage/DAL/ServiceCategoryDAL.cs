@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using MyGarage.Model;
 using System.Data.SqlClient;
 using MyGarage.DB;
@@ -10,7 +8,7 @@ using System.Windows.Forms;
 using System.Data;
 
 namespace MyGarage.DAL
-{   
+{
 
     class ServiceCategoryDAL
     {
@@ -31,7 +29,7 @@ namespace MyGarage.DAL
             SqlCommand insertCommand = new SqlCommand(insertStatement, connection);
 
             insertCommand.Parameters.AddWithValue("@categoryName", newServiceCategory.categoryName);
-            insertCommand.Parameters.AddWithValue("@vnumberOfDays", newServiceCategory.numberOfDays);
+            insertCommand.Parameters.AddWithValue("@numberOfDays", newServiceCategory.numberOfDays);
             insertCommand.Parameters.AddWithValue("@mileageIntervals", newServiceCategory.mileageIntervals);
 
             try

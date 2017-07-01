@@ -14,7 +14,7 @@ namespace MyGarage.View
 {
     public partial class AddServiceType : Form
     {
-        ServiceController serControl = new ServiceController(); 
+        ServiceCategoryController serControl = new ServiceCategoryController(); 
 
         public AddServiceType()
         {
@@ -29,7 +29,7 @@ namespace MyGarage.View
                 serviceCat.mileageIntervals = Convert.ToInt32(txtMileFreq.Text);
                 serviceCat.numberOfDays = Convert.ToInt32(txtDayFreq.Text);
 
-                int addStatus = serControl.AddServiceCat(serviceCat);
+                int addStatus = serControl.AddServiceCategory(serviceCat);
 
                 if (addStatus == 0)
                 {

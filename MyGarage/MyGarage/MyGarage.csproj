@@ -48,11 +48,13 @@
   <ItemGroup>
     <Compile Include="Controller\OwnerController.cs" />
     <Compile Include="Controller\OwnerVehicleController.cs" />
-    <Compile Include="Controller\ServiceController.cs" />
+    <Compile Include="Controller\ServiceCategoryController.cs" />
+    <Compile Include="Controller\ServiceRecordController.cs" />
     <Compile Include="Controller\VehicleController.cs" />
     <Compile Include="DAL\OwnerDAL.cs" />
     <Compile Include="DAL\OwnerVehicleDAL.cs" />
     <Compile Include="DAL\ServiceCategoryDAL.cs" />
+    <Compile Include="DAL\ServiceRecordDAL.cs" />
     <Compile Include="DAL\VehicleDAL.cs" />
     <Compile Include="DB\DBConnection.cs" />
     <Compile Include="Model\Owner.cs" />
