@@ -37,12 +37,14 @@
             this.label16 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMilage = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.dtServiceDate = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.chlistType = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -136,36 +138,28 @@
             this.label11.TabIndex = 4;
             this.label11.Text = "Vehicle Information";
             // 
-            // textBox1
+            // txtMilage
             // 
-            this.textBox1.Location = new System.Drawing.Point(65, 195);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(258, 25);
-            this.textBox1.TabIndex = 58;
+            this.txtMilage.Location = new System.Drawing.Point(65, 205);
+            this.txtMilage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMilage.Name = "txtMilage";
+            this.txtMilage.Size = new System.Drawing.Size(258, 25);
+            this.txtMilage.TabIndex = 58;
+            this.txtMilage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMilage_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 198);
+            this.label1.Location = new System.Drawing.Point(14, 208);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 59;
             this.label1.Text = "Mileage";
             // 
-            // cmbType
-            // 
-            this.cmbType.FormattingEnabled = true;
-            this.cmbType.Location = new System.Drawing.Point(65, 228);
-            this.cmbType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmbType.Name = "cmbType";
-            this.cmbType.Size = new System.Drawing.Size(258, 25);
-            this.cmbType.TabIndex = 60;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 231);
+            this.label2.Location = new System.Drawing.Point(24, 241);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 17);
             this.label2.TabIndex = 61;
@@ -173,16 +167,17 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(65, 273);
+            this.btnSave.Location = new System.Drawing.Point(64, 385);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 31);
             this.btnSave.TabIndex = 62;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(146, 273);
+            this.btnClose.Location = new System.Drawing.Point(145, 385);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 31);
             this.btnClose.TabIndex = 63;
@@ -190,17 +185,43 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // dtServiceDate
+            // 
+            this.dtServiceDate.Location = new System.Drawing.Point(65, 168);
+            this.dtServiceDate.Name = "dtServiceDate";
+            this.dtServiceDate.Size = new System.Drawing.Size(258, 25);
+            this.dtServiceDate.TabIndex = 64;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(25, 168);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 17);
+            this.label4.TabIndex = 65;
+            this.label4.Text = "Date";
+            // 
+            // chlistType
+            // 
+            this.chlistType.FormattingEnabled = true;
+            this.chlistType.Location = new System.Drawing.Point(65, 241);
+            this.chlistType.Name = "chlistType";
+            this.chlistType.Size = new System.Drawing.Size(258, 124);
+            this.chlistType.TabIndex = 67;
+            // 
             // AddServiceRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 529);
+            this.Controls.Add(this.chlistType);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dtServiceDate);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cmbType);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMilage);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.btnAll);
@@ -213,6 +234,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddServiceRecord";
             this.Text = "AddServiceRecord";
+            this.Load += new System.EventHandler(this.AddServiceRecord_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -233,11 +255,13 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMilage;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbType;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.DateTimePicker dtServiceDate;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.CheckedListBox chlistType;
     }
 }

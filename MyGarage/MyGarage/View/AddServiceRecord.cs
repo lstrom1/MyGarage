@@ -15,7 +15,9 @@ namespace MyGarage.View
     public partial class AddServiceRecord : Form
     {
 
-        VehicleController vehControl = new VehicleController(); 
+        VehicleController vehControl = new VehicleController();
+        ServiceRecordController serviceController = new ServiceRecordController();
+        ServiceCategoryController categoryControl = new ServiceCategoryController(); 
 
         public AddServiceRecord()
         {
@@ -26,6 +28,8 @@ namespace MyGarage.View
         {
             this.Close();
         }
+
+        
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -65,6 +69,67 @@ namespace MyGarage.View
         private void btnAll_Click(object sender, EventArgs e)
         {
             this.populateVehicleList("%");
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+            if (AllValidInputs())
+            {
+                ServiceRecord serviceRecord = new ServiceRecord();
+                serviceRecord.vehicleID = int.Parse(cmbSelect.SelectedValue.ToString());
+                serviceRecord.dateOfService = dtServiceDate.Value;
+                serviceRecord.mileage = Convert.ToInt32(txtMilage.Text); 
+
+                int addStatus = serviceController.AddServiceRecord(serviceRecord);
+
+                if (addStatus == 0)
+                {
+                    MessageBox.Show("You have successfully created a new service category!");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("There was an error while saving, please try again.");
+                }
+            } 
+        }
+
+        private bool AllValidInputs()
+        {
+            if (cmbSelect.SelectedValue == null ||
+                chlistType.SelectedValue == null ||
+                txtMilage.Text == "" ||
+                dtServiceDate.Text == null)
+            {
+                MessageBox.Show("Please fill out all fields.");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private void txtMilage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.allowOnlyNumbersKeyPress(e);
+        }
+
+        private void allowOnlyNumbersKeyPress(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void AddServiceRecord_Load(object sender, EventArgs e)
+        {
+            List<ServiceCategory> catList = categoryControl.GetCategoryList();
+            chlistType.DataSource = catList;
+            chlistType.DisplayMember = "categoryName";
+            chlistType.ValueMember = "serviceCategoryID";
         }
     }
 }

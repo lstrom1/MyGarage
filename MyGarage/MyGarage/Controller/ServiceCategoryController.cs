@@ -1,5 +1,6 @@
 ﻿using MyGarage.Model;
 using MyGarage.DAL;
+using System.Collections.Generic;
 
 namespace MyGarage.Controller
 {
@@ -8,6 +9,11 @@ namespace MyGarage.Controller
         public int AddServiceCategory(ServiceCategory serviceCategory)
         {
             return ServiceCategoryDAL.CreateServiceCategory(serviceCategory); 
+        }
+
+        public List<ServiceCategory> GetCategoryList()
+        {
+            return ServiceCategoryDAL.GetServiceCategoryList(); 
         }
     }
 }

@@ -23,7 +23,7 @@ namespace MyGarage.DAL
 
             SqlConnection connection = DBConnection.GetConnection();
 
-            string insertStatement = "INSERT serviceCategory (categoryName, numberOfDays, mileageIntervals) " +
+            string insertStatement = "INSERT serviceCategory (categoryName, numberOfDays, mileageInterval) " +
                 "VALUES (@categoryName, @numberOfDays, @mileageIntervals)";
 
             SqlCommand insertCommand = new SqlCommand(insertStatement, connection);
@@ -75,7 +75,7 @@ namespace MyGarage.DAL
             updateCommand.CommandText = "UPDATE serviceCategory " +
                 "SET categoryName = @updatedCategoryName, " +
                     "numberOfDays = @updatedNumberOfDays, " +
-                    "mileageIntervals = @updatedMileageIntervals " +
+                    "mileageInterval = @updatedMileageIntervals " +
                 "WHERE serviceCategoryID = @serviceCategoryID";
 
             updateCommand.Parameters.AddWithValue("@updatedCategoryName", updateServiceCategory.categoryName);
@@ -154,7 +154,7 @@ namespace MyGarage.DAL
                                 serviceCategory.serviceCategoryID = (int)reader["serviceCategoryID"];
                                 serviceCategory.categoryName = reader.GetString(serviceCategoryName);
                                 serviceCategory.numberOfDays = (int)reader["numberOfDays"];
-                                serviceCategory.mileageIntervals = (int)reader["mileageIntervals"];
+                                serviceCategory.mileageIntervals = (int)reader["mileageInterval"];
                             }
                             else
                             {
@@ -181,16 +181,15 @@ namespace MyGarage.DAL
         /// <returns></returns>
         public static List<ServiceCategory> GetServiceCategoryList()
         {
-            List<ServiceCategory> serviceCategoryList = new List<ServiceCategory>();
-
-            string selectStatement = "SELECT * FROM serviceCategory";
+            System.Collections.Generic.List<ServiceCategory> serviceCategoryList = new List<ServiceCategory>();
+            string selectStatement = "SELECT serviceCategoryID, categoryName, numberOfDays, mileageInterval FROM serviceCategory ";
             SqlDataReader reader = null;
             SqlConnection connection = null;
             try
             {
-                using (connection = DBConnection.GetConnection());
+                using (connection = DBConnection.GetConnection())
                 {
-                    connection.Open();
+                    connection.Open(); 
                     using (SqlCommand selectCommand = new SqlCommand(selectStatement, connection))
                     {
                         using (reader = selectCommand.ExecuteReader())
@@ -201,11 +200,9 @@ namespace MyGarage.DAL
                                 serviceCategory.serviceCategoryID = (int)reader["serviceCategoryID"];
                                 serviceCategory.categoryName = reader["categoryName"].ToString();
                                 serviceCategory.numberOfDays = (int)reader["numberOfDays"];
-                                serviceCategory.mileageIntervals = (int)reader["mileageIntervals"];
+                                serviceCategory.mileageIntervals = (int)reader["mileageInterval"];
                                 serviceCategoryList.Add(serviceCategory);
                             }
-                            reader.Close();
-                            connection.Close();
                         }
                     }
                 }
@@ -217,6 +214,13 @@ namespace MyGarage.DAL
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+                if (reader != null)
+                    reader.Close();
             }
             return serviceCategoryList;
         }
