@@ -17,7 +17,8 @@ namespace MyGarage.View
 
         VehicleController vehControl = new VehicleController();
         ServiceRecordController serviceController = new ServiceRecordController();
-        ServiceCategoryController categoryControl = new ServiceCategoryController(); 
+        ServiceCategoryController categoryControl = new ServiceCategoryController();
+        ServiceRecordTypeController serviceTypeControl = new ServiceRecordTypeController(); 
 
         public AddServiceRecord()
         {
@@ -79,20 +80,29 @@ namespace MyGarage.View
                 ServiceRecord serviceRecord = new ServiceRecord();
                 serviceRecord.vehicleID = int.Parse(cmbSelect.SelectedValue.ToString());
                 serviceRecord.dateOfService = dtServiceDate.Value;
-                serviceRecord.mileage = Convert.ToInt32(txtMilage.Text); 
+                serviceRecord.mileage = Convert.ToInt32(txtMilage.Text);
 
-                int addStatus = serviceController.AddServiceRecord(serviceRecord);
+                int serviceRecordID = serviceController.AddServiceRecord(serviceRecord);
 
-                if (addStatus == 0)
+                if (serviceRecordID != 0)
                 {
-                    MessageBox.Show("You have successfully created a new service category!");
-                    this.Close();
+                    for (int i = 0; i < chlistType.CheckedItems.Count; i++)
+                    {
+                        int categoryID = int.Parse(chlistType.SelectedValue.ToString());
+                        ServiceRecordType serviceType = new Model.ServiceRecordType();
+                        serviceType.serviceRecordID = serviceRecordID;
+                        serviceType.serviceCategoryID = categoryID;
+                        serviceTypeControl.AddServiceRecordType(serviceType); 
+
+                    }
+                    MessageBox.Show("You have succesfully created a service record");
+                    this.Close(); 
                 }
                 else
                 {
                     MessageBox.Show("There was an error while saving, please try again.");
                 }
-            } 
+            }
         }
 
         private bool AllValidInputs()
