@@ -50,6 +50,7 @@
     <Compile Include="Controller\OwnerVehicleController.cs" />
     <Compile Include="Controller\ServiceCategoryController.cs" />
     <Compile Include="Controller\ServiceRecordController.cs" />
+    <Compile Include="Controller\ServiceRecordTypeController.cs" />
     <Compile Include="Controller\VehicleController.cs" />
     <Compile Include="DAL\OwnerDAL.cs" />
     <Compile Include="DAL\OwnerVehicleDAL.cs" />
