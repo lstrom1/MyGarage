@@ -8,8 +8,10 @@ namespace MyGarage.Model
 {
     class OwnerVehicle
     {
-        public int ownerVehicleID { get; set;}
+        public int ownerVehicleID { get; set; }
+
         public int ownerID { get; set; }
+
         public int vehicleID { get; set; }
     }
 }
