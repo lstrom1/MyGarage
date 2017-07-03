@@ -2,12 +2,6 @@
 using MyGarage.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MyGarage.View
@@ -61,6 +55,12 @@ namespace MyGarage.View
                 try
                 {
                     List<Vehicle> vehList = vehControl.GetCustVehicleList(int.Parse(cmbCustomers.SelectedValue.ToString()));
+
+                    if (vehList.Count == 0)
+                    {
+                        MessageBox.Show("Customer does not have any vehicles assigned.");
+                    }
+
                     cmbSelect.DataSource = vehList;
                     cmbSelect.DisplayMember = "vehicleUnique";
                     cmbSelect.ValueMember = "vehicleID";

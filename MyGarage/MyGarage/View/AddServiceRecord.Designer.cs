@@ -65,7 +65,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(175, 28);
+            this.label3.Size = new System.Drawing.Size(221, 35);
             this.label3.TabIndex = 4;
             this.label3.Text = "Add Service Record";
             // 
@@ -86,7 +86,7 @@
             this.cmbSelect.Location = new System.Drawing.Point(65, 133);
             this.cmbSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbSelect.Name = "cmbSelect";
-            this.cmbSelect.Size = new System.Drawing.Size(258, 25);
+            this.cmbSelect.Size = new System.Drawing.Size(258, 29);
             this.cmbSelect.TabIndex = 54;
             // 
             // txtVinSearch
@@ -94,7 +94,7 @@
             this.txtVinSearch.Location = new System.Drawing.Point(65, 100);
             this.txtVinSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtVinSearch.Name = "txtVinSearch";
-            this.txtVinSearch.Size = new System.Drawing.Size(258, 25);
+            this.txtVinSearch.Size = new System.Drawing.Size(258, 29);
             this.txtVinSearch.TabIndex = 52;
             // 
             // btnSearch
@@ -112,9 +112,9 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(31, 100);
+            this.label16.Location = new System.Drawing.Point(30, 100);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(28, 17);
+            this.label16.Size = new System.Drawing.Size(36, 23);
             this.label16.TabIndex = 56;
             this.label16.Text = "VIN";
             // 
@@ -134,7 +134,7 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(3, 5);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(129, 20);
+            this.label11.Size = new System.Drawing.Size(164, 25);
             this.label11.TabIndex = 4;
             this.label11.Text = "Vehicle Information";
             // 
@@ -143,25 +143,25 @@
             this.txtMilage.Location = new System.Drawing.Point(65, 205);
             this.txtMilage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMilage.Name = "txtMilage";
-            this.txtMilage.Size = new System.Drawing.Size(258, 25);
+            this.txtMilage.Size = new System.Drawing.Size(258, 29);
             this.txtMilage.TabIndex = 58;
             this.txtMilage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMilage_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 208);
+            this.label1.Location = new System.Drawing.Point(4, 205);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 17);
+            this.label1.Size = new System.Drawing.Size(66, 23);
             this.label1.TabIndex = 59;
             this.label1.Text = "Mileage";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 241);
+            this.label2.Location = new System.Drawing.Point(21, 238);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 17);
+            this.label2.Size = new System.Drawing.Size(45, 23);
             this.label2.TabIndex = 61;
             this.label2.Text = "Type";
             // 
@@ -189,15 +189,15 @@
             // 
             this.dtServiceDate.Location = new System.Drawing.Point(65, 168);
             this.dtServiceDate.Name = "dtServiceDate";
-            this.dtServiceDate.Size = new System.Drawing.Size(258, 25);
+            this.dtServiceDate.Size = new System.Drawing.Size(258, 29);
             this.dtServiceDate.TabIndex = 64;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 168);
+            this.label4.Location = new System.Drawing.Point(23, 168);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 17);
+            this.label4.Size = new System.Drawing.Size(43, 23);
             this.label4.TabIndex = 65;
             this.label4.Text = "Date";
             // 
@@ -211,7 +211,7 @@
             // 
             // AddServiceRecord
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 529);
             this.Controls.Add(this.chlistType);
