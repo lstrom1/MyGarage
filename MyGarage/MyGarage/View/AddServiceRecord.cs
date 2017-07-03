@@ -86,17 +86,16 @@ namespace MyGarage.View
 
                 if (serviceRecordID != 0)
                 {
-                    for (int i = 0; i < chlistType.CheckedItems.Count; i++)
+                    foreach (var item in chlistType.CheckedItems.OfType<ServiceCategory>())
                     {
-                        int categoryID = int.Parse(chlistType.SelectedValue.ToString());
+                        int categoryID = item.serviceCategoryID;
                         ServiceRecordType serviceType = new Model.ServiceRecordType();
                         serviceType.serviceRecordID = serviceRecordID;
                         serviceType.serviceCategoryID = categoryID;
-                        serviceTypeControl.AddServiceRecordType(serviceType); 
-
+                        serviceTypeControl.AddServiceRecordType(serviceType);
                     }
                     MessageBox.Show("You have succesfully created a service record");
-                    this.Close(); 
+                    this.Close();
                 }
                 else
                 {
