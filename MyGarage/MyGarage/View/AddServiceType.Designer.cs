@@ -57,7 +57,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 28);
+            this.label3.Size = new System.Drawing.Size(396, 54);
             this.label3.TabIndex = 4;
             this.label3.Text = "Add New Service Type";
             // 
@@ -66,7 +66,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(9, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 17);
+            this.label1.Size = new System.Drawing.Size(166, 36);
             this.label1.TabIndex = 6;
             this.label1.Text = "Service Name";
             // 
@@ -75,7 +75,7 @@
             this.txtServiceName.Location = new System.Drawing.Point(121, 82);
             this.txtServiceName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtServiceName.Name = "txtServiceName";
-            this.txtServiceName.Size = new System.Drawing.Size(236, 25);
+            this.txtServiceName.Size = new System.Drawing.Size(236, 42);
             this.txtServiceName.TabIndex = 5;
             // 
             // label2
@@ -83,7 +83,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(9, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 17);
+            this.label2.Size = new System.Drawing.Size(178, 36);
             this.label2.TabIndex = 8;
             this.label2.Text = "Day Frequency";
             // 
@@ -92,7 +92,7 @@
             this.txtDayFreq.Location = new System.Drawing.Point(121, 115);
             this.txtDayFreq.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDayFreq.Name = "txtDayFreq";
-            this.txtDayFreq.Size = new System.Drawing.Size(236, 25);
+            this.txtDayFreq.Size = new System.Drawing.Size(236, 42);
             this.txtDayFreq.TabIndex = 7;
             this.txtDayFreq.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDayFreq_KeyPress);
             // 
@@ -101,16 +101,16 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(9, 148);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 17);
+            this.label4.Size = new System.Drawing.Size(221, 36);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Milage Frequency";
+            this.label4.Text = "Mileage Frequency";
             // 
             // txtMileFreq
             // 
             this.txtMileFreq.Location = new System.Drawing.Point(121, 148);
             this.txtMileFreq.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMileFreq.Name = "txtMileFreq";
-            this.txtMileFreq.Size = new System.Drawing.Size(236, 25);
+            this.txtMileFreq.Size = new System.Drawing.Size(236, 42);
             this.txtMileFreq.TabIndex = 9;
             this.txtMileFreq.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMileFreq_KeyPress);
             // 
@@ -136,7 +136,7 @@
             // 
             // AddServiceType
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 529);
             this.Controls.Add(this.btnClose);
