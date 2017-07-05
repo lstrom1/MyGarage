@@ -55,7 +55,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 31);
             this.btnClose.TabIndex = 79;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "Cancel";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -65,7 +65,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 31);
             this.btnSave.TabIndex = 78;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Delete";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -75,7 +75,7 @@
             this.cmbCustomers.FormattingEnabled = true;
             this.cmbCustomers.Location = new System.Drawing.Point(22, 165);
             this.cmbCustomers.Name = "cmbCustomers";
-            this.cmbCustomers.Size = new System.Drawing.Size(272, 44);
+            this.cmbCustomers.Size = new System.Drawing.Size(272, 25);
             this.cmbCustomers.TabIndex = 77;
             // 
             // btnCustSearch
@@ -92,14 +92,14 @@
             // 
             this.txtSearchLast.Location = new System.Drawing.Point(91, 132);
             this.txtSearchLast.Name = "txtSearchLast";
-            this.txtSearchLast.Size = new System.Drawing.Size(203, 42);
+            this.txtSearchLast.Size = new System.Drawing.Size(203, 25);
             this.txtSearchLast.TabIndex = 75;
             // 
             // txtSearchFirst
             // 
             this.txtSearchFirst.Location = new System.Drawing.Point(91, 100);
             this.txtSearchFirst.Name = "txtSearchFirst";
-            this.txtSearchFirst.Size = new System.Drawing.Size(203, 42);
+            this.txtSearchFirst.Size = new System.Drawing.Size(203, 25);
             this.txtSearchFirst.TabIndex = 74;
             // 
             // panel2
@@ -118,7 +118,7 @@
             this.label10.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(3, 5);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(295, 41);
+            this.label10.Size = new System.Drawing.Size(143, 20);
             this.label10.TabIndex = 4;
             this.label10.Text = "Customer Information";
             // 
@@ -138,7 +138,7 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(3, 5);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(258, 41);
+            this.label11.Size = new System.Drawing.Size(129, 20);
             this.label11.TabIndex = 4;
             this.label11.Text = "Vehicle Information";
             // 
@@ -148,7 +148,7 @@
             this.cmbSelect.FormattingEnabled = true;
             this.cmbSelect.Location = new System.Drawing.Point(22, 258);
             this.cmbSelect.Name = "cmbSelect";
-            this.cmbSelect.Size = new System.Drawing.Size(365, 44);
+            this.cmbSelect.Size = new System.Drawing.Size(365, 25);
             this.cmbSelect.TabIndex = 70;
             // 
             // panel1
@@ -166,7 +166,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(378, 54);
+            this.label3.Size = new System.Drawing.Size(192, 28);
             this.label3.TabIndex = 4;
             this.label3.Text = "Delete Vehicle Owner";
             // 
@@ -175,7 +175,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(17, 103);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(131, 36);
+            this.label12.Size = new System.Drawing.Size(67, 17);
             this.label12.TabIndex = 81;
             this.label12.Text = "First Name";
             // 
@@ -184,7 +184,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(18, 137);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 36);
+            this.label1.Size = new System.Drawing.Size(66, 17);
             this.label1.TabIndex = 82;
             this.label1.Text = "Last Name";
             // 
@@ -200,7 +200,7 @@
             // 
             // DeleteVehicleOwner
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 36F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 529);
             this.Controls.Add(this.btnSelect);

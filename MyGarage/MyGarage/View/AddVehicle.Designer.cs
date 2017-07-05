@@ -62,7 +62,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(194, 35);
+            this.label3.Size = new System.Drawing.Size(155, 28);
             this.label3.TabIndex = 4;
             this.label3.Text = "Add New Vehicle";
             // 
@@ -83,7 +83,7 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(3, 7);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(164, 25);
+            this.label11.Size = new System.Drawing.Size(129, 20);
             this.label11.TabIndex = 4;
             this.label11.Text = "Vehicle Information";
             // 
@@ -92,7 +92,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(24, 102);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(36, 23);
+            this.label15.Size = new System.Drawing.Size(28, 17);
             this.label15.TabIndex = 22;
             this.label15.Text = "VIN";
             // 
@@ -101,7 +101,7 @@
             this.txtVIN.Location = new System.Drawing.Point(64, 98);
             this.txtVIN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtVIN.Name = "txtVIN";
-            this.txtVIN.Size = new System.Drawing.Size(203, 29);
+            this.txtVIN.Size = new System.Drawing.Size(203, 25);
             this.txtVIN.TabIndex = 21;
             // 
             // label14
@@ -109,7 +109,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(291, 102);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 23);
+            this.label14.Size = new System.Drawing.Size(38, 17);
             this.label14.TabIndex = 24;
             this.label14.Text = "Make";
             // 
@@ -117,14 +117,14 @@
             // 
             this.txtMake.Location = new System.Drawing.Point(335, 99);
             this.txtMake.Name = "txtMake";
-            this.txtMake.Size = new System.Drawing.Size(203, 29);
+            this.txtMake.Size = new System.Drawing.Size(203, 25);
             this.txtMake.TabIndex = 23;
             // 
             // txtYear
             // 
             this.txtYear.Location = new System.Drawing.Point(335, 137);
             this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(69, 29);
+            this.txtYear.Size = new System.Drawing.Size(69, 25);
             this.txtYear.TabIndex = 30;
             this.txtYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYear_KeyPress);
             // 
@@ -133,7 +133,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(297, 140);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 23);
+            this.label12.Size = new System.Drawing.Size(32, 17);
             this.label12.TabIndex = 29;
             this.label12.Text = "Year";
             // 
@@ -141,7 +141,7 @@
             // 
             this.txtModel.Location = new System.Drawing.Point(64, 140);
             this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(203, 29);
+            this.txtModel.Size = new System.Drawing.Size(203, 25);
             this.txtModel.TabIndex = 28;
             // 
             // label13
@@ -149,7 +149,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(15, 140);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 23);
+            this.label13.Size = new System.Drawing.Size(43, 17);
             this.label13.TabIndex = 27;
             this.label13.Text = "Model";
             // 
@@ -159,7 +159,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 31);
             this.btnClose.TabIndex = 32;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "Cancel";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -169,13 +169,13 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 31);
             this.btnSave.TabIndex = 31;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Add";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // AddVehicle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 529);
             this.Controls.Add(this.btnClose);
