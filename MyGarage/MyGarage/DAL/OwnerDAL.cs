@@ -15,7 +15,7 @@ namespace MyGarage.DAL
         /// Creates a new Owner 
         /// </summary>
         /// <param name="newOwner"></param>
-        /// <returns></returns>
+        /// <returns>OwnerID of new owner</returns>
         public static int CreateOwner(Owner newOwner)
         {
             int exitStatus = 0;
@@ -150,7 +150,11 @@ namespace MyGarage.DAL
 
             return exitStatus;
         }
-
+        /// <summary>
+        /// Get Owner 
+        /// </summary>
+        /// <param name="ownerID"></param>
+        /// <returns></returns>
         public static Owner GetOwner(int ownerID)
         {
             Owner owner = new Owner();
@@ -207,7 +211,12 @@ namespace MyGarage.DAL
             }
             return owner;
         }
-
+        /// <summary>
+        /// Retrieves a list of Owners based on input of First or Last Name 
+        /// </summary>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <returns>List of Owners</returns>
         public static List<Owner> GetListByName(string firstName, string lastName)
         {
             System.Collections.Generic.List<Owner> ownerList = new List<Owner>();
@@ -232,6 +241,80 @@ namespace MyGarage.DAL
                             selectCommand.Parameters.AddWithValue("@lastName", lastName);
                         else
                             selectCommand.Parameters.AddWithValue("@lastName", lastName + "%");
+
+                        using (reader = selectCommand.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Owner owner = new Owner();
+                                owner.ownerID = (int)reader["ownerID"];
+                                owner.firstName = reader["firstName"].ToString();
+                                owner.lastName = reader["lastName"].ToString();
+                                owner.streetAddress = reader["streetAddress"].ToString();
+                                owner.city = reader["city"].ToString();
+                                owner.state = reader["state"].ToString();
+                                owner.zip = reader["zip"].ToString();
+                                owner.phoneNumber = reader["phoneNumber"].ToString();
+                                owner.emailAddress = reader["emailAddress"].ToString();
+                                ownerList.Add(owner);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+                if (reader != null)
+                    reader.Close();
+            }
+            return ownerList;
+        }
+        /// <summary>
+        /// Retrieves a list of Owners based on FirstName, lastName, or phoneNumber
+        /// </summary>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <param name="phoneNumber"></param>
+        /// <returns>List of Owners</returns>
+        public static List<Owner> GetListByNameOrPhone(string firstName, string lastName, string phoneNumber)
+        {
+            System.Collections.Generic.List<Owner> ownerList = new List<Owner>();
+            string selectStatement = "SELECT * FROM owner " +
+                "WHERE (firstName LIKE @firstName OR lastName LIKE @lastName OR phoneNumber LIKE @phoneNumber) " +
+                "ORDER BY lastName";
+            SqlDataReader reader = null;
+            SqlConnection connection = null;
+            try
+            {
+                using (connection = DBConnection.GetConnection())
+                {
+                    connection.Open();
+                    using (SqlCommand selectCommand = new SqlCommand(selectStatement, connection))
+                    {
+                        if (String.IsNullOrEmpty(firstName))
+                            selectCommand.Parameters.AddWithValue("@firstName", firstName);
+                        else
+                            selectCommand.Parameters.AddWithValue("@firstName", firstName + "%");
+
+                        if (String.IsNullOrEmpty(lastName))
+                            selectCommand.Parameters.AddWithValue("@lastName", lastName);
+                        else
+                            selectCommand.Parameters.AddWithValue("@lastName", lastName + "%");
+
+                        if (String.IsNullOrEmpty(lastName))
+                            selectCommand.Parameters.AddWithValue("@phoneNumber", phoneNumber);
+                        else
+                            selectCommand.Parameters.AddWithValue("@phoneNumber", phoneNumber + "%");
 
                         using (reader = selectCommand.ExecuteReader())
                         {
