@@ -1,5 +1,7 @@
 ﻿using MyGarage.DB;
 using MyGarage.Model;
+using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
 using System.Windows.Forms;
@@ -101,6 +103,62 @@ namespace MyGarage.DAL
             }
 
             return exitStatus;
+        }
+        /// <summary>
+        /// Returns a list of services performed based on vehicleID
+        /// </summary>
+        /// <param name="vehicleID"></param>
+        /// <returns></returns>
+        public static List<ServiceRecordType> GetListServicesPerformedByVehicle(int vehicleID)
+        {
+            List<ServiceRecordType> servicesPerformedList = new List<ServiceRecordType>();
+            string selectStatement = "SELECT SC.categoryName, SR.dateOfService, SR.mileage " +
+                                     "FROM serviceRecordType SRC " +
+                                     "JOIN serviceCategory SC ON SRC.serviceCategoryID = SC.serviceCategoryID " +
+                                     "JOIN serviceRecord SR ON SRC.serviceRecordID = SR.serviceRecordID " +
+                                     "WHERE SR.vehicleID = @vehicleID " +
+                                     "ORDER BY SR.dateOfService DESC";
+            SqlDataReader reader = null;
+            SqlConnection connection = null;
+            try
+            {
+                using (connection = DBConnection.GetConnection())
+                {
+                    connection.Open();
+                    using (SqlCommand selectCommand = new SqlCommand(selectStatement, connection))
+                    {
+                        selectCommand.Parameters.AddWithValue("@vehicleID", vehicleID);
+
+                        using (reader = selectCommand.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                ServiceRecordType src = new ServiceRecordType();
+                                src.categoryName = reader["categoryName"].ToString();
+                                src.dateOfService = (DateTime)reader["dateOfService"];
+                                src.mileage = (int)reader["mileage"];
+                                servicesPerformedList.Add(src);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+                if (reader != null)
+                    reader.Close();
+            }
+            return servicesPerformedList;
         }
     }
 }
