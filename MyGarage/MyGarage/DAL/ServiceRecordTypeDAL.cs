@@ -160,5 +160,53 @@ namespace MyGarage.DAL
             }
             return servicesPerformedList;
         }
+        /// <summary>
+        /// Method checks to see if this Mileage for the specified vehicleID and categoryName is higher than the previous
+        /// </summary>
+        /// <param name="vehicleID"></param>
+        /// <param name="categoryName"></param>
+        /// <param name="mileage"></param>
+        /// <returns>True if mileage is higher and False if mileage is lower</returns>
+        public static bool checkMileageWhenAddingSRTAssociation(int vehicleID, string categoryName, int mileage)
+        {
+            int previousMileage = 0;
+            
+            SqlConnection connection = DBConnection.GetConnection();
+            SqlCommand selectCommand = new SqlCommand();
+            selectCommand.Connection = connection;
+            selectCommand.CommandText = "SELECT MAX(sr.mileage) " +
+                "FROM dbo.vehicle AS v " +
+                "JOIN dbo.serviceRecord AS sr ON v.vehicleID = sr.vehicleID " +
+                "JOIN dbo.serviceRecordType AS srt ON sr.serviceRecordID = srt.serviceRecordID " +
+                "JOIN dbo.serviceCategory AS sc ON srt.serviceCategoryID = sc.serviceCategoryID " +
+                "WHERE V.vehicleID = @vehicleID AND SC.categoryName = @categoryName";
+
+            try
+            {
+                connection.Open();
+                previousMileage = Convert.ToInt32(selectCommand.ExecuteScalar());
+
+            }
+            catch (SqlException ex)
+            {
+                StringBuilder errorDetails = new StringBuilder();
+                for (int i = 0; i < ex.Errors.Count; i++)
+                {
+                    errorDetails.Append("Index #" + i + "\n" +
+                        "Message: " + ex.Errors[i].Message + "\n" +
+                        "Error Number: " + ex.Errors[i].Number + "\n" +
+                        "Procedure: " + ex.Errors[i].Procedure + "\n");
+                }
+                MessageBox.Show(errorDetails.ToString(), "SQL Exception");
+            }
+            if ( mileage > previousMileage)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
