@@ -87,5 +87,14 @@ namespace MyGarage
             frmPanel.Controls.Add(searchHistory);
             searchHistory.Show();
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            frmPanel.Controls.Clear();
+            MaintenanceReport runReport = new View.MaintenanceReport();
+            runReport.TopLevel = false;
+            frmPanel.Controls.Add(runReport);
+            runReport.Show();
+        }
     }
 }
