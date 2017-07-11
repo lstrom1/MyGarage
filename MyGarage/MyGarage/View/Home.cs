@@ -78,5 +78,14 @@ namespace MyGarage
             frmPanel.Controls.Add(addService);
             addService.Show();
         }
+
+        private void btnViewHistory_Click(object sender, EventArgs e)
+        {
+            frmPanel.Controls.Clear();
+            SearchHistory searchHistory = new View.SearchHistory();
+            searchHistory.TopLevel = false; 
+            frmPanel.Controls.Add(searchHistory);
+            searchHistory.Show();
+        }
     }
 }

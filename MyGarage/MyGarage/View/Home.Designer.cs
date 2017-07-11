@@ -45,6 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.frmPanel = new System.Windows.Forms.Panel();
+            this.btnViewHistory = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -54,6 +55,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnViewHistory);
             this.panel1.Controls.Add(this.btnAddVehicleOwner);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.btnAddService);
@@ -251,6 +253,20 @@
             this.frmPanel.Size = new System.Drawing.Size(641, 529);
             this.frmPanel.TabIndex = 4;
             // 
+            // btnViewHistory
+            // 
+            this.btnViewHistory.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(35)))), ((int)(((byte)(6)))));
+            this.btnViewHistory.FlatAppearance.BorderSize = 2;
+            this.btnViewHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewHistory.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewHistory.Location = new System.Drawing.Point(3, 379);
+            this.btnViewHistory.Name = "btnViewHistory";
+            this.btnViewHistory.Size = new System.Drawing.Size(159, 33);
+            this.btnViewHistory.TabIndex = 13;
+            this.btnViewHistory.Text = "View History";
+            this.btnViewHistory.UseVisualStyleBackColor = true;
+            this.btnViewHistory.Click += new System.EventHandler(this.btnViewHistory_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,6 +307,7 @@
         private System.Windows.Forms.Button btnDeleteVehOwn;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnAddVehicleOwner;
+        private System.Windows.Forms.Button btnViewHistory;
     }
 }
 

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -63,29 +61,12 @@
             this.txtPhoneLastFourDigits = new System.Windows.Forms.TextBox();
             this.phoneDashLeft = new System.Windows.Forms.Label();
             this.phoneDashRight = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(748, 59);
-            this.panel1.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 28);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Edit Customer";
             // 
             // panel2
             // 
@@ -305,7 +286,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(27, 144);
+            this.label11.Location = new System.Drawing.Point(27, 135);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(66, 17);
             this.label11.TabIndex = 45;
@@ -313,7 +294,7 @@
             // 
             // txtSearchLast
             // 
-            this.txtSearchLast.Location = new System.Drawing.Point(99, 141);
+            this.txtSearchLast.Location = new System.Drawing.Point(99, 132);
             this.txtSearchLast.Name = "txtSearchLast";
             this.txtSearchLast.Size = new System.Drawing.Size(203, 25);
             this.txtSearchLast.TabIndex = 44;
@@ -321,7 +302,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(26, 109);
+            this.label12.Location = new System.Drawing.Point(26, 98);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(67, 17);
             this.label12.TabIndex = 43;
@@ -329,14 +310,14 @@
             // 
             // txtSearchFirst
             // 
-            this.txtSearchFirst.Location = new System.Drawing.Point(99, 109);
+            this.txtSearchFirst.Location = new System.Drawing.Point(99, 98);
             this.txtSearchFirst.Name = "txtSearchFirst";
             this.txtSearchFirst.Size = new System.Drawing.Size(203, 25);
             this.txtSearchFirst.TabIndex = 42;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(320, 141);
+            this.btnSearch.Location = new System.Drawing.Point(320, 132);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 27);
             this.btnSearch.TabIndex = 46;
@@ -348,14 +329,14 @@
             // 
             this.cmbSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSelect.FormattingEnabled = true;
-            this.cmbSelect.Location = new System.Drawing.Point(30, 174);
+            this.cmbSelect.Location = new System.Drawing.Point(30, 166);
             this.cmbSelect.Name = "cmbSelect";
             this.cmbSelect.Size = new System.Drawing.Size(272, 25);
             this.cmbSelect.TabIndex = 47;
             // 
             // btnSelect
             // 
-            this.btnSelect.Location = new System.Drawing.Point(320, 173);
+            this.btnSelect.Location = new System.Drawing.Point(320, 165);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(75, 26);
             this.btnSelect.TabIndex = 48;
@@ -368,7 +349,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(35)))), ((int)(((byte)(6)))));
             this.panel3.Controls.Add(this.label13);
             this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(0, 65);
+            this.panel3.Location = new System.Drawing.Point(0, 52);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(641, 31);
             this.panel3.TabIndex = 49;
@@ -425,11 +406,31 @@
             this.phoneDashRight.TabIndex = 54;
             this.phoneDashRight.Text = "-";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(641, 45);
+            this.panel1.TabIndex = 55;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(129, 28);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Edit Customer";
+            // 
             // EditCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 529);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.phoneDashRight);
             this.Controls.Add(this.phoneDashLeft);
             this.Controls.Add(this.txtPhoneLastFourDigits);
@@ -461,26 +462,22 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditCustomer";
             this.Text = "EditCustomer";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
@@ -514,5 +511,7 @@
         private System.Windows.Forms.TextBox txtPhoneLastFourDigits;
         private System.Windows.Forms.Label phoneDashLeft;
         private System.Windows.Forms.Label phoneDashRight;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
     }
 }
