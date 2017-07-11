@@ -42,8 +42,18 @@
             this.label13 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnSelect = new System.Windows.Forms.Button();
+            this.cmbSelect = new System.Windows.Forms.ComboBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSearchLast = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSearchFirst = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -155,7 +165,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(143, 188);
+            this.btnClose.Location = new System.Drawing.Point(227, 356);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 31);
             this.btnClose.TabIndex = 32;
@@ -165,7 +175,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(62, 188);
+            this.btnSave.Location = new System.Drawing.Point(146, 356);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 31);
             this.btnSave.TabIndex = 31;
@@ -173,11 +183,98 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(35)))), ((int)(((byte)(6)))));
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.ForeColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(0, 195);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(641, 31);
+            this.panel2.TabIndex = 57;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Select Customer";
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.Location = new System.Drawing.Point(320, 317);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(75, 26);
+            this.btnSelect.TabIndex = 56;
+            this.btnSelect.Text = "Select";
+            this.btnSelect.UseVisualStyleBackColor = true;
+            // 
+            // cmbSelect
+            // 
+            this.cmbSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSelect.FormattingEnabled = true;
+            this.cmbSelect.Location = new System.Drawing.Point(30, 318);
+            this.cmbSelect.Name = "cmbSelect";
+            this.cmbSelect.Size = new System.Drawing.Size(272, 25);
+            this.cmbSelect.TabIndex = 55;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(320, 279);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 27);
+            this.btnSearch.TabIndex = 54;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 282);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 17);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "Last Name";
+            // 
+            // txtSearchLast
+            // 
+            this.txtSearchLast.Location = new System.Drawing.Point(99, 279);
+            this.txtSearchLast.Name = "txtSearchLast";
+            this.txtSearchLast.Size = new System.Drawing.Size(203, 25);
+            this.txtSearchLast.TabIndex = 52;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(26, 241);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 17);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "First Name";
+            // 
+            // txtSearchFirst
+            // 
+            this.txtSearchFirst.Location = new System.Drawing.Point(99, 241);
+            this.txtSearchFirst.Name = "txtSearchFirst";
+            this.txtSearchFirst.Size = new System.Drawing.Size(203, 25);
+            this.txtSearchFirst.TabIndex = 50;
+            // 
             // AddVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 529);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.btnSelect);
+            this.Controls.Add(this.cmbSelect);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtSearchLast);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtSearchFirst);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtYear);
@@ -199,6 +296,8 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,5 +319,14 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.ComboBox cmbSelect;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtSearchLast;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtSearchFirst;
     }
 }
