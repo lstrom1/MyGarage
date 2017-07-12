@@ -44,7 +44,6 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSelect = new System.Windows.Forms.Button();
             this.cmbSelect = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -203,15 +202,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Select Customer";
             // 
-            // btnSelect
-            // 
-            this.btnSelect.Location = new System.Drawing.Point(320, 317);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(75, 26);
-            this.btnSelect.TabIndex = 56;
-            this.btnSelect.Text = "Select";
-            this.btnSelect.UseVisualStyleBackColor = true;
-            // 
             // cmbSelect
             // 
             this.cmbSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -229,6 +219,7 @@
             this.btnSearch.TabIndex = 54;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label2
             // 
@@ -268,7 +259,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 529);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.cmbSelect);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label2);
@@ -321,7 +311,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSelect;
         private System.Windows.Forms.ComboBox cmbSelect;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label2;

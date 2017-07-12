@@ -1,6 +1,7 @@
 ﻿using MyGarage.Controller;
 using MyGarage.Model;
 using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -9,7 +10,9 @@ namespace MyGarage.View
     public partial class AddVehicle : Form
     {
 
-        VehicleController vehControl = new VehicleController(); 
+        VehicleController vehControl = new VehicleController();
+        OwnerController ownControl = new OwnerController();
+        OwnerVehicleController ownVehControl = new OwnerVehicleController(); 
 
         public AddVehicle()
         {
@@ -18,7 +21,11 @@ namespace MyGarage.View
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (AllValidInputs() && IsValidYear(txtYear.Text))
+            if (cmbSelect.SelectedValue == null)
+            {
+                MessageBox.Show("Please select an owner to add.");
+            } 
+            else if (AllValidInputs() && IsValidYear(txtYear.Text))
             {
 
                 //add new vehicle
@@ -28,9 +35,16 @@ namespace MyGarage.View
                 newVehicle.VIN = txtVIN.Text;
                 newVehicle.year = txtYear.Text;
 
-                int addStatus = vehControl.AddVehicle(newVehicle);
+                int vehicleID = vehControl.AddVehicle(newVehicle);
+                int ownerID = int.Parse(cmbSelect.SelectedValue.ToString());
 
-                if (addStatus == 0)
+                OwnerVehicle newOwnerVehicle = new OwnerVehicle();
+                newOwnerVehicle.ownerID = ownerID;
+                newOwnerVehicle.vehicleID = vehicleID;
+
+                int addStatus = ownVehControl.AddOwnerVehicle(newOwnerVehicle);
+
+                if (ownerID != 0 && vehicleID != 0 && addStatus == 0)
                 {
                     MessageBox.Show("You have successfully created a new vehicle!");
                     this.Close();
@@ -98,6 +112,29 @@ namespace MyGarage.View
         private void txtYear_KeyPress(object sender, KeyPressEventArgs e)
         {
             this.allowOnlyNumbersKeyPress(e);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtSearchFirst.Text != null && txtSearchLast.Text != null)
+            {
+                try
+                {
+                    List<Owner> ownList = ownControl.GetOwners(txtSearchFirst.Text, txtSearchLast.Text);
+                    cmbSelect.DataSource = ownList;
+                    cmbSelect.DisplayMember = "ownerUnique";
+                    cmbSelect.ValueMember = "OwnerID";
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("An error has occured, please try again");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please provide first and last name.");
+            }
         }
     }
 }
