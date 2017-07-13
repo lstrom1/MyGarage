@@ -317,6 +317,7 @@
             // txtPhoneAreaCode
             // 
             this.txtPhoneAreaCode.Location = new System.Drawing.Point(392, 216);
+            this.txtPhoneAreaCode.MaxLength = 3;
             this.txtPhoneAreaCode.Name = "txtPhoneAreaCode";
             this.txtPhoneAreaCode.Size = new System.Drawing.Size(59, 25);
             this.txtPhoneAreaCode.TabIndex = 7;
@@ -334,6 +335,7 @@
             // txtPhoneFirstThreeDigits
             // 
             this.txtPhoneFirstThreeDigits.Location = new System.Drawing.Point(468, 216);
+            this.txtPhoneFirstThreeDigits.MaxLength = 3;
             this.txtPhoneFirstThreeDigits.Name = "txtPhoneFirstThreeDigits";
             this.txtPhoneFirstThreeDigits.Size = new System.Drawing.Size(55, 25);
             this.txtPhoneFirstThreeDigits.TabIndex = 8;
@@ -342,6 +344,7 @@
             // txtPhoneLastFourDigits
             // 
             this.txtPhoneLastFourDigits.Location = new System.Drawing.Point(544, 216);
+            this.txtPhoneLastFourDigits.MaxLength = 4;
             this.txtPhoneLastFourDigits.Name = "txtPhoneLastFourDigits";
             this.txtPhoneLastFourDigits.Size = new System.Drawing.Size(74, 25);
             this.txtPhoneLastFourDigits.TabIndex = 9;

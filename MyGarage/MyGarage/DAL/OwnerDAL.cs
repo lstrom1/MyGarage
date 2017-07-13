@@ -289,9 +289,18 @@ namespace MyGarage.DAL
         public static List<Owner> GetListByNameOrPhone(string firstName, string lastName, string phoneNumber)
         {
             System.Collections.Generic.List<Owner> ownerList = new List<Owner>();
-            string selectStatement = "SELECT * FROM owner " +
-                "WHERE (firstName LIKE @firstName OR lastName LIKE @lastName OR phoneNumber LIKE @phoneNumber) " +
+            string selectStatement; 
+            if (phoneNumber == "--") {
+                selectStatement = "SELECT * FROM owner " +
+                "WHERE firstName LIKE @firstName OR lastName LIKE @lastName " +
                 "ORDER BY lastName";
+            } else
+            {
+                selectStatement = "SELECT * FROM owner " +
+                "WHERE (phoneNumber LIKE @phoneNumber) " +
+                "ORDER BY lastName";
+            }
+            
             SqlDataReader reader = null;
             SqlConnection connection = null;
             try

@@ -41,10 +41,13 @@
             this.txtPhoneAreaCode = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbVehicles = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnView = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbCustomers = new System.Windows.Forms.ComboBox();
+            this.btnSelect = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,6 +114,7 @@
             // txtPhoneLastFourDigits
             // 
             this.txtPhoneLastFourDigits.Location = new System.Drawing.Point(264, 95);
+            this.txtPhoneLastFourDigits.MaxLength = 4;
             this.txtPhoneLastFourDigits.Name = "txtPhoneLastFourDigits";
             this.txtPhoneLastFourDigits.Size = new System.Drawing.Size(74, 25);
             this.txtPhoneLastFourDigits.TabIndex = 37;
@@ -118,6 +122,7 @@
             // txtPhoneFirstThreeDigits
             // 
             this.txtPhoneFirstThreeDigits.Location = new System.Drawing.Point(188, 95);
+            this.txtPhoneFirstThreeDigits.MaxLength = 3;
             this.txtPhoneFirstThreeDigits.Name = "txtPhoneFirstThreeDigits";
             this.txtPhoneFirstThreeDigits.Size = new System.Drawing.Size(55, 25);
             this.txtPhoneFirstThreeDigits.TabIndex = 36;
@@ -134,6 +139,7 @@
             // txtPhoneAreaCode
             // 
             this.txtPhoneAreaCode.Location = new System.Drawing.Point(112, 95);
+            this.txtPhoneAreaCode.MaxLength = 3;
             this.txtPhoneAreaCode.Name = "txtPhoneAreaCode";
             this.txtPhoneAreaCode.Size = new System.Drawing.Size(59, 25);
             this.txtPhoneAreaCode.TabIndex = 35;
@@ -155,19 +161,20 @@
             this.btnSearch.TabIndex = 41;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // comboBox1
+            // cmbVehicles
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(110, 133);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(292, 25);
-            this.comboBox1.TabIndex = 42;
+            this.cmbVehicles.FormattingEnabled = true;
+            this.cmbVehicles.Location = new System.Drawing.Point(110, 169);
+            this.cmbVehicles.Name = "cmbVehicles";
+            this.cmbVehicles.Size = new System.Drawing.Size(292, 25);
+            this.cmbVehicles.TabIndex = 42;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 136);
+            this.label4.Location = new System.Drawing.Point(50, 172);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 17);
             this.label4.TabIndex = 43;
@@ -175,7 +182,7 @@
             // 
             // btnView
             // 
-            this.btnView.Location = new System.Drawing.Point(417, 129);
+            this.btnView.Location = new System.Drawing.Point(417, 165);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(96, 31);
             this.btnView.TabIndex = 44;
@@ -184,21 +191,51 @@
             // 
             // listView1
             // 
-            this.listView1.Location = new System.Drawing.Point(17, 179);
+            this.listView1.Location = new System.Drawing.Point(17, 218);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(612, 338);
+            this.listView1.Size = new System.Drawing.Size(612, 299);
             this.listView1.TabIndex = 45;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(40, 132);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 17);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "Customers";
+            // 
+            // cmbCustomers
+            // 
+            this.cmbCustomers.FormattingEnabled = true;
+            this.cmbCustomers.Location = new System.Drawing.Point(110, 132);
+            this.cmbCustomers.Name = "cmbCustomers";
+            this.cmbCustomers.Size = new System.Drawing.Size(292, 25);
+            this.cmbCustomers.TabIndex = 47;
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.Location = new System.Drawing.Point(417, 128);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(96, 31);
+            this.btnSelect.TabIndex = 48;
+            this.btnSelect.Text = "View Vehicles";
+            this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // SearchHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 529);
+            this.Controls.Add(this.btnSelect);
+            this.Controls.Add(this.cmbCustomers);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbVehicles);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.phoneDashRight);
             this.Controls.Add(this.txtPhoneLastFourDigits);
@@ -238,9 +275,12 @@
         private System.Windows.Forms.TextBox txtPhoneAreaCode;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbVehicles;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbCustomers;
+        private System.Windows.Forms.Button btnSelect;
     }
 }

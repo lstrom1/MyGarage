@@ -16,6 +16,11 @@ namespace MyGarage.Controller
             return OwnerDAL.GetListByName(first, last); 
         }
 
+        public List<Owner> SearchOwner(string first, string last, string phoneNumber)
+        {
+            return OwnerDAL.GetListByNameOrPhone(first, last, phoneNumber); 
+        }
+
         public Owner GetOwner(int id)
         {
             return OwnerDAL.GetOwner(id); 

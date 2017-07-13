@@ -60,7 +60,7 @@
     <Compile Include="DAL\ServiceCategoryDAL.cs" />
     <Compile Include="DAL\ServiceRecordDAL.cs" />
     <Compile Include="DAL\ServiceRecordTypeDAL.cs" />
-    <Compile Include="DB\VehicleDAL.cs" />
+    <Compile Include="DAL\VehicleDAL.cs" />
     <Compile Include="DB\DBConnection.cs" />
     <Compile Include="Model\Owner.cs" />
     <Compile Include="Model\OwnerVehicle.cs" />
