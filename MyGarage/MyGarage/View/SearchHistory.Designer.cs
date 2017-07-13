@@ -44,10 +44,13 @@
             this.cmbVehicles = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnView = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lstService = new System.Windows.Forms.ListView();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbCustomers = new System.Windows.Forms.ComboBox();
             this.btnSelect = new System.Windows.Forms.Button();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -188,14 +191,20 @@
             this.btnView.TabIndex = 44;
             this.btnView.Text = "View History";
             this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
-            // listView1
+            // lstService
             // 
-            this.listView1.Location = new System.Drawing.Point(17, 218);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(612, 299);
-            this.listView1.TabIndex = 45;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lstService.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.lstService.Location = new System.Drawing.Point(17, 218);
+            this.lstService.Name = "lstService";
+            this.lstService.Size = new System.Drawing.Size(612, 299);
+            this.lstService.TabIndex = 45;
+            this.lstService.UseCompatibleStateImageBehavior = false;
+            this.lstService.View = System.Windows.Forms.View.Details;
             // 
             // label5
             // 
@@ -213,6 +222,7 @@
             this.cmbCustomers.Name = "cmbCustomers";
             this.cmbCustomers.Size = new System.Drawing.Size(292, 25);
             this.cmbCustomers.TabIndex = 47;
+            this.cmbCustomers.SelectedIndexChanged += new System.EventHandler(this.cmbCustomers_SelectedIndexChanged);
             // 
             // btnSelect
             // 
@@ -224,6 +234,21 @@
             this.btnSelect.UseVisualStyleBackColor = true;
             this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Service Type";
+            this.columnHeader1.Width = 135;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Date of Service";
+            this.columnHeader2.Width = 141;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Mileage";
+            this.columnHeader3.Width = 123;
+            // 
             // SearchHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -232,7 +257,7 @@
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.cmbCustomers);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lstService);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cmbVehicles);
@@ -278,9 +303,12 @@
         private System.Windows.Forms.ComboBox cmbVehicles;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnView;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lstService;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbCustomers;
         private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using MyGarage.DAL;
 using MyGarage.Model;
+using System.Collections.Generic;
 
 namespace MyGarage.Controller
 {
@@ -14,5 +15,11 @@ namespace MyGarage.Controller
         {
             return ServiceRecordTypeDAL.RemoveServiceRecordType(oldServiceRecordType);
         }
+
+        public List<ServiceRecordType> GetRecordByVehicle(int vehicleID)
+        {
+            return ServiceRecordTypeDAL.GetListServicesPerformedByVehicle(vehicleID); 
+        }
+
     }
 }
