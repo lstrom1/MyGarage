@@ -130,6 +130,21 @@
     <Compile Include="View\SearchHistory.Designer.cs">
       <DependentUpon>SearchHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="_CS6920_team5DataSet_HistoryForSpecifiedVehicle.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_CS6920_team5DataSet_HistoryForSpecifiedVehicle.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_CS6920_team5DataSet_NeededNumber30Days.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_CS6920_team5DataSet_NeededNumber30Days.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_CS6920_team5_DataSet_AllOwnerVehicles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_CS6920_team5_DataSet_AllOwnerVehicles.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +193,39 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="_CS6920_team5DataSet_HistoryForSpecifiedVehicle.xsc">
+      <DependentUpon>_CS6920_team5DataSet_HistoryForSpecifiedVehicle.xsd</DependentUpon>
+    </None>
+    <None Include="_CS6920_team5DataSet_HistoryForSpecifiedVehicle.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_CS6920_team5DataSet_HistoryForSpecifiedVehicle.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_CS6920_team5DataSet_HistoryForSpecifiedVehicle.xss">
+      <DependentUpon>_CS6920_team5DataSet_HistoryForSpecifiedVehicle.xsd</DependentUpon>
+    </None>
+    <None Include="_CS6920_team5DataSet_NeededNumber30Days.xsc">
+      <DependentUpon>_CS6920_team5DataSet_NeededNumber30Days.xsd</DependentUpon>
+    </None>
+    <None Include="_CS6920_team5DataSet_NeededNumber30Days.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_CS6920_team5DataSet_NeededNumber30Days.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_CS6920_team5DataSet_NeededNumber30Days.xss">
+      <DependentUpon>_CS6920_team5DataSet_NeededNumber30Days.xsd</DependentUpon>
+    </None>
+    <None Include="_CS6920_team5_DataSet_AllOwnerVehicles.xsc">
+      <DependentUpon>_CS6920_team5_DataSet_AllOwnerVehicles.xsd</DependentUpon>
+    </None>
+    <None Include="_CS6920_team5_DataSet_AllOwnerVehicles.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_CS6920_team5_DataSet_AllOwnerVehicles.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_CS6920_team5_DataSet_AllOwnerVehicles.xss">
+      <DependentUpon>_CS6920_team5_DataSet_AllOwnerVehicles.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
