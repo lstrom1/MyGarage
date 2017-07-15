@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyGarage.View
 {
-    public partial class MaintenanceReport : Form
+    public partial class AllOwnerVehicleReport : Form
     {
-        public MaintenanceReport()
+        public AllOwnerVehicleReport()
         {
             InitializeComponent();
         }

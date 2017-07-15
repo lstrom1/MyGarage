@@ -98,6 +98,12 @@
     <Compile Include="View\AddVehicleOwner.Designer.cs">
       <DependentUpon>AddVehicleOwner.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\PastDueVehiclesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PastDueVehiclesReport.Designer.cs">
+      <DependentUpon>PastDueVehiclesReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ChooseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,17 +130,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\MaintenanceReport.cs">
+    <Compile Include="View\AllOwnerVehicleReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\MaintenanceReport.Designer.cs">
-      <DependentUpon>MaintenanceReport.cs</DependentUpon>
+    <Compile Include="View\AllOwnerVehicleReport.Designer.cs">
+      <DependentUpon>AllOwnerVehicleReport.cs</DependentUpon>
     </Compile>
     <Compile Include="View\SearchHistory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\SearchHistory.Designer.cs">
       <DependentUpon>SearchHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\VehicleReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\VehicleReport.Designer.cs">
+      <DependentUpon>VehicleReport.cs</DependentUpon>
     </Compile>
     <Compile Include="_CS6920_team5DataSet_HistoryForSpecifiedVehicle.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -167,6 +179,9 @@
     <EmbeddedResource Include="View\AddVehicleOwner.resx">
       <DependentUpon>AddVehicleOwner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\PastDueVehiclesReport.resx">
+      <DependentUpon>PastDueVehiclesReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ChooseForm.resx">
       <DependentUpon>ChooseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,11 +203,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\MaintenanceReport.resx">
-      <DependentUpon>MaintenanceReport.cs</DependentUpon>
+    <EmbeddedResource Include="View\AllOwnerVehicleReport.resx">
+      <DependentUpon>AllOwnerVehicleReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\SearchHistory.resx">
       <DependentUpon>SearchHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\VehicleReport.resx">
+      <DependentUpon>VehicleReport.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
