@@ -104,11 +104,11 @@
     <Compile Include="View\PastDueVehiclesReport.Designer.cs">
       <DependentUpon>PastDueVehiclesReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ChooseForm.cs">
+    <Compile Include="View\ChooseReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\ChooseForm.Designer.cs">
-      <DependentUpon>ChooseForm.cs</DependentUpon>
+    <Compile Include="View\ChooseReport.Designer.cs">
+      <DependentUpon>ChooseReport.cs</DependentUpon>
     </Compile>
     <Compile Include="View\DeleteVehicleOwner.cs">
       <SubType>Form</SubType>
@@ -182,8 +182,8 @@
     <EmbeddedResource Include="View\PastDueVehiclesReport.resx">
       <DependentUpon>PastDueVehiclesReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ChooseForm.resx">
-      <DependentUpon>ChooseForm.cs</DependentUpon>
+    <EmbeddedResource Include="View\ChooseReport.resx">
+      <DependentUpon>ChooseReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\DeleteVehicleOwner.resx">
       <DependentUpon>DeleteVehicleOwner.cs</DependentUpon>

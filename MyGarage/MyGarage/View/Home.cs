@@ -91,7 +91,7 @@ namespace MyGarage
         private void btnReport_Click(object sender, EventArgs e)
         {
             frmPanel.Controls.Clear();
-            ChooseForm chooseForm = new View.ChooseForm();
+            ChooseReport chooseForm = new View.ChooseReport();
             chooseForm.TopLevel = false;
             frmPanel.Controls.Add(chooseForm);
             chooseForm.Show();

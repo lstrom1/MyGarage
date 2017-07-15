@@ -1,6 +1,6 @@
 ﻿namespace MyGarage.View
 {
-    partial class ChooseForm
+    partial class ChooseReport
     {
         /// <summary>
         /// Required designer variable.
@@ -298,6 +298,7 @@
             this.btnAllVehicles.TabIndex = 78;
             this.btnAllVehicles.Text = "All";
             this.btnAllVehicles.UseVisualStyleBackColor = true;
+            this.btnAllVehicles.Click += new System.EventHandler(this.btnAllVehicles_Click);
             // 
             // cmbVehicles
             // 
@@ -343,7 +344,7 @@
             this.label11.TabIndex = 83;
             this.label11.Text = "Vehicles needing or past due for maintenance based on previous service records.";
             // 
-            // ChooseForm
+            // ChooseReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -378,7 +379,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "ChooseForm";
+            this.Name = "ChooseReport";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

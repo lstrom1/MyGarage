@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace MyGarage.View
 {
-    public partial class ChooseForm : Form
+    public partial class ChooseReport : Form
     {
 
         OwnerController ownControl = new OwnerController();
         VehicleController vehControl = new VehicleController(); 
 
-        public ChooseForm()
+        public ChooseReport()
         {
             InitializeComponent();
         }
@@ -86,6 +86,21 @@ namespace MyGarage.View
             } else
             {
                 MessageBox.Show("Please select a customer to run a report for."); 
+            }
+        }
+
+        private void btnAllVehicles_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<Vehicle> vehList = vehControl.GetCompleteVehicleList();
+                cmbVehicles.DataSource = vehList;
+                cmbVehicles.DisplayMember = "vehicleUnique";
+                cmbVehicles.ValueMember = "vehicleID";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An error has occured, please try again");
             }
         }
     }
