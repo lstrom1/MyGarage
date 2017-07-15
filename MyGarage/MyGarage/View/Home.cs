@@ -91,10 +91,10 @@ namespace MyGarage
         private void btnReport_Click(object sender, EventArgs e)
         {
             frmPanel.Controls.Clear();
-            MaintenanceReport runReport = new View.MaintenanceReport();
-            runReport.TopLevel = false;
-            frmPanel.Controls.Add(runReport);
-            runReport.Show();
+            ChooseForm chooseForm = new View.ChooseForm();
+            chooseForm.TopLevel = false;
+            frmPanel.Controls.Add(chooseForm);
+            chooseForm.Show();
         }
     }
 }
