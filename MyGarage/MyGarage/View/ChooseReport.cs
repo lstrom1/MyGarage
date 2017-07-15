@@ -93,7 +93,7 @@ namespace MyGarage.View
         {
             try
             {
-                List<Vehicle> vehList = vehControl.GetCompleteVehicleList();
+                List<Vehicle> vehList = vehControl.GetAllVehicleList("%");
                 cmbVehicles.DataSource = vehList;
                 cmbVehicles.DisplayMember = "vehicleUnique";
                 cmbVehicles.ValueMember = "vehicleID";

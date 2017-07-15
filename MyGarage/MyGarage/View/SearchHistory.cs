@@ -88,7 +88,7 @@ namespace MyGarage.View
                         {
                             recordType = serviceList[i];
                             lstService.Items.Add(recordType.categoryName.ToString());
-                            lstService.Items[i].SubItems.Add(recordType.dateOfService.ToString());
+                            lstService.Items[i].SubItems.Add(recordType.dateOfService.ToShortDateString());
                             lstService.Items[i].SubItems.Add(recordType.mileage.ToString());
                         }
                     } else

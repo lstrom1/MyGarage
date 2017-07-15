@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReport = new System.Windows.Forms.Button();
             this.btnViewHistory = new System.Windows.Forms.Button();
             this.btnAddVehicleOwner = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -46,7 +47,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.frmPanel = new System.Windows.Forms.Panel();
-            this.btnReport = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -75,6 +75,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(165, 451);
             this.panel1.TabIndex = 1;
+            // 
+            // btnReport
+            // 
+            this.btnReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(35)))), ((int)(((byte)(6)))));
+            this.btnReport.FlatAppearance.BorderSize = 2;
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Location = new System.Drawing.Point(3, 415);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(159, 33);
+            this.btnReport.TabIndex = 14;
+            this.btnReport.Text = "Maintenance Reports";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnViewHistory
             // 
@@ -268,20 +282,6 @@
             this.frmPanel.Name = "frmPanel";
             this.frmPanel.Size = new System.Drawing.Size(641, 529);
             this.frmPanel.TabIndex = 4;
-            // 
-            // btnReport
-            // 
-            this.btnReport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(35)))), ((int)(((byte)(6)))));
-            this.btnReport.FlatAppearance.BorderSize = 2;
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.Location = new System.Drawing.Point(3, 415);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(159, 33);
-            this.btnReport.TabIndex = 14;
-            this.btnReport.Text = "Maintenance Report";
-            this.btnReport.UseVisualStyleBackColor = true;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // Home
             // 

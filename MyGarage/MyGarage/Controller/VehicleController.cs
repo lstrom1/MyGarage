@@ -25,12 +25,5 @@ namespace MyGarage.Controller
         {
             return VehicleDAL.GetAllList(VIN);
         }
-
-        public List<Vehicle> GetCompleteVehicleList()
-        {
-            return VehicleDAL.GetAllVehiclesList(); 
-        }
-
-
     }
 }
