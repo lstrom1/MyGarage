@@ -76,7 +76,18 @@ namespace MyGarage.View
                 }
             }
             }
-            
+
+        private void btnCustomerReport_Click(object sender, EventArgs e)
+        {
+            if (cmbCustomers.SelectedValue != null)
+            {
+                AllOwnerVehicleReport allVehicle = new AllOwnerVehicleReport(Convert.ToInt32(cmbCustomers.SelectedValue.ToString()));
+                allVehicle.Show(); 
+            } else
+            {
+                MessageBox.Show("Please select a customer to run a report for."); 
+            }
         }
+    }
     }
 

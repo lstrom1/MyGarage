@@ -28,15 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.cS6920team5DataSetAllOwnerVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._CS6920_team5_DataSet_AllOwnerVehicles = new MyGarage._CS6920_team5_DataSet_AllOwnerVehicles();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.usp_maintainanceAllOwnerVehiclesTableAdapter1 = new MyGarage._CS6920_team5_DataSet_AllOwnerVehiclesTableAdapters.usp_maintainanceAllOwnerVehiclesTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.cS6920team5DataSetAllOwnerVehiclesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CS6920_team5_DataSet_AllOwnerVehicles)).BeginInit();
             this.SuspendLayout();
+            // 
+            // cS6920team5DataSetAllOwnerVehiclesBindingSource
+            // 
+            this.cS6920team5DataSetAllOwnerVehiclesBindingSource.DataMember = "usp_maintainanceAllOwnerVehicles";
+            this.cS6920team5DataSetAllOwnerVehiclesBindingSource.DataSource = this._CS6920_team5_DataSet_AllOwnerVehicles;
+            // 
+            // _CS6920_team5_DataSet_AllOwnerVehicles
+            // 
+            this._CS6920_team5_DataSet_AllOwnerVehicles.DataSetName = "_CS6920_team5_DataSet_AllOwnerVehicles";
+            this._CS6920_team5_DataSet_AllOwnerVehicles.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(12, 12);
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "AllOwnerVehiclesDataSet";
+            reportDataSource1.Value = this.cS6920team5DataSetAllOwnerVehiclesBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "MyGarage.AllOwnerVehiclesReport.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(617, 505);
+            this.reportViewer1.Size = new System.Drawing.Size(641, 529);
             this.reportViewer1.TabIndex = 46;
+            // 
+            // usp_maintainanceAllOwnerVehiclesTableAdapter1
+            // 
+            this.usp_maintainanceAllOwnerVehiclesTableAdapter1.ClearBeforeFill = true;
             // 
             // AllOwnerVehicleReport
             // 
@@ -50,11 +76,16 @@
             this.Name = "AllOwnerVehicleReport";
             this.Text = "Customer Vehicle Maintenance Report";
             this.Load += new System.EventHandler(this.MaintenanceReport_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.cS6920team5DataSetAllOwnerVehiclesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CS6920_team5_DataSet_AllOwnerVehicles)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource cS6920team5DataSetAllOwnerVehiclesBindingSource;
+        private _CS6920_team5_DataSet_AllOwnerVehicles _CS6920_team5_DataSet_AllOwnerVehicles;
+        private _CS6920_team5_DataSet_AllOwnerVehiclesTableAdapters.usp_maintainanceAllOwnerVehiclesTableAdapter usp_maintainanceAllOwnerVehiclesTableAdapter1;
     }
 }

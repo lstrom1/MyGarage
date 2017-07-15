@@ -152,6 +152,7 @@
             this.btnCustomerReport.TabIndex = 74;
             this.btnCustomerReport.Text = "Run Report";
             this.btnCustomerReport.UseVisualStyleBackColor = true;
+            this.btnCustomerReport.Click += new System.EventHandler(this.btnCustomerReport_Click);
             // 
             // cmbCustomers
             // 
