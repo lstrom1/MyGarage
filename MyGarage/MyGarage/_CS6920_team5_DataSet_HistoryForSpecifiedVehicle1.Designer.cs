@@ -20,17 +20,17 @@ namespace MyGarage {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("_CS6920_team5DataSet_NeededNumber30Days")]
+    [global::System.Xml.Serialization.XmlRootAttribute("_CS6920_team5_DataSet_HistoryForSpecifiedVehicle")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class _CS6920_team5DataSet_NeededNumber30Days : global::System.Data.DataSet {
+    public partial class _CS6920_team5_DataSet_HistoryForSpecifiedVehicle : global::System.Data.DataSet {
         
-        private usp_maintenanceNeededNumber30DaysDataTable tableusp_maintenanceNeededNumber30Days;
+        private usp_maintenanceHistoryForSpecifiedVehicleDataTable tableusp_maintenanceHistoryForSpecifiedVehicle;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public _CS6920_team5DataSet_NeededNumber30Days() {
+        public _CS6920_team5_DataSet_HistoryForSpecifiedVehicle() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace MyGarage {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected _CS6920_team5DataSet_NeededNumber30Days(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected _CS6920_team5_DataSet_HistoryForSpecifiedVehicle(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace MyGarage {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["usp_maintenanceNeededNumber30Days"] != null)) {
-                    base.Tables.Add(new usp_maintenanceNeededNumber30DaysDataTable(ds.Tables["usp_maintenanceNeededNumber30Days"]));
+                if ((ds.Tables["usp_maintenanceHistoryForSpecifiedVehicle"] != null)) {
+                    base.Tables.Add(new usp_maintenanceHistoryForSpecifiedVehicleDataTable(ds.Tables["usp_maintenanceHistoryForSpecifiedVehicle"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace MyGarage {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public usp_maintenanceNeededNumber30DaysDataTable usp_maintenanceNeededNumber30Days {
+        public usp_maintenanceHistoryForSpecifiedVehicleDataTable usp_maintenanceHistoryForSpecifiedVehicle {
             get {
-                return this.tableusp_maintenanceNeededNumber30Days;
+                return this.tableusp_maintenanceHistoryForSpecifiedVehicle;
             }
         }
         
@@ -127,7 +127,7 @@ namespace MyGarage {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            _CS6920_team5DataSet_NeededNumber30Days cln = ((_CS6920_team5DataSet_NeededNumber30Days)(base.Clone()));
+            _CS6920_team5_DataSet_HistoryForSpecifiedVehicle cln = ((_CS6920_team5_DataSet_HistoryForSpecifiedVehicle)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace MyGarage {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["usp_maintenanceNeededNumber30Days"] != null)) {
-                    base.Tables.Add(new usp_maintenanceNeededNumber30DaysDataTable(ds.Tables["usp_maintenanceNeededNumber30Days"]));
+                if ((ds.Tables["usp_maintenanceHistoryForSpecifiedVehicle"] != null)) {
+                    base.Tables.Add(new usp_maintenanceHistoryForSpecifiedVehicleDataTable(ds.Tables["usp_maintenanceHistoryForSpecifiedVehicle"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace MyGarage {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableusp_maintenanceNeededNumber30Days = ((usp_maintenanceNeededNumber30DaysDataTable)(base.Tables["usp_maintenanceNeededNumber30Days"]));
+            this.tableusp_maintenanceHistoryForSpecifiedVehicle = ((usp_maintenanceHistoryForSpecifiedVehicleDataTable)(base.Tables["usp_maintenanceHistoryForSpecifiedVehicle"]));
             if ((initTable == true)) {
-                if ((this.tableusp_maintenanceNeededNumber30Days != null)) {
-                    this.tableusp_maintenanceNeededNumber30Days.InitVars();
+                if ((this.tableusp_maintenanceHistoryForSpecifiedVehicle != null)) {
+                    this.tableusp_maintenanceHistoryForSpecifiedVehicle.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace MyGarage {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "_CS6920_team5DataSet_NeededNumber30Days";
+            this.DataSetName = "_CS6920_team5_DataSet_HistoryForSpecifiedVehicle";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/_CS6920_team5DataSet_NeededNumber30Days.xsd";
+            this.Namespace = "http://tempuri.org/_CS6920_team5_DataSet_HistoryForSpecifiedVehicle1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableusp_maintenanceNeededNumber30Days = new usp_maintenanceNeededNumber30DaysDataTable();
-            base.Tables.Add(this.tableusp_maintenanceNeededNumber30Days);
+            this.tableusp_maintenanceHistoryForSpecifiedVehicle = new usp_maintenanceHistoryForSpecifiedVehicleDataTable();
+            base.Tables.Add(this.tableusp_maintenanceHistoryForSpecifiedVehicle);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeusp_maintenanceNeededNumber30Days() {
+        private bool ShouldSerializeusp_maintenanceHistoryForSpecifiedVehicle() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace MyGarage {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            _CS6920_team5DataSet_NeededNumber30Days ds = new _CS6920_team5DataSet_NeededNumber30Days();
+            _CS6920_team5_DataSet_HistoryForSpecifiedVehicle ds = new _CS6920_team5_DataSet_HistoryForSpecifiedVehicle();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,45 +270,33 @@ namespace MyGarage {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void usp_maintenanceNeededNumber30DaysRowChangeEventHandler(object sender, usp_maintenanceNeededNumber30DaysRowChangeEvent e);
+        public delegate void usp_maintenanceHistoryForSpecifiedVehicleRowChangeEventHandler(object sender, usp_maintenanceHistoryForSpecifiedVehicleRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class usp_maintenanceNeededNumber30DaysDataTable : global::System.Data.TypedTableBase<usp_maintenanceNeededNumber30DaysRow> {
+        public partial class usp_maintenanceHistoryForSpecifiedVehicleDataTable : global::System.Data.TypedTableBase<usp_maintenanceHistoryForSpecifiedVehicleRow> {
             
-            private global::System.Data.DataColumn columnService;
+            private global::System.Data.DataColumn columnmake;
             
-            private global::System.Data.DataColumn columnFirstName;
+            private global::System.Data.DataColumn columnmodel;
             
-            private global::System.Data.DataColumn columnLastName;
+            private global::System.Data.DataColumn columnvehicleYear;
             
-            private global::System.Data.DataColumn columnPhoneNumber;
+            private global::System.Data.DataColumn columnvin;
             
-            private global::System.Data.DataColumn columnEmailAddress;
+            private global::System.Data.DataColumn columndateOfService;
             
-            private global::System.Data.DataColumn columnVIN;
+            private global::System.Data.DataColumn columnmileage;
             
-            private global::System.Data.DataColumn columnModel;
-            
-            private global::System.Data.DataColumn columnMake;
-            
-            private global::System.Data.DataColumn columnVehicleYear;
-            
-            private global::System.Data.DataColumn columnMileageOnLastServiceDate;
-            
-            private global::System.Data.DataColumn columnMileageForService;
-            
-            private global::System.Data.DataColumn columnServiceDate;
-            
-            private global::System.Data.DataColumn columnEstimateDateNextService;
+            private global::System.Data.DataColumn columncategoryName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public usp_maintenanceNeededNumber30DaysDataTable() {
-                this.TableName = "usp_maintenanceNeededNumber30Days";
+            public usp_maintenanceHistoryForSpecifiedVehicleDataTable() {
+                this.TableName = "usp_maintenanceHistoryForSpecifiedVehicle";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -316,7 +304,7 @@ namespace MyGarage {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal usp_maintenanceNeededNumber30DaysDataTable(global::System.Data.DataTable table) {
+            internal usp_maintenanceHistoryForSpecifiedVehicleDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -333,112 +321,64 @@ namespace MyGarage {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected usp_maintenanceNeededNumber30DaysDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected usp_maintenanceHistoryForSpecifiedVehicleDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ServiceColumn {
+            public global::System.Data.DataColumn makeColumn {
                 get {
-                    return this.columnService;
+                    return this.columnmake;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FirstNameColumn {
+            public global::System.Data.DataColumn modelColumn {
                 get {
-                    return this.columnFirstName;
+                    return this.columnmodel;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn LastNameColumn {
+            public global::System.Data.DataColumn vehicleYearColumn {
                 get {
-                    return this.columnLastName;
+                    return this.columnvehicleYear;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PhoneNumberColumn {
+            public global::System.Data.DataColumn vinColumn {
                 get {
-                    return this.columnPhoneNumber;
+                    return this.columnvin;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EmailAddressColumn {
+            public global::System.Data.DataColumn dateOfServiceColumn {
                 get {
-                    return this.columnEmailAddress;
+                    return this.columndateOfService;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn VINColumn {
+            public global::System.Data.DataColumn mileageColumn {
                 get {
-                    return this.columnVIN;
+                    return this.columnmileage;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ModelColumn {
+            public global::System.Data.DataColumn categoryNameColumn {
                 get {
-                    return this.columnModel;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MakeColumn {
-                get {
-                    return this.columnMake;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn VehicleYearColumn {
-                get {
-                    return this.columnVehicleYear;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MileageOnLastServiceDateColumn {
-                get {
-                    return this.columnMileageOnLastServiceDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MileageForServiceColumn {
-                get {
-                    return this.columnMileageForService;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ServiceDateColumn {
-                get {
-                    return this.columnServiceDate;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EstimateDateNextServiceColumn {
-                get {
-                    return this.columnEstimateDateNextService;
+                    return this.columncategoryName;
                 }
             }
             
@@ -453,57 +393,51 @@ namespace MyGarage {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public usp_maintenanceNeededNumber30DaysRow this[int index] {
+            public usp_maintenanceHistoryForSpecifiedVehicleRow this[int index] {
                 get {
-                    return ((usp_maintenanceNeededNumber30DaysRow)(this.Rows[index]));
+                    return ((usp_maintenanceHistoryForSpecifiedVehicleRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event usp_maintenanceNeededNumber30DaysRowChangeEventHandler usp_maintenanceNeededNumber30DaysRowChanging;
+            public event usp_maintenanceHistoryForSpecifiedVehicleRowChangeEventHandler usp_maintenanceHistoryForSpecifiedVehicleRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event usp_maintenanceNeededNumber30DaysRowChangeEventHandler usp_maintenanceNeededNumber30DaysRowChanged;
+            public event usp_maintenanceHistoryForSpecifiedVehicleRowChangeEventHandler usp_maintenanceHistoryForSpecifiedVehicleRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event usp_maintenanceNeededNumber30DaysRowChangeEventHandler usp_maintenanceNeededNumber30DaysRowDeleting;
+            public event usp_maintenanceHistoryForSpecifiedVehicleRowChangeEventHandler usp_maintenanceHistoryForSpecifiedVehicleRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event usp_maintenanceNeededNumber30DaysRowChangeEventHandler usp_maintenanceNeededNumber30DaysRowDeleted;
+            public event usp_maintenanceHistoryForSpecifiedVehicleRowChangeEventHandler usp_maintenanceHistoryForSpecifiedVehicleRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Addusp_maintenanceNeededNumber30DaysRow(usp_maintenanceNeededNumber30DaysRow row) {
+            public void Addusp_maintenanceHistoryForSpecifiedVehicleRow(usp_maintenanceHistoryForSpecifiedVehicleRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public usp_maintenanceNeededNumber30DaysRow Addusp_maintenanceNeededNumber30DaysRow(string Service, string FirstName, string LastName, string PhoneNumber, string EmailAddress, string VIN, string Model, string Make, string VehicleYear, int MileageOnLastServiceDate, int MileageForService, System.DateTime ServiceDate, System.DateTime EstimateDateNextService) {
-                usp_maintenanceNeededNumber30DaysRow rowusp_maintenanceNeededNumber30DaysRow = ((usp_maintenanceNeededNumber30DaysRow)(this.NewRow()));
+            public usp_maintenanceHistoryForSpecifiedVehicleRow Addusp_maintenanceHistoryForSpecifiedVehicleRow(string make, string model, string vehicleYear, string vin, System.DateTime dateOfService, int mileage, string categoryName) {
+                usp_maintenanceHistoryForSpecifiedVehicleRow rowusp_maintenanceHistoryForSpecifiedVehicleRow = ((usp_maintenanceHistoryForSpecifiedVehicleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Service,
-                        FirstName,
-                        LastName,
-                        PhoneNumber,
-                        EmailAddress,
-                        VIN,
-                        Model,
-                        Make,
-                        VehicleYear,
-                        MileageOnLastServiceDate,
-                        MileageForService,
-                        ServiceDate,
-                        EstimateDateNextService};
-                rowusp_maintenanceNeededNumber30DaysRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowusp_maintenanceNeededNumber30DaysRow);
-                return rowusp_maintenanceNeededNumber30DaysRow;
+                        make,
+                        model,
+                        vehicleYear,
+                        vin,
+                        dateOfService,
+                        mileage,
+                        categoryName};
+                rowusp_maintenanceHistoryForSpecifiedVehicleRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowusp_maintenanceHistoryForSpecifiedVehicleRow);
+                return rowusp_maintenanceHistoryForSpecifiedVehicleRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                usp_maintenanceNeededNumber30DaysDataTable cln = ((usp_maintenanceNeededNumber30DaysDataTable)(base.Clone()));
+                usp_maintenanceHistoryForSpecifiedVehicleDataTable cln = ((usp_maintenanceHistoryForSpecifiedVehicleDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -511,100 +445,76 @@ namespace MyGarage {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new usp_maintenanceNeededNumber30DaysDataTable();
+                return new usp_maintenanceHistoryForSpecifiedVehicleDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnService = base.Columns["Service"];
-                this.columnFirstName = base.Columns["FirstName"];
-                this.columnLastName = base.Columns["LastName"];
-                this.columnPhoneNumber = base.Columns["PhoneNumber"];
-                this.columnEmailAddress = base.Columns["EmailAddress"];
-                this.columnVIN = base.Columns["VIN"];
-                this.columnModel = base.Columns["Model"];
-                this.columnMake = base.Columns["Make"];
-                this.columnVehicleYear = base.Columns["VehicleYear"];
-                this.columnMileageOnLastServiceDate = base.Columns["MileageOnLastServiceDate"];
-                this.columnMileageForService = base.Columns["MileageForService"];
-                this.columnServiceDate = base.Columns["ServiceDate"];
-                this.columnEstimateDateNextService = base.Columns["EstimateDateNextService"];
+                this.columnmake = base.Columns["make"];
+                this.columnmodel = base.Columns["model"];
+                this.columnvehicleYear = base.Columns["vehicleYear"];
+                this.columnvin = base.Columns["vin"];
+                this.columndateOfService = base.Columns["dateOfService"];
+                this.columnmileage = base.Columns["mileage"];
+                this.columncategoryName = base.Columns["categoryName"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnService = new global::System.Data.DataColumn("Service", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnService);
-                this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFirstName);
-                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLastName);
-                this.columnPhoneNumber = new global::System.Data.DataColumn("PhoneNumber", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPhoneNumber);
-                this.columnEmailAddress = new global::System.Data.DataColumn("EmailAddress", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmailAddress);
-                this.columnVIN = new global::System.Data.DataColumn("VIN", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnVIN);
-                this.columnModel = new global::System.Data.DataColumn("Model", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnModel);
-                this.columnMake = new global::System.Data.DataColumn("Make", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMake);
-                this.columnVehicleYear = new global::System.Data.DataColumn("VehicleYear", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnVehicleYear);
-                this.columnMileageOnLastServiceDate = new global::System.Data.DataColumn("MileageOnLastServiceDate", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMileageOnLastServiceDate);
-                this.columnMileageForService = new global::System.Data.DataColumn("MileageForService", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMileageForService);
-                this.columnServiceDate = new global::System.Data.DataColumn("ServiceDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnServiceDate);
-                this.columnEstimateDateNextService = new global::System.Data.DataColumn("EstimateDateNextService", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEstimateDateNextService);
-                this.columnService.AllowDBNull = false;
-                this.columnService.MaxLength = 45;
-                this.columnFirstName.MaxLength = 45;
-                this.columnLastName.MaxLength = 45;
-                this.columnPhoneNumber.MaxLength = 12;
-                this.columnEmailAddress.MaxLength = 150;
-                this.columnVIN.AllowDBNull = false;
-                this.columnVIN.MaxLength = 17;
-                this.columnModel.AllowDBNull = false;
-                this.columnModel.MaxLength = 45;
-                this.columnMake.AllowDBNull = false;
-                this.columnMake.MaxLength = 45;
-                this.columnVehicleYear.AllowDBNull = false;
-                this.columnVehicleYear.MaxLength = 4;
-                this.columnMileageOnLastServiceDate.ReadOnly = true;
-                this.columnMileageForService.ReadOnly = true;
-                this.columnServiceDate.ReadOnly = true;
-                this.columnEstimateDateNextService.ReadOnly = true;
+                this.columnmake = new global::System.Data.DataColumn("make", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmake);
+                this.columnmodel = new global::System.Data.DataColumn("model", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmodel);
+                this.columnvehicleYear = new global::System.Data.DataColumn("vehicleYear", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvehicleYear);
+                this.columnvin = new global::System.Data.DataColumn("vin", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnvin);
+                this.columndateOfService = new global::System.Data.DataColumn("dateOfService", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndateOfService);
+                this.columnmileage = new global::System.Data.DataColumn("mileage", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmileage);
+                this.columncategoryName = new global::System.Data.DataColumn("categoryName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncategoryName);
+                this.columnmake.AllowDBNull = false;
+                this.columnmake.MaxLength = 45;
+                this.columnmodel.AllowDBNull = false;
+                this.columnmodel.MaxLength = 45;
+                this.columnvehicleYear.AllowDBNull = false;
+                this.columnvehicleYear.MaxLength = 4;
+                this.columnvin.AllowDBNull = false;
+                this.columnvin.MaxLength = 17;
+                this.columndateOfService.AllowDBNull = false;
+                this.columnmileage.AllowDBNull = false;
+                this.columncategoryName.AllowDBNull = false;
+                this.columncategoryName.MaxLength = 45;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public usp_maintenanceNeededNumber30DaysRow Newusp_maintenanceNeededNumber30DaysRow() {
-                return ((usp_maintenanceNeededNumber30DaysRow)(this.NewRow()));
+            public usp_maintenanceHistoryForSpecifiedVehicleRow Newusp_maintenanceHistoryForSpecifiedVehicleRow() {
+                return ((usp_maintenanceHistoryForSpecifiedVehicleRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new usp_maintenanceNeededNumber30DaysRow(builder);
+                return new usp_maintenanceHistoryForSpecifiedVehicleRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(usp_maintenanceNeededNumber30DaysRow);
+                return typeof(usp_maintenanceHistoryForSpecifiedVehicleRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.usp_maintenanceNeededNumber30DaysRowChanged != null)) {
-                    this.usp_maintenanceNeededNumber30DaysRowChanged(this, new usp_maintenanceNeededNumber30DaysRowChangeEvent(((usp_maintenanceNeededNumber30DaysRow)(e.Row)), e.Action));
+                if ((this.usp_maintenanceHistoryForSpecifiedVehicleRowChanged != null)) {
+                    this.usp_maintenanceHistoryForSpecifiedVehicleRowChanged(this, new usp_maintenanceHistoryForSpecifiedVehicleRowChangeEvent(((usp_maintenanceHistoryForSpecifiedVehicleRow)(e.Row)), e.Action));
                 }
             }
             
@@ -612,8 +522,8 @@ namespace MyGarage {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.usp_maintenanceNeededNumber30DaysRowChanging != null)) {
-                    this.usp_maintenanceNeededNumber30DaysRowChanging(this, new usp_maintenanceNeededNumber30DaysRowChangeEvent(((usp_maintenanceNeededNumber30DaysRow)(e.Row)), e.Action));
+                if ((this.usp_maintenanceHistoryForSpecifiedVehicleRowChanging != null)) {
+                    this.usp_maintenanceHistoryForSpecifiedVehicleRowChanging(this, new usp_maintenanceHistoryForSpecifiedVehicleRowChangeEvent(((usp_maintenanceHistoryForSpecifiedVehicleRow)(e.Row)), e.Action));
                 }
             }
             
@@ -621,8 +531,8 @@ namespace MyGarage {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.usp_maintenanceNeededNumber30DaysRowDeleted != null)) {
-                    this.usp_maintenanceNeededNumber30DaysRowDeleted(this, new usp_maintenanceNeededNumber30DaysRowChangeEvent(((usp_maintenanceNeededNumber30DaysRow)(e.Row)), e.Action));
+                if ((this.usp_maintenanceHistoryForSpecifiedVehicleRowDeleted != null)) {
+                    this.usp_maintenanceHistoryForSpecifiedVehicleRowDeleted(this, new usp_maintenanceHistoryForSpecifiedVehicleRowChangeEvent(((usp_maintenanceHistoryForSpecifiedVehicleRow)(e.Row)), e.Action));
                 }
             }
             
@@ -630,14 +540,14 @@ namespace MyGarage {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.usp_maintenanceNeededNumber30DaysRowDeleting != null)) {
-                    this.usp_maintenanceNeededNumber30DaysRowDeleting(this, new usp_maintenanceNeededNumber30DaysRowChangeEvent(((usp_maintenanceNeededNumber30DaysRow)(e.Row)), e.Action));
+                if ((this.usp_maintenanceHistoryForSpecifiedVehicleRowDeleting != null)) {
+                    this.usp_maintenanceHistoryForSpecifiedVehicleRowDeleting(this, new usp_maintenanceHistoryForSpecifiedVehicleRowChangeEvent(((usp_maintenanceHistoryForSpecifiedVehicleRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Removeusp_maintenanceNeededNumber30DaysRow(usp_maintenanceNeededNumber30DaysRow row) {
+            public void Removeusp_maintenanceHistoryForSpecifiedVehicleRow(usp_maintenanceHistoryForSpecifiedVehicleRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -646,7 +556,7 @@ namespace MyGarage {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _CS6920_team5DataSet_NeededNumber30Days ds = new _CS6920_team5DataSet_NeededNumber30Days();
+                _CS6920_team5_DataSet_HistoryForSpecifiedVehicle ds = new _CS6920_team5_DataSet_HistoryForSpecifiedVehicle();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -664,7 +574,7 @@ namespace MyGarage {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "usp_maintenanceNeededNumber30DaysDataTable";
+                attribute2.FixedValue = "usp_maintenanceHistoryForSpecifiedVehicleDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -708,302 +618,92 @@ namespace MyGarage {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class usp_maintenanceNeededNumber30DaysRow : global::System.Data.DataRow {
+        public partial class usp_maintenanceHistoryForSpecifiedVehicleRow : global::System.Data.DataRow {
             
-            private usp_maintenanceNeededNumber30DaysDataTable tableusp_maintenanceNeededNumber30Days;
+            private usp_maintenanceHistoryForSpecifiedVehicleDataTable tableusp_maintenanceHistoryForSpecifiedVehicle;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal usp_maintenanceNeededNumber30DaysRow(global::System.Data.DataRowBuilder rb) : 
+            internal usp_maintenanceHistoryForSpecifiedVehicleRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableusp_maintenanceNeededNumber30Days = ((usp_maintenanceNeededNumber30DaysDataTable)(this.Table));
+                this.tableusp_maintenanceHistoryForSpecifiedVehicle = ((usp_maintenanceHistoryForSpecifiedVehicleDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Service {
+            public string make {
                 get {
-                    return ((string)(this[this.tableusp_maintenanceNeededNumber30Days.ServiceColumn]));
+                    return ((string)(this[this.tableusp_maintenanceHistoryForSpecifiedVehicle.makeColumn]));
                 }
                 set {
-                    this[this.tableusp_maintenanceNeededNumber30Days.ServiceColumn] = value;
+                    this[this.tableusp_maintenanceHistoryForSpecifiedVehicle.makeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string FirstName {
+            public string model {
                 get {
-                    try {
-                        return ((string)(this[this.tableusp_maintenanceNeededNumber30Days.FirstNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'FirstName\' in table \'usp_maintenanceNeededNumber30Days\' is " +
-                                "DBNull.", e);
-                    }
+                    return ((string)(this[this.tableusp_maintenanceHistoryForSpecifiedVehicle.modelColumn]));
                 }
                 set {
-                    this[this.tableusp_maintenanceNeededNumber30Days.FirstNameColumn] = value;
+                    this[this.tableusp_maintenanceHistoryForSpecifiedVehicle.modelColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string LastName {
+            public string vehicleYear {
                 get {
-                    try {
-                        return ((string)(this[this.tableusp_maintenanceNeededNumber30Days.LastNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'LastName\' in table \'usp_maintenanceNeededNumber30Days\' is D" +
-                                "BNull.", e);
-                    }
+                    return ((string)(this[this.tableusp_maintenanceHistoryForSpecifiedVehicle.vehicleYearColumn]));
                 }
                 set {
-                    this[this.tableusp_maintenanceNeededNumber30Days.LastNameColumn] = value;
+                    this[this.tableusp_maintenanceHistoryForSpecifiedVehicle.vehicleYearColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string PhoneNumber {
+            public string vin {
                 get {
-                    try {
-                        return ((string)(this[this.tableusp_maintenanceNeededNumber30Days.PhoneNumberColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PhoneNumber\' in table \'usp_maintenanceNeededNumber30Days\' i" +
-                                "s DBNull.", e);
-                    }
+                    return ((string)(this[this.tableusp_maintenanceHistoryForSpecifiedVehicle.vinColumn]));
                 }
                 set {
-                    this[this.tableusp_maintenanceNeededNumber30Days.PhoneNumberColumn] = value;
+                    this[this.tableusp_maintenanceHistoryForSpecifiedVehicle.vinColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string EmailAddress {
+            public System.DateTime dateOfService {
                 get {
-                    try {
-                        return ((string)(this[this.tableusp_maintenanceNeededNumber30Days.EmailAddressColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EmailAddress\' in table \'usp_maintenanceNeededNumber30Days\' " +
-                                "is DBNull.", e);
-                    }
+                    return ((global::System.DateTime)(this[this.tableusp_maintenanceHistoryForSpecifiedVehicle.dateOfServiceColumn]));
                 }
                 set {
-                    this[this.tableusp_maintenanceNeededNumber30Days.EmailAddressColumn] = value;
+                    this[this.tableusp_maintenanceHistoryForSpecifiedVehicle.dateOfServiceColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string VIN {
+            public int mileage {
                 get {
-                    return ((string)(this[this.tableusp_maintenanceNeededNumber30Days.VINColumn]));
+                    return ((int)(this[this.tableusp_maintenanceHistoryForSpecifiedVehicle.mileageColumn]));
                 }
                 set {
-                    this[this.tableusp_maintenanceNeededNumber30Days.VINColumn] = value;
+                    this[this.tableusp_maintenanceHistoryForSpecifiedVehicle.mileageColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Model {
+            public string categoryName {
                 get {
-                    return ((string)(this[this.tableusp_maintenanceNeededNumber30Days.ModelColumn]));
+                    return ((string)(this[this.tableusp_maintenanceHistoryForSpecifiedVehicle.categoryNameColumn]));
                 }
                 set {
-                    this[this.tableusp_maintenanceNeededNumber30Days.ModelColumn] = value;
+                    this[this.tableusp_maintenanceHistoryForSpecifiedVehicle.categoryNameColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Make {
-                get {
-                    return ((string)(this[this.tableusp_maintenanceNeededNumber30Days.MakeColumn]));
-                }
-                set {
-                    this[this.tableusp_maintenanceNeededNumber30Days.MakeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string VehicleYear {
-                get {
-                    return ((string)(this[this.tableusp_maintenanceNeededNumber30Days.VehicleYearColumn]));
-                }
-                set {
-                    this[this.tableusp_maintenanceNeededNumber30Days.VehicleYearColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int MileageOnLastServiceDate {
-                get {
-                    try {
-                        return ((int)(this[this.tableusp_maintenanceNeededNumber30Days.MileageOnLastServiceDateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MileageOnLastServiceDate\' in table \'usp_maintenanceNeededNu" +
-                                "mber30Days\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableusp_maintenanceNeededNumber30Days.MileageOnLastServiceDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int MileageForService {
-                get {
-                    try {
-                        return ((int)(this[this.tableusp_maintenanceNeededNumber30Days.MileageForServiceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MileageForService\' in table \'usp_maintenanceNeededNumber30D" +
-                                "ays\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableusp_maintenanceNeededNumber30Days.MileageForServiceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime ServiceDate {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableusp_maintenanceNeededNumber30Days.ServiceDateColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ServiceDate\' in table \'usp_maintenanceNeededNumber30Days\' i" +
-                                "s DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableusp_maintenanceNeededNumber30Days.ServiceDateColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime EstimateDateNextService {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableusp_maintenanceNeededNumber30Days.EstimateDateNextServiceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EstimateDateNextService\' in table \'usp_maintenanceNeededNum" +
-                                "ber30Days\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableusp_maintenanceNeededNumber30Days.EstimateDateNextServiceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsFirstNameNull() {
-                return this.IsNull(this.tableusp_maintenanceNeededNumber30Days.FirstNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetFirstNameNull() {
-                this[this.tableusp_maintenanceNeededNumber30Days.FirstNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsLastNameNull() {
-                return this.IsNull(this.tableusp_maintenanceNeededNumber30Days.LastNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetLastNameNull() {
-                this[this.tableusp_maintenanceNeededNumber30Days.LastNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPhoneNumberNull() {
-                return this.IsNull(this.tableusp_maintenanceNeededNumber30Days.PhoneNumberColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPhoneNumberNull() {
-                this[this.tableusp_maintenanceNeededNumber30Days.PhoneNumberColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEmailAddressNull() {
-                return this.IsNull(this.tableusp_maintenanceNeededNumber30Days.EmailAddressColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEmailAddressNull() {
-                this[this.tableusp_maintenanceNeededNumber30Days.EmailAddressColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMileageOnLastServiceDateNull() {
-                return this.IsNull(this.tableusp_maintenanceNeededNumber30Days.MileageOnLastServiceDateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMileageOnLastServiceDateNull() {
-                this[this.tableusp_maintenanceNeededNumber30Days.MileageOnLastServiceDateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMileageForServiceNull() {
-                return this.IsNull(this.tableusp_maintenanceNeededNumber30Days.MileageForServiceColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMileageForServiceNull() {
-                this[this.tableusp_maintenanceNeededNumber30Days.MileageForServiceColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsServiceDateNull() {
-                return this.IsNull(this.tableusp_maintenanceNeededNumber30Days.ServiceDateColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetServiceDateNull() {
-                this[this.tableusp_maintenanceNeededNumber30Days.ServiceDateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEstimateDateNextServiceNull() {
-                return this.IsNull(this.tableusp_maintenanceNeededNumber30Days.EstimateDateNextServiceColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEstimateDateNextServiceNull() {
-                this[this.tableusp_maintenanceNeededNumber30Days.EstimateDateNextServiceColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1011,22 +711,22 @@ namespace MyGarage {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class usp_maintenanceNeededNumber30DaysRowChangeEvent : global::System.EventArgs {
+        public class usp_maintenanceHistoryForSpecifiedVehicleRowChangeEvent : global::System.EventArgs {
             
-            private usp_maintenanceNeededNumber30DaysRow eventRow;
+            private usp_maintenanceHistoryForSpecifiedVehicleRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public usp_maintenanceNeededNumber30DaysRowChangeEvent(usp_maintenanceNeededNumber30DaysRow row, global::System.Data.DataRowAction action) {
+            public usp_maintenanceHistoryForSpecifiedVehicleRowChangeEvent(usp_maintenanceHistoryForSpecifiedVehicleRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public usp_maintenanceNeededNumber30DaysRow Row {
+            public usp_maintenanceHistoryForSpecifiedVehicleRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1042,7 +742,7 @@ namespace MyGarage {
         }
     }
 }
-namespace MyGarage._CS6920_team5DataSet_NeededNumber30DaysTableAdapters {
+namespace MyGarage._CS6920_team5_DataSet_HistoryForSpecifiedVehicleTableAdapters {
     
     
     /// <summary>
@@ -1054,7 +754,7 @@ namespace MyGarage._CS6920_team5DataSet_NeededNumber30DaysTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class usp_maintenanceNeededNumber30DaysTableAdapter : global::System.ComponentModel.Component {
+    public partial class usp_maintenanceHistoryForSpecifiedVehicleTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1068,7 +768,7 @@ namespace MyGarage._CS6920_team5DataSet_NeededNumber30DaysTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public usp_maintenanceNeededNumber30DaysTableAdapter() {
+        public usp_maintenanceHistoryForSpecifiedVehicleTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1165,20 +865,14 @@ namespace MyGarage._CS6920_team5DataSet_NeededNumber30DaysTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "usp_maintenanceNeededNumber30Days";
-            tableMapping.ColumnMappings.Add("Service", "Service");
-            tableMapping.ColumnMappings.Add("FirstName", "FirstName");
-            tableMapping.ColumnMappings.Add("LastName", "LastName");
-            tableMapping.ColumnMappings.Add("PhoneNumber", "PhoneNumber");
-            tableMapping.ColumnMappings.Add("EmailAddress", "EmailAddress");
-            tableMapping.ColumnMappings.Add("VIN", "VIN");
-            tableMapping.ColumnMappings.Add("Model", "Model");
-            tableMapping.ColumnMappings.Add("Make", "Make");
-            tableMapping.ColumnMappings.Add("VehicleYear", "VehicleYear");
-            tableMapping.ColumnMappings.Add("MileageOnLastServiceDate", "MileageOnLastServiceDate");
-            tableMapping.ColumnMappings.Add("MileageForService", "MileageForService");
-            tableMapping.ColumnMappings.Add("ServiceDate", "ServiceDate");
-            tableMapping.ColumnMappings.Add("EstimateDateNextService", "EstimateDateNextService");
+            tableMapping.DataSetTable = "usp_maintenanceHistoryForSpecifiedVehicle";
+            tableMapping.ColumnMappings.Add("make", "make");
+            tableMapping.ColumnMappings.Add("model", "model");
+            tableMapping.ColumnMappings.Add("vehicleYear", "vehicleYear");
+            tableMapping.ColumnMappings.Add("vin", "vin");
+            tableMapping.ColumnMappings.Add("dateOfService", "dateOfService");
+            tableMapping.ColumnMappings.Add("mileage", "mileage");
+            tableMapping.ColumnMappings.Add("categoryName", "categoryName");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1195,17 +889,24 @@ namespace MyGarage._CS6920_team5DataSet_NeededNumber30DaysTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.usp_maintenanceNeededNumber30Days";
+            this._commandCollection[0].CommandText = "dbo.usp_maintenanceHistoryForSpecifiedVehicle";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@vehicleID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_CS6920_team5DataSet_NeededNumber30Days.usp_maintenanceNeededNumber30DaysDataTable dataTable) {
+        public virtual int Fill(_CS6920_team5_DataSet_HistoryForSpecifiedVehicle.usp_maintenanceHistoryForSpecifiedVehicleDataTable dataTable, global::System.Nullable<int> vehicleID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((vehicleID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(vehicleID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1217,9 +918,15 @@ namespace MyGarage._CS6920_team5DataSet_NeededNumber30DaysTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _CS6920_team5DataSet_NeededNumber30Days.usp_maintenanceNeededNumber30DaysDataTable GetData() {
+        public virtual _CS6920_team5_DataSet_HistoryForSpecifiedVehicle.usp_maintenanceHistoryForSpecifiedVehicleDataTable GetData(global::System.Nullable<int> vehicleID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _CS6920_team5DataSet_NeededNumber30Days.usp_maintenanceNeededNumber30DaysDataTable dataTable = new _CS6920_team5DataSet_NeededNumber30Days.usp_maintenanceNeededNumber30DaysDataTable();
+            if ((vehicleID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(vehicleID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            _CS6920_team5_DataSet_HistoryForSpecifiedVehicle.usp_maintenanceHistoryForSpecifiedVehicleDataTable dataTable = new _CS6920_team5_DataSet_HistoryForSpecifiedVehicle.usp_maintenanceHistoryForSpecifiedVehicleDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1293,7 +1000,7 @@ namespace MyGarage._CS6920_team5DataSet_NeededNumber30DaysTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(_CS6920_team5DataSet_NeededNumber30Days dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(_CS6920_team5_DataSet_HistoryForSpecifiedVehicle dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1303,7 +1010,7 @@ namespace MyGarage._CS6920_team5DataSet_NeededNumber30DaysTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(_CS6920_team5DataSet_NeededNumber30Days dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(_CS6920_team5_DataSet_HistoryForSpecifiedVehicle dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1313,7 +1020,7 @@ namespace MyGarage._CS6920_team5DataSet_NeededNumber30DaysTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(_CS6920_team5DataSet_NeededNumber30Days dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(_CS6920_team5_DataSet_HistoryForSpecifiedVehicle dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1347,7 +1054,7 @@ namespace MyGarage._CS6920_team5DataSet_NeededNumber30DaysTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(_CS6920_team5DataSet_NeededNumber30Days dataSet) {
+        public virtual int UpdateAll(_CS6920_team5_DataSet_HistoryForSpecifiedVehicle dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

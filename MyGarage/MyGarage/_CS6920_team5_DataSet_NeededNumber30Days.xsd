@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="_CS6920_team5DataSet_NeededNumber30Days" targetNamespace="http://tempuri.org/_CS6920_team5DataSet_NeededNumber30Days.xsd" xmlns:mstns="http://tempuri.org/_CS6920_team5DataSet_NeededNumber30Days.xsd" xmlns="http://tempuri.org/_CS6920_team5DataSet_NeededNumber30Days.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="_CS6920_team5_DataSet_NeededNumber30Days" targetNamespace="http://tempuri.org/_CS6920_team5_DataSet_NeededNumber30Days.xsd" xmlns:mstns="http://tempuri.org/_CS6920_team5_DataSet_NeededNumber30Days.xsd" xmlns="http://tempuri.org/_CS6920_team5_DataSet_NeededNumber30Days.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -42,7 +42,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="_CS6920_team5DataSet_NeededNumber30Days" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_CS6920_team5DataSet_NeededNumber30Days" msprop:Generator_UserDSName="_CS6920_team5DataSet_NeededNumber30Days">
+  <xs:element name="_CS6920_team5_DataSet_NeededNumber30Days" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_CS6920_team5_DataSet_NeededNumber30Days" msprop:Generator_UserDSName="_CS6920_team5_DataSet_NeededNumber30Days">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="usp_maintenanceNeededNumber30Days" msprop:Generator_TableClassName="usp_maintenanceNeededNumber30DaysDataTable" msprop:Generator_TableVarName="tableusp_maintenanceNeededNumber30Days" msprop:Generator_TablePropName="usp_maintenanceNeededNumber30Days" msprop:Generator_RowDeletingName="usp_maintenanceNeededNumber30DaysRowDeleting" msprop:Generator_RowChangingName="usp_maintenanceNeededNumber30DaysRowChanging" msprop:Generator_RowEvHandlerName="usp_maintenanceNeededNumber30DaysRowChangeEventHandler" msprop:Generator_RowDeletedName="usp_maintenanceNeededNumber30DaysRowDeleted" msprop:Generator_UserTableName="usp_maintenanceNeededNumber30Days" msprop:Generator_RowChangedName="usp_maintenanceNeededNumber30DaysRowChanged" msprop:Generator_RowEvArgName="usp_maintenanceNeededNumber30DaysRowChangeEvent" msprop:Generator_RowClassName="usp_maintenanceNeededNumber30DaysRow">
