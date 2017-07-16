@@ -164,6 +164,7 @@
       <DependentUpon>_CS6920_team5_DataSet_NeededNumber30Days.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AllOwnerVehiclesReport.rdlc" />
+    <EmbeddedResource Include="HistoryForSpecifiedVehicleReport.rdlc" />
     <EmbeddedResource Include="View\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
