@@ -165,6 +165,7 @@
     </Compile>
     <EmbeddedResource Include="AllOwnerVehiclesReport.rdlc" />
     <EmbeddedResource Include="HistoryForSpecifiedVehicleReport.rdlc" />
+    <EmbeddedResource Include="NeededNumber30DaysReport.rdlc" />
     <EmbeddedResource Include="View\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
