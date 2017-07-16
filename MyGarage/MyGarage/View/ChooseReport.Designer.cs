@@ -71,7 +71,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(250, 28);
+            this.label3.Size = new System.Drawing.Size(313, 35);
             this.label3.TabIndex = 4;
             this.label3.Text = "Choose Maintenance Report";
             // 
@@ -100,7 +100,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 20);
+            this.label1.Size = new System.Drawing.Size(176, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "Report by Customer";
             // 
@@ -120,7 +120,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 20);
+            this.label2.Size = new System.Drawing.Size(153, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Report by Vehicle";
             // 
@@ -140,7 +140,7 @@
             this.label4.Font = new System.Drawing.Font("Segoe UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 7);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(262, 20);
+            this.label4.Size = new System.Drawing.Size(339, 25);
             this.label4.TabIndex = 4;
             this.label4.Text = "Upcoming/Past Due Maintenance Report";
             // 
@@ -159,7 +159,7 @@
             this.cmbCustomers.FormattingEnabled = true;
             this.cmbCustomers.Location = new System.Drawing.Point(106, 168);
             this.cmbCustomers.Name = "cmbCustomers";
-            this.cmbCustomers.Size = new System.Drawing.Size(292, 25);
+            this.cmbCustomers.Size = new System.Drawing.Size(292, 29);
             this.cmbCustomers.TabIndex = 73;
             // 
             // label5
@@ -167,7 +167,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(36, 168);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 17);
+            this.label5.Size = new System.Drawing.Size(88, 23);
             this.label5.TabIndex = 72;
             this.label5.Text = "Customers";
             // 
@@ -186,7 +186,7 @@
             this.phoneDashRight.AutoSize = true;
             this.phoneDashRight.Location = new System.Drawing.Point(245, 134);
             this.phoneDashRight.Name = "phoneDashRight";
-            this.phoneDashRight.Size = new System.Drawing.Size(13, 17);
+            this.phoneDashRight.Size = new System.Drawing.Size(17, 23);
             this.phoneDashRight.TabIndex = 70;
             this.phoneDashRight.Text = "-";
             // 
@@ -195,7 +195,7 @@
             this.txtPhoneLastFourDigits.Location = new System.Drawing.Point(260, 131);
             this.txtPhoneLastFourDigits.MaxLength = 4;
             this.txtPhoneLastFourDigits.Name = "txtPhoneLastFourDigits";
-            this.txtPhoneLastFourDigits.Size = new System.Drawing.Size(74, 25);
+            this.txtPhoneLastFourDigits.Size = new System.Drawing.Size(74, 29);
             this.txtPhoneLastFourDigits.TabIndex = 67;
             // 
             // txtPhoneFirstThreeDigits
@@ -203,7 +203,7 @@
             this.txtPhoneFirstThreeDigits.Location = new System.Drawing.Point(184, 131);
             this.txtPhoneFirstThreeDigits.MaxLength = 3;
             this.txtPhoneFirstThreeDigits.Name = "txtPhoneFirstThreeDigits";
-            this.txtPhoneFirstThreeDigits.Size = new System.Drawing.Size(55, 25);
+            this.txtPhoneFirstThreeDigits.Size = new System.Drawing.Size(55, 29);
             this.txtPhoneFirstThreeDigits.TabIndex = 66;
             // 
             // phoneDashLeft
@@ -211,7 +211,7 @@
             this.phoneDashLeft.AutoSize = true;
             this.phoneDashLeft.Location = new System.Drawing.Point(170, 134);
             this.phoneDashLeft.Name = "phoneDashLeft";
-            this.phoneDashLeft.Size = new System.Drawing.Size(13, 17);
+            this.phoneDashLeft.Size = new System.Drawing.Size(17, 23);
             this.phoneDashLeft.TabIndex = 69;
             this.phoneDashLeft.Text = "-";
             // 
@@ -220,7 +220,7 @@
             this.txtPhoneAreaCode.Location = new System.Drawing.Point(108, 131);
             this.txtPhoneAreaCode.MaxLength = 3;
             this.txtPhoneAreaCode.Name = "txtPhoneAreaCode";
-            this.txtPhoneAreaCode.Size = new System.Drawing.Size(59, 25);
+            this.txtPhoneAreaCode.Size = new System.Drawing.Size(59, 29);
             this.txtPhoneAreaCode.TabIndex = 65;
             // 
             // label8
@@ -228,7 +228,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(10, 132);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 17);
+            this.label8.Size = new System.Drawing.Size(121, 23);
             this.label8.TabIndex = 68;
             this.label8.Text = "Phone Number";
             // 
@@ -236,7 +236,7 @@
             // 
             this.txtLastName.Location = new System.Drawing.Point(389, 92);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(184, 25);
+            this.txtLastName.Size = new System.Drawing.Size(184, 29);
             this.txtLastName.TabIndex = 64;
             // 
             // label6
@@ -244,7 +244,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(317, 95);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 17);
+            this.label6.Size = new System.Drawing.Size(86, 23);
             this.label6.TabIndex = 63;
             this.label6.Text = "Last Name";
             // 
@@ -253,7 +253,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(33, 95);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 17);
+            this.label7.Size = new System.Drawing.Size(87, 23);
             this.label7.TabIndex = 62;
             this.label7.Text = "First Name";
             // 
@@ -261,7 +261,7 @@
             // 
             this.txtFirstName.Location = new System.Drawing.Point(106, 91);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(184, 25);
+            this.txtFirstName.Size = new System.Drawing.Size(184, 29);
             this.txtFirstName.TabIndex = 61;
             // 
             // label9
@@ -269,7 +269,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(72, 257);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(28, 17);
+            this.label9.Size = new System.Drawing.Size(36, 23);
             this.label9.TabIndex = 76;
             this.label9.Text = "VIN";
             // 
@@ -277,7 +277,7 @@
             // 
             this.txtVin.Location = new System.Drawing.Point(106, 254);
             this.txtVin.Name = "txtVin";
-            this.txtVin.Size = new System.Drawing.Size(292, 25);
+            this.txtVin.Size = new System.Drawing.Size(292, 29);
             this.txtVin.TabIndex = 75;
             // 
             // btnSearchVehicle
@@ -305,7 +305,7 @@
             this.cmbVehicles.FormattingEnabled = true;
             this.cmbVehicles.Location = new System.Drawing.Point(106, 295);
             this.cmbVehicles.Name = "cmbVehicles";
-            this.cmbVehicles.Size = new System.Drawing.Size(292, 25);
+            this.cmbVehicles.Size = new System.Drawing.Size(292, 29);
             this.cmbVehicles.TabIndex = 79;
             // 
             // label10
@@ -313,7 +313,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(48, 298);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 17);
+            this.label10.Size = new System.Drawing.Size(66, 23);
             this.label10.TabIndex = 80;
             this.label10.Text = "Vehicles";
             // 
@@ -325,6 +325,7 @@
             this.btnVehicleReport.TabIndex = 81;
             this.btnVehicleReport.Text = "Run Report";
             this.btnVehicleReport.UseVisualStyleBackColor = true;
+            this.btnVehicleReport.Click += new System.EventHandler(this.btnVehicleReport_Click);
             // 
             // btnPastDueReport
             // 
@@ -334,19 +335,20 @@
             this.btnPastDueReport.TabIndex = 82;
             this.btnPastDueReport.Text = "Run Report";
             this.btnPastDueReport.UseVisualStyleBackColor = true;
+            this.btnPastDueReport.Click += new System.EventHandler(this.btnPastDueReport_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(12, 391);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(456, 17);
+            this.label11.Size = new System.Drawing.Size(602, 23);
             this.label11.TabIndex = 83;
             this.label11.Text = "Vehicles needing or past due for maintenance based on previous service records.";
             // 
             // ChooseReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(641, 529);
             this.Controls.Add(this.label11);

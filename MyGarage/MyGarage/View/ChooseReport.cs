@@ -103,6 +103,19 @@ namespace MyGarage.View
                 MessageBox.Show("An error has occured, please try again");
             }
         }
+
+        private void btnVehicleReport_Click(object sender, EventArgs e)
+        {
+            //Needs vehicleID as parameter for the report
+            VehicleReport vehicleReport = new VehicleReport();
+            vehicleReport.Show();
+        }
+
+        private void btnPastDueReport_Click(object sender, EventArgs e)
+        {
+            PastDueVehiclesReport pastDueVehicles = new PastDueVehiclesReport();
+            pastDueVehicles.Show();
+        }
     }
     }
 

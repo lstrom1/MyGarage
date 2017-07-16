@@ -27,7 +27,7 @@ namespace MyGarage.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=mygarage.cezil3uadcim.us-east-2.rds.amazonaws.com;Initial Catalog=CS6" +
-            "920-team5;Persist Security Info=True;User ID=mygarage")]
+            "920-team5;Persist Security Info=True;User ID=mygarage;Password=8923dfahuweiQUWI")]
         public string CS6920_team5_ConnectionString {
             get {
                 return ((string)(this["CS6920_team5_ConnectionString"]));
