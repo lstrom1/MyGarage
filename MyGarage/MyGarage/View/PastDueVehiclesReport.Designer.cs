@@ -30,15 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.uspmaintenanceNeededNumber30DaysBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._CS6920_team5_DataSet_NeededNumber30Days = new MyGarage._CS6920_team5_DataSet_NeededNumber30Days();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.cS6920team5DataSetNeededNumber30DaysBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uspmaintenanceNeededNumber30DaysBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usp_maintenanceNeededNumber30DaysTableAdapter = new MyGarage._CS6920_team5_DataSet_NeededNumber30DaysTableAdapters.usp_maintenanceNeededNumber30DaysTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.uspmaintenanceNeededNumber30DaysBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._CS6920_team5_DataSet_NeededNumber30Days)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cS6920team5DataSetNeededNumber30DaysBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uspmaintenanceNeededNumber30DaysBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // uspmaintenanceNeededNumber30DaysBindingSource
+            // 
+            this.uspmaintenanceNeededNumber30DaysBindingSource.DataMember = "usp_maintenanceNeededNumber30Days";
+            this.uspmaintenanceNeededNumber30DaysBindingSource.DataSource = this._CS6920_team5_DataSet_NeededNumber30Days;
             // 
             // _CS6920_team5_DataSet_NeededNumber30Days
             // 
@@ -55,18 +60,13 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Margin = new System.Windows.Forms.Padding(4);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1906, 709);
+            this.reportViewer1.Size = new System.Drawing.Size(1366, 709);
             this.reportViewer1.TabIndex = 0;
             // 
             // cS6920team5DataSetNeededNumber30DaysBindingSource
             // 
             this.cS6920team5DataSetNeededNumber30DaysBindingSource.DataSource = this._CS6920_team5_DataSet_NeededNumber30Days;
             this.cS6920team5DataSetNeededNumber30DaysBindingSource.Position = 0;
-            // 
-            // uspmaintenanceNeededNumber30DaysBindingSource
-            // 
-            this.uspmaintenanceNeededNumber30DaysBindingSource.DataMember = "usp_maintenanceNeededNumber30Days";
-            this.uspmaintenanceNeededNumber30DaysBindingSource.DataSource = this._CS6920_team5_DataSet_NeededNumber30Days;
             // 
             // usp_maintenanceNeededNumber30DaysTableAdapter
             // 
@@ -76,15 +76,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1906, 709);
+            this.ClientSize = new System.Drawing.Size(1366, 709);
             this.Controls.Add(this.reportViewer1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PastDueVehiclesReport";
             this.Text = "Past Due/Upcoming Maintenance Report";
             this.Load += new System.EventHandler(this.AllVehiclesReport_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.uspmaintenanceNeededNumber30DaysBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._CS6920_team5_DataSet_NeededNumber30Days)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cS6920team5DataSetNeededNumber30DaysBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uspmaintenanceNeededNumber30DaysBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
