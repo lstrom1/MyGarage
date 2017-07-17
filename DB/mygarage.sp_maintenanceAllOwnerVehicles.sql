@@ -1,11 +1,11 @@
 USE [CS6920-team5];
 GO
 
-IF OBJECT_ID('usp_maintenanceAllOwnerVehicles') IS NOT NULL
-	DROP PROC usp_maintenanceAllOwnerVehicles;
+IF OBJECT_ID('usp_maintainanceAllOwnerVehicles') IS NOT NULL
+	DROP PROC usp_maintainanceAllOwnerVehicles;
 GO
 
-CREATE PROCEDURE usp_maintenanceAllOwnerVehicles
+CREATE PROCEDURE usp_maintainanceAllOwnerVehicles
 	@ownerID INT
 
 AS
@@ -32,7 +32,7 @@ AS
 		LEFT JOIN vehicle V ON OV.vehicleID = V.vehicleID
 		LEFT OUTER JOIN serviceRecord SR ON V.vehicleID = SR.vehicleID
 		LEFT OUTER JOIN serviceRecordType SRT ON SR.serviceRecordID = SRT.serviceRecordID
-		LEFT JOIN serviceCategory SC ON SRT.serviceCategoryID = SRT.serviceCategoryID 
+		LEFT JOIN serviceCategory SC ON SRT.serviceCategoryID = SC.serviceCategoryID 
 	WHERE
 		O.ownerID = @ownerID
 	GROUP BY
