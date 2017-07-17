@@ -30,13 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.usp_maintenanceHistoryForSpecifiedVehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._CS6920_team5_DataSet_HistoryForSpecifiedVehicle = new MyGarage._CS6920_team5_DataSet_HistoryForSpecifiedVehicle();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.usp_maintenanceHistoryForSpecifiedVehicleTableAdapter = new MyGarage._CS6920_team5_DataSet_HistoryForSpecifiedVehicleTableAdapters.usp_maintenanceHistoryForSpecifiedVehicleTableAdapter();
-            this.usp_maintenanceHistoryForSpecifiedVehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this._CS6920_team5_DataSet_HistoryForSpecifiedVehicle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usp_maintenanceHistoryForSpecifiedVehicleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CS6920_team5_DataSet_HistoryForSpecifiedVehicle)).BeginInit();
             this.SuspendLayout();
+            // 
+            // usp_maintenanceHistoryForSpecifiedVehicleBindingSource
+            // 
+            this.usp_maintenanceHistoryForSpecifiedVehicleBindingSource.DataMember = "usp_maintenanceHistoryForSpecifiedVehicle";
+            this.usp_maintenanceHistoryForSpecifiedVehicleBindingSource.DataSource = this._CS6920_team5_DataSet_HistoryForSpecifiedVehicle;
             // 
             // _CS6920_team5_DataSet_HistoryForSpecifiedVehicle
             // 
@@ -53,30 +58,25 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Margin = new System.Windows.Forms.Padding(4);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1004, 656);
+            this.reportViewer1.Size = new System.Drawing.Size(787, 656);
             this.reportViewer1.TabIndex = 0;
             // 
             // usp_maintenanceHistoryForSpecifiedVehicleTableAdapter
             // 
             this.usp_maintenanceHistoryForSpecifiedVehicleTableAdapter.ClearBeforeFill = true;
             // 
-            // usp_maintenanceHistoryForSpecifiedVehicleBindingSource
-            // 
-            this.usp_maintenanceHistoryForSpecifiedVehicleBindingSource.DataMember = "usp_maintenanceHistoryForSpecifiedVehicle";
-            this.usp_maintenanceHistoryForSpecifiedVehicleBindingSource.DataSource = this._CS6920_team5_DataSet_HistoryForSpecifiedVehicle;
-            // 
             // VehicleReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 656);
+            this.ClientSize = new System.Drawing.Size(787, 656);
             this.Controls.Add(this.reportViewer1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "VehicleReport";
             this.Text = "Vehicle Maintenance Report";
             this.Load += new System.EventHandler(this.VehicleReport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this._CS6920_team5_DataSet_HistoryForSpecifiedVehicle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usp_maintenanceHistoryForSpecifiedVehicleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._CS6920_team5_DataSet_HistoryForSpecifiedVehicle)).EndInit();
             this.ResumeLayout(false);
 
         }

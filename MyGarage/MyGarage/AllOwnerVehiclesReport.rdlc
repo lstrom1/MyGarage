@@ -418,8 +418,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>=Fields!make.Value &amp; " " &amp; Fields!model.Value 
-&amp; " VIN: " &amp; Fields!vin.Value</Value>
+                            <Value>=Fields!make.Value &amp; " " &amp; Fields!model.Value &amp; VbCrLf &amp; "VIN: " &amp; Fields!vin.Value</Value>
                             <Style>
                               <FontFamily>Tahoma</FontFamily>
                               <FontWeight>Bold</FontWeight>
@@ -443,6 +442,7 @@
                       <PaddingBottom>2pt</PaddingBottom>
                     </Style>
                   </Textbox>
+                  <rd:Selected>true</rd:Selected>
                 </CellContents>
               </TablixHeader>
               <TablixMembers>
@@ -460,7 +460,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>AllOwnerVehiclesDataSet</DataSetName>
-        <Top>2.03611in</Top>
+        <Top>1.41514in</Top>
         <Height>0.75in</Height>
         <Width>7.78207in</Width>
         <Style>
@@ -476,12 +476,17 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Maintenance Report for Customer - </Value>
+                <Value>Maintenance Report for Customer</Value>
                 <Style>
                   <FontSize>16pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
               <TextRun>
                 <Value>=Globals!ExecutionTime</Value>
                 <Style>
@@ -494,9 +499,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>0.13278in</Top>
         <Left>1.78889in</Left>
-        <Height>0.30833in</Height>
+        <Height>0.53889in</Height>
         <Width>5.99318in</Width>
         <ZIndex>1</ZIndex>
         <Style>
@@ -527,18 +531,6 @@
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Owner Information</Value>
-                <Style>
-                  <FontSize>14pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
           <Paragraph>
             <TextRuns>
               <TextRun>
@@ -612,9 +604,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox14</rd:DefaultName>
-        <Top>0.69667in</Top>
+        <Top>0.60833in</Top>
         <Left>0.18833in</Left>
-        <Height>0.99569in</Height>
+        <Height>0.73736in</Height>
         <Width>7.59374in</Width>
         <ZIndex>3</ZIndex>
         <Style>
@@ -628,10 +620,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>2.83819in</Height>
+    <Height>2.20486in</Height>
     <Style />
   </Body>
-  <Width>7.8625in</Width>
+  <Width>7.82917in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
