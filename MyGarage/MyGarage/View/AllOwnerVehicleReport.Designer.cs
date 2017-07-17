@@ -66,7 +66,7 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "MyGarage.AllOwnerVehiclesReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1280, 773);
+            this.reportViewer1.Size = new System.Drawing.Size(1184, 773);
             this.reportViewer1.TabIndex = 46;
             // 
             // usp_maintainanceAllOwnerVehiclesTableAdapter1
@@ -82,7 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 36F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 773);
+            this.ClientSize = new System.Drawing.Size(1184, 773);
             this.Controls.Add(this.reportViewer1);
             this.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
