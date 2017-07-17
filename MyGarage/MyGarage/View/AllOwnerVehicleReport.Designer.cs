@@ -35,11 +35,9 @@
             this.cS6920team5DataSetAllOwnerVehiclesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.usp_maintainanceAllOwnerVehiclesTableAdapter1 = new MyGarage._CS6920_team5_DataSet_AllOwnerVehiclesTableAdapters.usp_maintainanceAllOwnerVehiclesTableAdapter();
-            this.cS6920team5DataSetAllOwnerVehiclesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.usp_maintainanceAllOwnerVehiclesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._CS6920_team5_DataSet_AllOwnerVehicles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cS6920team5DataSetAllOwnerVehiclesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cS6920team5DataSetAllOwnerVehiclesBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // usp_maintainanceAllOwnerVehiclesBindingSource
@@ -73,14 +71,9 @@
             // 
             this.usp_maintainanceAllOwnerVehiclesTableAdapter1.ClearBeforeFill = true;
             // 
-            // cS6920team5DataSetAllOwnerVehiclesBindingSource1
-            // 
-            this.cS6920team5DataSetAllOwnerVehiclesBindingSource1.DataSource = this._CS6920_team5_DataSet_AllOwnerVehicles;
-            this.cS6920team5DataSetAllOwnerVehiclesBindingSource1.Position = 0;
-            // 
             // AllOwnerVehicleReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 36F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 773);
             this.Controls.Add(this.reportViewer1);
@@ -93,7 +86,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.usp_maintainanceAllOwnerVehiclesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._CS6920_team5_DataSet_AllOwnerVehicles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cS6920team5DataSetAllOwnerVehiclesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cS6920team5DataSetAllOwnerVehiclesBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -104,6 +96,5 @@
         private _CS6920_team5_DataSet_AllOwnerVehicles _CS6920_team5_DataSet_AllOwnerVehicles;
         private _CS6920_team5_DataSet_AllOwnerVehiclesTableAdapters.usp_maintainanceAllOwnerVehiclesTableAdapter usp_maintainanceAllOwnerVehiclesTableAdapter1;
         private System.Windows.Forms.BindingSource usp_maintainanceAllOwnerVehiclesBindingSource;
-        private System.Windows.Forms.BindingSource cS6920team5DataSetAllOwnerVehiclesBindingSource1;
     }
 }

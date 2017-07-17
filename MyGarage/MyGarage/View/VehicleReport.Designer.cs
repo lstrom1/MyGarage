@@ -33,9 +33,9 @@
             this._CS6920_team5_DataSet_HistoryForSpecifiedVehicle = new MyGarage._CS6920_team5_DataSet_HistoryForSpecifiedVehicle();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.usp_maintenanceHistoryForSpecifiedVehicleTableAdapter = new MyGarage._CS6920_team5_DataSet_HistoryForSpecifiedVehicleTableAdapters.usp_maintenanceHistoryForSpecifiedVehicleTableAdapter();
-            this.uspmaintenanceHistoryForSpecifiedVehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usp_maintenanceHistoryForSpecifiedVehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this._CS6920_team5_DataSet_HistoryForSpecifiedVehicle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uspmaintenanceHistoryForSpecifiedVehicleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usp_maintenanceHistoryForSpecifiedVehicleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // _CS6920_team5_DataSet_HistoryForSpecifiedVehicle
@@ -47,7 +47,7 @@
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "HistoryForSpecifiedVehicleDataSet";
-            reportDataSource1.Value = this.uspmaintenanceHistoryForSpecifiedVehicleBindingSource;
+            reportDataSource1.Value = this.usp_maintenanceHistoryForSpecifiedVehicleBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "MyGarage.HistoryForSpecifiedVehicleReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
@@ -60,10 +60,10 @@
             // 
             this.usp_maintenanceHistoryForSpecifiedVehicleTableAdapter.ClearBeforeFill = true;
             // 
-            // uspmaintenanceHistoryForSpecifiedVehicleBindingSource
+            // usp_maintenanceHistoryForSpecifiedVehicleBindingSource
             // 
-            this.uspmaintenanceHistoryForSpecifiedVehicleBindingSource.DataMember = "usp_maintenanceHistoryForSpecifiedVehicle";
-            this.uspmaintenanceHistoryForSpecifiedVehicleBindingSource.DataSource = this._CS6920_team5_DataSet_HistoryForSpecifiedVehicle;
+            this.usp_maintenanceHistoryForSpecifiedVehicleBindingSource.DataMember = "usp_maintenanceHistoryForSpecifiedVehicle";
+            this.usp_maintenanceHistoryForSpecifiedVehicleBindingSource.DataSource = this._CS6920_team5_DataSet_HistoryForSpecifiedVehicle;
             // 
             // VehicleReport
             // 
@@ -76,7 +76,7 @@
             this.Text = "Vehicle Maintenance Report";
             this.Load += new System.EventHandler(this.VehicleReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this._CS6920_team5_DataSet_HistoryForSpecifiedVehicle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uspmaintenanceHistoryForSpecifiedVehicleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usp_maintenanceHistoryForSpecifiedVehicleBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -86,6 +86,6 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private _CS6920_team5_DataSet_HistoryForSpecifiedVehicle _CS6920_team5_DataSet_HistoryForSpecifiedVehicle;
         private _CS6920_team5_DataSet_HistoryForSpecifiedVehicleTableAdapters.usp_maintenanceHistoryForSpecifiedVehicleTableAdapter usp_maintenanceHistoryForSpecifiedVehicleTableAdapter;
-        private System.Windows.Forms.BindingSource uspmaintenanceHistoryForSpecifiedVehicleBindingSource;
+        private System.Windows.Forms.BindingSource usp_maintenanceHistoryForSpecifiedVehicleBindingSource;
     }
 }

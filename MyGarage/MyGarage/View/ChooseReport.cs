@@ -2,12 +2,6 @@
 using MyGarage.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MyGarage.View
@@ -106,8 +100,8 @@ namespace MyGarage.View
 
         private void btnVehicleReport_Click(object sender, EventArgs e)
         {
-            //Needs vehicleID as parameter for the report
-            VehicleReport vehicleReport = new VehicleReport();
+            int selectedVehicleID = Convert.ToInt32(cmbVehicles.SelectedValue.ToString());
+            VehicleReport vehicleReport = new VehicleReport(selectedVehicleID);
             vehicleReport.Show();
         }
 
