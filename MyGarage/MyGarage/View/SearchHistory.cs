@@ -40,6 +40,10 @@ namespace MyGarage.View
                     cmbCustomers.DisplayMember = "ownerUnique";
                     cmbCustomers.ValueMember = "OwnerID";
 
+                    if (ownList.Count == 0)
+                    {
+                        MessageBox.Show("Customer not found. Please double check your entered information and try again.");
+                    }
                 }
                 catch (Exception)
                 {
