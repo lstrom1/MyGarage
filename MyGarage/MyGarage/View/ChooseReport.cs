@@ -114,6 +114,29 @@ namespace MyGarage.View
             PastDueVehiclesReport pastDueVehicles = new PastDueVehiclesReport();
             pastDueVehicles.Show();
         }
+
+        private void allowOnlyNumbersKeyPress(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPhoneAreaCode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.allowOnlyNumbersKeyPress(e);
+        }
+
+        private void txtPhoneFirstThreeDigits_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.allowOnlyNumbersKeyPress(e);
+        }
+
+        private void txtPhoneLastFourDigits_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.allowOnlyNumbersKeyPress(e);
+        }
     }
-    }
+}
 

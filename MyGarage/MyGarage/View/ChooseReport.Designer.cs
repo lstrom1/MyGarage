@@ -197,6 +197,7 @@
             this.txtPhoneLastFourDigits.Name = "txtPhoneLastFourDigits";
             this.txtPhoneLastFourDigits.Size = new System.Drawing.Size(74, 29);
             this.txtPhoneLastFourDigits.TabIndex = 67;
+            this.txtPhoneLastFourDigits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneLastFourDigits_KeyPress);
             // 
             // txtPhoneFirstThreeDigits
             // 
@@ -205,6 +206,7 @@
             this.txtPhoneFirstThreeDigits.Name = "txtPhoneFirstThreeDigits";
             this.txtPhoneFirstThreeDigits.Size = new System.Drawing.Size(55, 29);
             this.txtPhoneFirstThreeDigits.TabIndex = 66;
+            this.txtPhoneFirstThreeDigits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneFirstThreeDigits_KeyPress);
             // 
             // phoneDashLeft
             // 
@@ -222,6 +224,7 @@
             this.txtPhoneAreaCode.Name = "txtPhoneAreaCode";
             this.txtPhoneAreaCode.Size = new System.Drawing.Size(59, 29);
             this.txtPhoneAreaCode.TabIndex = 65;
+            this.txtPhoneAreaCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneAreaCode_KeyPress);
             // 
             // label8
             // 
